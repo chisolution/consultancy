@@ -13,8 +13,8 @@ return [
 
     // Hero Section
     'hero' => [
-        'title' => 'Consultancy d\'Affaires de Confiance à Travers les Frontières',
-        'subtitle' => 'Solutions expertes en comptabilité, conseil et affaires pour les entreprises au Rwanda, Canada, États-Unis et Cameroun',
+        'title' => 'Consultancy Professionnelle d\'Affaires du Rwanda',
+        'subtitle' => 'Services experts de conseil en affaires, comptabilité et conseil financier depuis Kigali, servant des clients mondialement à travers des partenariats spécialisés',
         'cta_primary' => 'Commencer Votre Parcours',
         'cta_secondary' => 'Voir les Services',
         'features' => [

@@ -13,8 +13,8 @@ return [
 
     // Hero Section
     'hero' => [
-        'title' => 'Trusted Business Consultancy Across Borders',
-        'subtitle' => 'Expert accounting, advisory, and business solutions for companies in Rwanda, Canada, US, and Cameroon',
+        'title' => 'Professional Business Consultancy from Rwanda',
+        'subtitle' => 'Expert business consultancy, accounting, and financial advisory services from Kigali, serving clients globally through specialist partnerships',
         'cta_primary' => 'Start Your Journey',
         'cta_secondary' => 'View Services',
         'features' => [
@@ -108,16 +108,16 @@ return [
 
     // Footer
     'footer' => [
-        'company_description' => 'Professional accounting and business consultancy services across Rwanda, Canada, US, and Cameroon.',
+        'company_description' => 'Professional business consultancy, accounting, and financial advisory services from Rwanda, serving clients globally.',
         'quick_links' => 'Quick Links',
         'services_title' => 'Services',
         'contact_info' => 'Contact Information',
-        'offices' => 'Our Offices',
-        'locations' => [
-            'rwanda' => 'Kigali, Rwanda',
-            'canada' => 'Toronto, Canada',
-            'usa' => 'New York, USA',
-            'cameroon' => 'Douala, Cameroon',
+        'office_location' => 'Our Office',
+        'location' => [
+            'address' => 'KG 123 St, Gasabo District',
+            'city' => 'Kigali, Rwanda',
+            'phone' => '+250 XXX XXX XXX',
+            'email' => 'hello@consultancy.rw',
         ],
         'copyright' => 'All rights reserved.',
         'privacy' => 'Privacy Policy',
