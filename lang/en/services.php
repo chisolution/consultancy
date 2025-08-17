@@ -239,6 +239,112 @@ return [
     'tax_advisory' => [
         'title' => 'Tax Advisory Services',
         'short_description' => 'Expert tax planning, compliance, and advisory services for individuals and businesses in Rwanda.',
+        'meta' => [
+            'title' => 'Tax Advisory Services | Expert Tax Planning & Compliance | Rwanda',
+            'description' => 'Professional tax advisory services in Rwanda. Expert tax planning, VAT compliance, income tax preparation, and strategic tax optimization for businesses.',
+            'keywords' => 'tax advisory Rwanda, tax planning Kigali, VAT compliance Rwanda, income tax preparation East Africa, tax optimization Rwanda',
+        ],
+        'hero' => [
+            'subtitle' => 'Navigate Rwanda\'s tax landscape with confidence. Our expert tax advisors provide strategic planning, compliance support, and optimization strategies that minimize your tax burden while ensuring full regulatory compliance.',
+        ],
+        'stats' => [
+            'tax_returns_filed' => 'Tax Returns Filed',
+            'compliance_rate' => 'Compliance Rate',
+            'years_experience' => 'Years Experience',
+            'response_time' => 'Response Time',
+        ],
+        'cta' => [
+            'get_consultation' => 'Get Tax Consultation',
+            'view_services' => 'View Tax Services',
+        ],
+        'overview' => [
+            'title' => 'Expert Tax Advisory & Compliance',
+            'description' => 'Our tax advisory services help businesses and individuals navigate Rwanda\'s complex tax environment with confidence. We provide strategic tax planning, compliance management, and optimization strategies that protect your interests while ensuring full regulatory compliance.',
+            'expertise' => 'Our certified tax professionals stay current with Rwanda Revenue Authority regulations and international tax standards. From VAT registration to complex corporate tax planning, we provide the expertise you need to minimize tax liability and avoid costly compliance issues.',
+        ],
+        'benefits' => [
+            'tax_planning' => [
+                'title' => 'Strategic Tax Planning',
+                'description' => 'Proactive tax strategies that minimize liability and optimize your financial position.',
+            ],
+            'compliance' => [
+                'title' => 'Full Compliance Assurance',
+                'description' => 'Stay compliant with all Rwanda tax regulations and avoid penalties.',
+            ],
+            'optimization' => [
+                'title' => 'Tax Optimization',
+                'description' => 'Identify opportunities to reduce tax burden through legal strategies and incentives.',
+            ],
+            'expert_guidance' => [
+                'title' => 'Expert Guidance',
+                'description' => 'Professional advice from certified tax specialists with local expertise.',
+            ],
+        ],
+        'contact' => [
+            'title' => 'Get Tax Expert Support',
+            'hours' => 'Mon-Fri 8AM-6PM CAT',
+            'cta' => 'Get Consultation',
+        ],
+        'calendar' => [
+            'title' => 'Tax Calendar',
+            'vat_monthly' => 'VAT Returns',
+            '15th' => '15th Monthly',
+            'income_tax' => 'Income Tax',
+            'march_31' => 'March 31',
+            'payroll_tax' => 'Payroll Tax',
+            'monthly' => 'Monthly',
+            'annual_returns' => 'Annual Returns',
+            'june_30' => 'June 30',
+        ],
+        'detailed_services' => [
+            'title' => 'Comprehensive Tax Services',
+            'subtitle' => 'Full-service tax advisory covering all aspects of Rwanda tax compliance and planning.',
+        ],
+        'services' => [
+            'vat' => [
+                'title' => 'VAT Services',
+                'description' => 'Complete VAT registration, filing, and compliance management.',
+                'features' => [
+                    'registration' => 'VAT registration assistance',
+                    'monthly_returns' => 'Monthly VAT return filing',
+                    'compliance' => 'VAT compliance monitoring',
+                ],
+            ],
+            'income_tax' => [
+                'title' => 'Income Tax Services',
+                'description' => 'Corporate and personal income tax preparation and planning.',
+                'features' => [
+                    'corporate' => 'Corporate income tax returns',
+                    'personal' => 'Personal income tax filing',
+                    'planning' => 'Tax planning strategies',
+                ],
+            ],
+            'payroll_tax' => [
+                'title' => 'Payroll Tax Services',
+                'description' => 'Employee tax compliance and payroll tax management.',
+                'features' => [
+                    'paye' => 'PAYE calculation and filing',
+                    'social_security' => 'Social security contributions',
+                    'compliance' => 'Payroll tax compliance',
+                ],
+            ],
+        ],
+        'consultation' => [
+            'title' => 'Get Expert Tax Consultation',
+            'subtitle' => 'Schedule a consultation to discuss your tax situation and discover optimization opportunities.',
+        ],
+        'form' => [
+            'tax_issue' => 'Tax Issue Type',
+            'select_issue' => 'Select your tax concern',
+            'tax_planning' => 'Tax Planning Strategy',
+            'compliance_issue' => 'Compliance Issue',
+            'message_placeholder' => 'Describe your tax situation and specific concerns...',
+            'submit' => 'Request Tax Consultation',
+        ],
+        'related' => [
+            'title' => 'Related Financial Services',
+            'subtitle' => 'Complement your tax strategy with our additional professional services.',
+        ],
     ],
 
     // Audit & Compliance
