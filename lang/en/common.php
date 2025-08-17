@@ -122,6 +122,7 @@ return [
         'copyright' => 'All rights reserved.',
         'privacy' => 'Privacy Policy',
         'terms' => 'Terms of Service',
+        'global_service_note' => 'Serving clients globally through specialist partnerships',
     ],
 
     // Common
@@ -174,4 +175,18 @@ return [
     'get_started' => 'Get Started',
     'contact_us' => 'Contact Us',
     'read_more' => 'Read More',
+
+    // Contact Page
+    'contact' => [
+        'global_service' => [
+            'title' => 'Global Service Delivery',
+            'description' => 'While our office is based in Rwanda, we serve clients worldwide through remote consultations, specialist partnerships, and cultural competency that spans diverse markets.',
+            'features' => [
+                'remote_consultation' => 'Remote Consultation',
+                'specialist_partnerships' => 'Specialist Partnerships',
+                'cultural_competency' => 'Cultural Competency',
+                'local_expertise' => 'Local Expertise',
+            ],
+        ],
+    ],
 ];

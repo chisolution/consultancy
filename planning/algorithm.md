@@ -213,6 +213,42 @@ Phase 4: Optimization & Launch (Sprints 13-18)
 
 ---
 
+### 🔧 Issue #006: Schema.org Context Line Causing Parse Error
+
+| Field | Details |
+|-------|---------|
+| **Date** | 2025-08-17 |
+| **Reported By** | @user |
+| **Tags** | #blade #schema #json-ld #parsing #syntax |
+| **Problem Summary** | Schema.org @context line causing "unexpected end of file, expecting endif" parse error |
+| **Location** | `resources/views/pages/services/*.blade.php` - structured data sections |
+| **Impact** | Complete page failure - Internal Server Error preventing service pages from loading |
+| **Root Cause** | The `"@context": "https://schema.org",` line in JSON-LD structured data is causing Blade template parsing conflicts |
+| **Sample Code (Before)** |
+```php
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "{{ __('services.accounting.title') }}"
+}
+</script>
+``` |
+| **Sample Code (Fix)** |
+```php
+<script type="application/ld+json">
+{
+  "@type": "Service",
+  "name": "{{ __('services.accounting.title') }}"
+}
+</script>
+``` |
+| **Fix Explanation** | Removed the `"@context": "https://schema.org",` line from all structured data blocks. While this line is standard for JSON-LD, it's causing Blade parsing conflicts and should be excluded from Laravel Blade templates. |
+| **Status** | ✅ Fixed |
+| **Prevention** | Avoid using @context in Blade templates with JSON-LD. Use alternative schema markup methods or exclude @context line. Test all structured data implementations thoroughly. |
+
+---
+
 _Add more entries below this point using the table template above._
 
 ---

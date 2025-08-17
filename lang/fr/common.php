@@ -122,6 +122,7 @@ return [
         'copyright' => 'Tous droits réservés.',
         'privacy' => 'Politique de Confidentialité',
         'terms' => 'Conditions de Service',
+        'global_service_note' => 'Servir les clients mondialement grâce à des partenariats spécialisés',
     ],
 
     // Common
@@ -174,4 +175,18 @@ return [
     'get_started' => 'Commencer',
     'contact_us' => 'Nous Contacter',
     'read_more' => 'Lire Plus',
+
+    // Contact Page
+    'contact' => [
+        'global_service' => [
+            'title' => 'Prestation de Services Mondiale',
+            'description' => 'Bien que notre bureau soit basé au Rwanda, nous servons des clients dans le monde entier grâce à des consultations à distance, des partenariats spécialisés et une compétence culturelle qui s\'étend sur divers marchés.',
+            'features' => [
+                'remote_consultation' => 'Consultation à Distance',
+                'specialist_partnerships' => 'Partenariats Spécialisés',
+                'cultural_competency' => 'Compétence Culturelle',
+                'local_expertise' => 'Expertise Locale',
+            ],
+        ],
+    ],
 ];

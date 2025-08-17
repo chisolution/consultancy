@@ -1,15 +1,15 @@
 @extends('layouts.app')
 
-@section('title', __('services.accounting.meta.title'))
-@section('description', __('services.accounting.meta.description'))
-@section('keywords', __('services.accounting.meta.keywords'))
+@section('title', __('services.financial_planning.meta.title'))
+@section('description', __('services.financial_planning.meta.description'))
+@section('keywords', __('services.financial_planning.meta.keywords'))
 
 @push('structured-data')
 <script type="application/ld+json">
 {
   "@type": "Service",
-  "name": "{{ __('services.accounting.title') }}",
-  "description": "{{ __('services.accounting.meta.description') }}",
+  "name": "{{ __('services.financial_planning.title') }}",
+  "description": "{{ __('services.financial_planning.meta.description') }}",
   "provider": {
     "@type": "Organization",
     "name": "Professional Consultancy Rwanda",
@@ -21,12 +21,12 @@
     }
   },
   "areaServed": "Global",
-  "serviceType": "Accounting Services",
+  "serviceType": "Financial Planning Services",
   "offers": {
     "@type": "Offer",
-    "price": "300",
+    "price": "600",
     "priceCurrency": "USD",
-    "description": "Starting from $300 for monthly accounting services"
+    "description": "Starting from $600 for financial planning consultation"
   }
 }
 </script>
@@ -41,7 +41,7 @@
             <li class="text-gray-400">/</li>
             <li><a href="{{ route('services', app()->getLocale()) }}" class="text-gray-500 hover:text-primary-600">{{ __('common.nav.services') }}</a></li>
             <li class="text-gray-400">/</li>
-            <li class="text-gray-900 font-medium">{{ __('services.accounting.title') }}</li>
+            <li class="text-gray-900 font-medium">{{ __('services.financial_planning.title') }}</li>
         </ol>
     </div>
 </nav>
@@ -52,17 +52,17 @@
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
                 <h1 class="text-4xl lg:text-5xl font-bold mb-6">
-                    {{ __('services.accounting.title') }}
+                    {{ __('services.financial_planning.title') }}
                 </h1>
                 <p class="text-xl text-secondary-100 mb-8 leading-relaxed">
-                    {{ __('services.accounting.hero.subtitle') }}
+                    {{ __('services.financial_planning.hero.subtitle') }}
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4">
                     <a href="#consultation" class="bg-primary-600 hover:bg-primary-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 text-center">
-                        {{ __('services.accounting.cta.get_quote') }}
+                        {{ __('services.financial_planning.cta.get_plan') }}
                     </a>
                     <a href="#services" class="border-2 border-white text-white hover:bg-white hover:text-secondary-600 px-8 py-4 rounded-lg font-semibold transition-colors duration-200 text-center">
-                        {{ __('services.accounting.cta.view_services') }}
+                        {{ __('services.financial_planning.cta.view_services') }}
                     </a>
                 </div>
             </div>
@@ -70,20 +70,20 @@
                 <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8">
                     <div class="grid grid-cols-2 gap-6 text-center">
                         <div>
-                            <div class="text-3xl font-bold text-primary-300">200+</div>
-                            <div class="text-secondary-100">{{ __('services.accounting.stats.clients_served') }}</div>
+                            <div class="text-3xl font-bold text-primary-300">$50M+</div>
+                            <div class="text-secondary-100">{{ __('services.financial_planning.stats.assets_managed') }}</div>
                         </div>
                         <div>
-                            <div class="text-3xl font-bold text-primary-300">99.9%</div>
-                            <div class="text-secondary-100">{{ __('services.accounting.stats.accuracy_rate') }}</div>
+                            <div class="text-3xl font-bold text-primary-300">98%</div>
+                            <div class="text-secondary-100">{{ __('services.financial_planning.stats.client_satisfaction') }}</div>
                         </div>
                         <div>
-                            <div class="text-3xl font-bold text-primary-300">10+</div>
-                            <div class="text-secondary-100">{{ __('services.accounting.stats.years_experience') }}</div>
+                            <div class="text-3xl font-bold text-primary-300">12+</div>
+                            <div class="text-secondary-100">{{ __('services.financial_planning.stats.years_experience') }}</div>
                         </div>
                         <div>
-                            <div class="text-3xl font-bold text-primary-300">24h</div>
-                            <div class="text-secondary-100">{{ __('services.accounting.stats.turnaround') }}</div>
+                            <div class="text-3xl font-bold text-primary-300">15%</div>
+                            <div class="text-secondary-100">{{ __('services.financial_planning.stats.avg_returns') }}</div>
                         </div>
                     </div>
                 </div>
@@ -98,11 +98,11 @@
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
             <div class="lg:col-span-2">
                 <h2 class="text-3xl font-bold text-gray-900 mb-6">
-                    {{ __('services.accounting.overview.title') }}
+                    {{ __('services.financial_planning.overview.title') }}
                 </h2>
                 <div class="prose prose-lg text-gray-600 mb-8">
-                    <p>{{ __('services.accounting.overview.description') }}</p>
-                    <p>{{ __('services.accounting.overview.expertise') }}</p>
+                    <p>{{ __('services.financial_planning.overview.description') }}</p>
+                    <p>{{ __('services.financial_planning.overview.expertise') }}</p>
                 </div>
                 
                 <!-- Key Services -->
@@ -110,24 +110,24 @@
                     <div class="flex items-start space-x-4">
                         <div class="flex-shrink-0 w-12 h-12 bg-secondary-100 rounded-lg flex items-center justify-center">
                             <svg class="w-6 h-6 text-secondary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
                             </svg>
                         </div>
                         <div>
-                            <h3 class="text-lg font-semibold text-gray-900 mb-2">{{ __('services.accounting.services.bookkeeping.title') }}</h3>
-                            <p class="text-gray-600">{{ __('services.accounting.services.bookkeeping.description') }}</p>
+                            <h3 class="text-lg font-semibold text-gray-900 mb-2">{{ __('services.financial_planning.services.investment_strategy.title') }}</h3>
+                            <p class="text-gray-600">{{ __('services.financial_planning.services.investment_strategy.description') }}</p>
                         </div>
                     </div>
                     
                     <div class="flex items-start space-x-4">
                         <div class="flex-shrink-0 w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center">
                             <svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
                             </svg>
                         </div>
                         <div>
-                            <h3 class="text-lg font-semibold text-gray-900 mb-2">{{ __('services.accounting.services.financial_statements.title') }}</h3>
-                            <p class="text-gray-600">{{ __('services.accounting.services.financial_statements.description') }}</p>
+                            <h3 class="text-lg font-semibold text-gray-900 mb-2">{{ __('services.financial_planning.services.risk_management.title') }}</h3>
+                            <p class="text-gray-600">{{ __('services.financial_planning.services.risk_management.description') }}</p>
                         </div>
                     </div>
                     
@@ -138,20 +138,20 @@
                             </svg>
                         </div>
                         <div>
-                            <h3 class="text-lg font-semibold text-gray-900 mb-2">{{ __('services.accounting.services.payroll.title') }}</h3>
-                            <p class="text-gray-600">{{ __('services.accounting.services.payroll.description') }}</p>
+                            <h3 class="text-lg font-semibold text-gray-900 mb-2">{{ __('services.financial_planning.services.wealth_building.title') }}</h3>
+                            <p class="text-gray-600">{{ __('services.financial_planning.services.wealth_building.description') }}</p>
                         </div>
                     </div>
                     
                     <div class="flex items-start space-x-4">
                         <div class="flex-shrink-0 w-12 h-12 bg-secondary-100 rounded-lg flex items-center justify-center">
                             <svg class="w-6 h-6 text-secondary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
                             </svg>
                         </div>
                         <div>
-                            <h3 class="text-lg font-semibold text-gray-900 mb-2">{{ __('services.accounting.services.compliance.title') }}</h3>
-                            <p class="text-gray-600">{{ __('services.accounting.services.compliance.description') }}</p>
+                            <h3 class="text-lg font-semibold text-gray-900 mb-2">{{ __('services.financial_planning.services.retirement_planning.title') }}</h3>
+                            <p class="text-gray-600">{{ __('services.financial_planning.services.retirement_planning.description') }}</p>
                         </div>
                     </div>
                 </div>
@@ -161,7 +161,7 @@
             <div class="lg:col-span-1">
                 <!-- Quick Contact -->
                 <div class="bg-gray-50 rounded-xl p-6 mb-8">
-                    <h3 class="text-lg font-semibold text-gray-900 mb-4">{{ __('services.accounting.contact.title') }}</h3>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-4">{{ __('services.financial_planning.contact.title') }}</h3>
                     <div class="space-y-3 text-sm">
                         <div class="flex items-center space-x-3">
                             <svg class="w-5 h-5 text-secondary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -173,39 +173,44 @@
                             <svg class="w-5 h-5 text-secondary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
                             </svg>
-                            <span class="text-gray-600">accounting@consultancy.rw</span>
+                            <span class="text-gray-600">financial@consultancy.rw</span>
                         </div>
                         <div class="flex items-center space-x-3">
                             <svg class="w-5 h-5 text-secondary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                             </svg>
-                            <span class="text-gray-600">{{ __('services.accounting.contact.hours') }}</span>
+                            <span class="text-gray-600">{{ __('services.financial_planning.contact.hours') }}</span>
                         </div>
                     </div>
                     <a href="{{ route('contact', app()->getLocale()) }}" class="block w-full bg-secondary-600 hover:bg-secondary-700 text-white text-center py-3 rounded-lg font-semibold mt-4 transition-colors duration-200">
-                        {{ __('services.accounting.contact.cta') }}
+                        {{ __('services.financial_planning.contact.cta') }}
                     </a>
                 </div>
                 
-                <!-- Service Packages -->
+                <!-- Investment Calculator -->
                 <div class="bg-white border border-gray-200 rounded-xl p-6">
-                    <h3 class="text-lg font-semibold text-gray-900 mb-4">{{ __('services.accounting.packages.title') }}</h3>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-4">{{ __('services.financial_planning.calculator.title') }}</h3>
                     <div class="space-y-4">
-                        <div class="border-l-4 border-secondary-600 pl-4">
-                            <h4 class="font-semibold text-gray-900">{{ __('services.accounting.packages.basic.title') }}</h4>
-                            <p class="text-sm text-gray-600 mb-2">{{ __('services.accounting.packages.basic.description') }}</p>
-                            <p class="text-lg font-bold text-secondary-600">$300/{{ __('services.accounting.packages.month') }}</p>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">{{ __('services.financial_planning.calculator.initial_investment') }}</label>
+                            <input type="number" class="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm" placeholder="$10,000">
                         </div>
-                        <div class="border-l-4 border-primary-600 pl-4">
-                            <h4 class="font-semibold text-gray-900">{{ __('services.accounting.packages.standard.title') }}</h4>
-                            <p class="text-sm text-gray-600 mb-2">{{ __('services.accounting.packages.standard.description') }}</p>
-                            <p class="text-lg font-bold text-primary-600">$600/{{ __('services.accounting.packages.month') }}</p>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">{{ __('services.financial_planning.calculator.monthly_contribution') }}</label>
+                            <input type="number" class="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm" placeholder="$500">
                         </div>
-                        <div class="border-l-4 border-accent-600 pl-4">
-                            <h4 class="font-semibold text-gray-900">{{ __('services.accounting.packages.premium.title') }}</h4>
-                            <p class="text-sm text-gray-600 mb-2">{{ __('services.accounting.packages.premium.description') }}</p>
-                            <p class="text-lg font-bold text-accent-600">{{ __('services.accounting.packages.premium.price') }}</p>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">{{ __('services.financial_planning.calculator.time_horizon') }}</label>
+                            <select class="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm">
+                                <option>5 years</option>
+                                <option>10 years</option>
+                                <option>15 years</option>
+                                <option>20 years</option>
+                            </select>
                         </div>
+                        <button class="w-full bg-secondary-600 hover:bg-secondary-700 text-white py-2 rounded-lg font-medium text-sm transition-colors duration-200">
+                            {{ __('services.financial_planning.calculator.calculate') }}
+                        </button>
                     </div>
                 </div>
             </div>
@@ -213,108 +218,108 @@
     </div>
 </section>
 
-<!-- Services Detail Section -->
+<!-- Financial Services Detail -->
 <section id="services" class="py-16 bg-gray-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-12">
             <h2 class="text-3xl font-bold text-gray-900 mb-4">
-                {{ __('services.accounting.detailed_services.title') }}
+                {{ __('services.financial_planning.detailed_services.title') }}
             </h2>
             <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                {{ __('services.accounting.detailed_services.subtitle') }}
+                {{ __('services.financial_planning.detailed_services.subtitle') }}
             </p>
         </div>
         
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <!-- Bookkeeping -->
+            <!-- Investment Strategy -->
             <div class="bg-white rounded-xl shadow-lg p-6">
                 <div class="w-12 h-12 bg-secondary-100 rounded-lg flex items-center justify-center mb-4">
                     <svg class="w-6 h-6 text-secondary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
                     </svg>
                 </div>
-                <h3 class="text-xl font-semibold text-gray-900 mb-3">{{ __('services.accounting.services.bookkeeping.title') }}</h3>
-                <p class="text-gray-600 mb-4">{{ __('services.accounting.services.bookkeeping.detailed_description') }}</p>
+                <h3 class="text-xl font-semibold text-gray-900 mb-3">{{ __('services.financial_planning.services.investment_strategy.title') }}</h3>
+                <p class="text-gray-600 mb-4">{{ __('services.financial_planning.services.investment_strategy.detailed_description') }}</p>
                 <ul class="text-sm text-gray-600 space-y-2">
                     <li class="flex items-center">
                         <svg class="w-4 h-4 text-secondary-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                         </svg>
-                        {{ __('services.accounting.services.bookkeeping.features.daily_transactions') }}
+                        {{ __('services.financial_planning.services.investment_strategy.features.portfolio_design') }}
                     </li>
                     <li class="flex items-center">
                         <svg class="w-4 h-4 text-secondary-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                         </svg>
-                        {{ __('services.accounting.services.bookkeeping.features.bank_reconciliation') }}
+                        {{ __('services.financial_planning.services.investment_strategy.features.asset_allocation') }}
                     </li>
                     <li class="flex items-center">
                         <svg class="w-4 h-4 text-secondary-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                         </svg>
-                        {{ __('services.accounting.services.bookkeeping.features.expense_tracking') }}
+                        {{ __('services.financial_planning.services.investment_strategy.features.performance_monitoring') }}
                     </li>
                 </ul>
             </div>
             
-            <!-- Financial Statements -->
+            <!-- Risk Management -->
             <div class="bg-white rounded-xl shadow-lg p-6">
                 <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mb-4">
                     <svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
                     </svg>
                 </div>
-                <h3 class="text-xl font-semibold text-gray-900 mb-3">{{ __('services.accounting.services.financial_statements.title') }}</h3>
-                <p class="text-gray-600 mb-4">{{ __('services.accounting.services.financial_statements.detailed_description') }}</p>
+                <h3 class="text-xl font-semibold text-gray-900 mb-3">{{ __('services.financial_planning.services.risk_management.title') }}</h3>
+                <p class="text-gray-600 mb-4">{{ __('services.financial_planning.services.risk_management.detailed_description') }}</p>
                 <ul class="text-sm text-gray-600 space-y-2">
                     <li class="flex items-center">
                         <svg class="w-4 h-4 text-primary-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                         </svg>
-                        {{ __('services.accounting.services.financial_statements.features.income_statement') }}
+                        {{ __('services.financial_planning.services.risk_management.features.risk_assessment') }}
                     </li>
                     <li class="flex items-center">
                         <svg class="w-4 h-4 text-primary-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                         </svg>
-                        {{ __('services.accounting.services.financial_statements.features.balance_sheet') }}
+                        {{ __('services.financial_planning.services.risk_management.features.insurance_planning') }}
                     </li>
                     <li class="flex items-center">
                         <svg class="w-4 h-4 text-primary-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                         </svg>
-                        {{ __('services.accounting.services.financial_statements.features.cash_flow') }}
+                        {{ __('services.financial_planning.services.risk_management.features.diversification') }}
                     </li>
                 </ul>
             </div>
             
-            <!-- Tax Preparation -->
+            <!-- Retirement Planning -->
             <div class="bg-white rounded-xl shadow-lg p-6">
                 <div class="w-12 h-12 bg-accent-100 rounded-lg flex items-center justify-center mb-4">
                     <svg class="w-6 h-6 text-accent-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
                     </svg>
                 </div>
-                <h3 class="text-xl font-semibold text-gray-900 mb-3">{{ __('services.accounting.services.tax_preparation.title') }}</h3>
-                <p class="text-gray-600 mb-4">{{ __('services.accounting.services.tax_preparation.detailed_description') }}</p>
+                <h3 class="text-xl font-semibold text-gray-900 mb-3">{{ __('services.financial_planning.services.retirement_planning.title') }}</h3>
+                <p class="text-gray-600 mb-4">{{ __('services.financial_planning.services.retirement_planning.detailed_description') }}</p>
                 <ul class="text-sm text-gray-600 space-y-2">
                     <li class="flex items-center">
                         <svg class="w-4 h-4 text-accent-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                         </svg>
-                        {{ __('services.accounting.services.tax_preparation.features.vat_returns') }}
+                        {{ __('services.financial_planning.services.retirement_planning.features.retirement_goals') }}
                     </li>
                     <li class="flex items-center">
                         <svg class="w-4 h-4 text-accent-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                         </svg>
-                        {{ __('services.accounting.services.tax_preparation.features.income_tax') }}
+                        {{ __('services.financial_planning.services.retirement_planning.features.savings_strategy') }}
                     </li>
                     <li class="flex items-center">
                         <svg class="w-4 h-4 text-accent-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                         </svg>
-                        {{ __('services.accounting.services.tax_preparation.features.compliance') }}
+                        {{ __('services.financial_planning.services.retirement_planning.features.income_planning') }}
                     </li>
                 </ul>
             </div>
@@ -327,10 +332,10 @@
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-12">
             <h2 class="text-3xl font-bold text-gray-900 mb-4">
-                {{ __('services.accounting.consultation.title') }}
+                {{ __('services.financial_planning.consultation.title') }}
             </h2>
             <p class="text-xl text-gray-600">
-                {{ __('services.accounting.consultation.subtitle') }}
+                {{ __('services.financial_planning.consultation.subtitle') }}
             </p>
         </div>
         
@@ -348,8 +353,15 @@
                 </div>
                 
                 <div>
-                    <label for="company" class="block text-sm font-medium text-gray-700 mb-2">{{ __('common.form.company') }}</label>
-                    <input type="text" id="company" name="company" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-secondary-500 focus:border-secondary-500">
+                    <label for="age" class="block text-sm font-medium text-gray-700 mb-2">{{ __('services.financial_planning.form.age') }}</label>
+                    <select id="age" name="age" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-secondary-500 focus:border-secondary-500">
+                        <option value="">{{ __('services.financial_planning.form.select_age') }}</option>
+                        <option value="20-30">20-30</option>
+                        <option value="31-40">31-40</option>
+                        <option value="41-50">41-50</option>
+                        <option value="51-60">51-60</option>
+                        <option value="60+">60+</option>
+                    </select>
                 </div>
                 
                 <div>
@@ -358,25 +370,25 @@
                 </div>
                 
                 <div class="md:col-span-2">
-                    <label for="service_needed" class="block text-sm font-medium text-gray-700 mb-2">{{ __('services.accounting.form.service_needed') }}</label>
-                    <select id="service_needed" name="service_needed" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-secondary-500 focus:border-secondary-500">
-                        <option value="">{{ __('services.accounting.form.select_service') }}</option>
-                        <option value="bookkeeping">{{ __('services.accounting.services.bookkeeping.title') }}</option>
-                        <option value="financial_statements">{{ __('services.accounting.services.financial_statements.title') }}</option>
-                        <option value="tax_preparation">{{ __('services.accounting.services.tax_preparation.title') }}</option>
-                        <option value="payroll">{{ __('services.accounting.services.payroll.title') }}</option>
-                        <option value="full_service">{{ __('services.accounting.form.full_service') }}</option>
+                    <label for="financial_goals" class="block text-sm font-medium text-gray-700 mb-2">{{ __('services.financial_planning.form.financial_goals') }}</label>
+                    <select id="financial_goals" name="financial_goals" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-secondary-500 focus:border-secondary-500">
+                        <option value="">{{ __('services.financial_planning.form.select_goals') }}</option>
+                        <option value="retirement">{{ __('services.financial_planning.form.goals.retirement') }}</option>
+                        <option value="wealth_building">{{ __('services.financial_planning.form.goals.wealth_building') }}</option>
+                        <option value="education">{{ __('services.financial_planning.form.goals.education') }}</option>
+                        <option value="home_purchase">{{ __('services.financial_planning.form.goals.home_purchase') }}</option>
+                        <option value="business_investment">{{ __('services.financial_planning.form.goals.business_investment') }}</option>
                     </select>
                 </div>
                 
                 <div class="md:col-span-2">
                     <label for="message" class="block text-sm font-medium text-gray-700 mb-2">{{ __('common.form.message') }}</label>
-                    <textarea id="message" name="message" rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-secondary-500 focus:border-secondary-500" placeholder="{{ __('services.accounting.form.message_placeholder') }}"></textarea>
+                    <textarea id="message" name="message" rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-secondary-500 focus:border-secondary-500" placeholder="{{ __('services.financial_planning.form.message_placeholder') }}"></textarea>
                 </div>
                 
                 <div class="md:col-span-2">
                     <button type="submit" class="w-full bg-secondary-600 hover:bg-secondary-700 text-white py-4 px-8 rounded-lg font-semibold text-lg transition-colors duration-200">
-                        {{ __('services.accounting.form.submit') }}
+                        {{ __('services.financial_planning.form.submit') }}
                     </button>
                 </div>
             </form>
@@ -389,14 +401,42 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-12">
             <h2 class="text-3xl font-bold text-gray-900 mb-4">
-                {{ __('services.accounting.related.title') }}
+                {{ __('services.financial_planning.related.title') }}
             </h2>
             <p class="text-xl text-gray-600">
-                {{ __('services.accounting.related.subtitle') }}
+                {{ __('services.financial_planning.related.subtitle') }}
             </p>
         </div>
         
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Business Consultancy -->
+            <div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 p-6">
+                <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mb-4">
+                    <svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-900 mb-2">{{ __('services.business_consultancy.title') }}</h3>
+                <p class="text-gray-600 mb-4">{{ __('services.business_consultancy.short_description') }}</p>
+                <a href="{{ route('services.business-consultancy', app()->getLocale()) }}" class="text-primary-600 hover:text-primary-700 font-semibold">
+                    {{ __('common.learn_more') }} →
+                </a>
+            </div>
+            
+            <!-- Accounting Services -->
+            <div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 p-6">
+                <div class="w-12 h-12 bg-secondary-100 rounded-lg flex items-center justify-center mb-4">
+                    <svg class="w-6 h-6 text-secondary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-900 mb-2">{{ __('services.accounting.title') }}</h3>
+                <p class="text-gray-600 mb-4">{{ __('services.accounting.short_description') }}</p>
+                <a href="{{ route('services.accounting', app()->getLocale()) }}" class="text-secondary-600 hover:text-secondary-700 font-semibold">
+                    {{ __('common.learn_more') }} →
+                </a>
+            </div>
+            
             <!-- Tax Advisory -->
             <div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 p-6">
                 <div class="w-12 h-12 bg-accent-100 rounded-lg flex items-center justify-center mb-4">
@@ -407,34 +447,6 @@
                 <h3 class="text-xl font-semibold text-gray-900 mb-2">{{ __('services.tax_advisory.title') }}</h3>
                 <p class="text-gray-600 mb-4">{{ __('services.tax_advisory.short_description') }}</p>
                 <a href="{{ route('services.tax-advisory', app()->getLocale()) }}" class="text-accent-600 hover:text-accent-700 font-semibold">
-                    {{ __('common.learn_more') }} →
-                </a>
-            </div>
-            
-            <!-- Financial Planning -->
-            <div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 p-6">
-                <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mb-4">
-                    <svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
-                    </svg>
-                </div>
-                <h3 class="text-xl font-semibold text-gray-900 mb-2">{{ __('services.financial_planning.title') }}</h3>
-                <p class="text-gray-600 mb-4">{{ __('services.financial_planning.short_description') }}</p>
-                <a href="{{ route('services.financial-planning', app()->getLocale()) }}" class="text-primary-600 hover:text-primary-700 font-semibold">
-                    {{ __('common.learn_more') }} →
-                </a>
-            </div>
-            
-            <!-- Audit & Compliance -->
-            <div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 p-6">
-                <div class="w-12 h-12 bg-secondary-100 rounded-lg flex items-center justify-center mb-4">
-                    <svg class="w-6 h-6 text-secondary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                    </svg>
-                </div>
-                <h3 class="text-xl font-semibold text-gray-900 mb-2">{{ __('services.audit_compliance.title') }}</h3>
-                <p class="text-gray-600 mb-4">{{ __('services.audit_compliance.short_description') }}</p>
-                <a href="{{ route('services.audit-compliance', app()->getLocale()) }}" class="text-secondary-600 hover:text-secondary-700 font-semibold">
                     {{ __('common.learn_more') }} →
                 </a>
             </div>

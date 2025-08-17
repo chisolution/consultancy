@@ -4,6 +4,7 @@ return [
     // Business Consultancy Service
     'business_consultancy' => [
         'title' => 'Business Consultancy Services',
+        'short_description' => 'Strategic business consultancy services including planning, market analysis, and growth strategies for sustainable business development.',
         'meta' => [
             'title' => 'Business Consultancy Services | Strategic Planning & Growth | Rwanda',
             'description' => 'Expert business consultancy services in Rwanda. Strategic planning, market analysis, and growth strategies for businesses across East Africa and globally.',
@@ -111,12 +112,217 @@ return [
     'business_registration' => [
         'title' => 'Business Registration & Branding',
         'short_description' => 'Complete business registration services in Rwanda with professional branding and legal compliance support.',
+        'meta' => [
+            'title' => 'Business Registration & Branding Services | Company Formation | Rwanda',
+            'description' => 'Professional business registration services in Rwanda. Complete company formation, branding, and legal compliance support for new businesses.',
+            'keywords' => 'business registration Rwanda, company formation Kigali, business license Rwanda, brand development East Africa, legal compliance Rwanda',
+        ],
+        'hero' => [
+            'subtitle' => 'Launch your business with confidence. Our comprehensive registration and branding services handle all legal requirements while building a strong foundation for your brand identity and market presence.',
+        ],
+        'stats' => [
+            'businesses_registered' => 'Businesses Registered',
+            'days_average' => 'Days Average',
+            'success_rate' => 'Success Rate',
+            'years_experience' => 'Years Experience',
+        ],
+        'cta' => [
+            'start_registration' => 'Start Registration',
+            'learn_process' => 'Learn Our Process',
+        ],
+        'overview' => [
+            'title' => 'Complete Business Formation & Branding',
+            'description' => 'Starting a business in Rwanda requires navigating complex legal requirements and establishing a strong brand presence. Our comprehensive registration and branding services handle every aspect of business formation, from legal documentation to brand identity development.',
+            'expertise' => 'Our team combines legal expertise with creative branding skills to ensure your business launches successfully. We handle all interactions with Rwanda Development Board (RDB) and other regulatory bodies while developing a professional brand that resonates with your target market.',
+        ],
+        'services' => [
+            'company_registration' => [
+                'title' => 'Company Registration',
+                'description' => 'Complete legal registration with Rwanda Development Board and all required authorities.',
+            ],
+            'brand_development' => [
+                'title' => 'Brand Development',
+                'description' => 'Professional logo design, brand identity, and marketing materials creation.',
+            ],
+            'compliance' => [
+                'title' => 'Legal Compliance',
+                'description' => 'Ensuring full compliance with Rwanda business regulations and requirements.',
+            ],
+            'ongoing_support' => [
+                'title' => 'Ongoing Support',
+                'description' => 'Continued support for business operations and regulatory compliance.',
+            ],
+        ],
+        'contact' => [
+            'title' => 'Start Your Business Today',
+            'hours' => 'Mon-Fri 8AM-6PM CAT',
+            'cta' => 'Get Started',
+        ],
+        'packages' => [
+            'title' => 'Registration Packages',
+            'basic' => [
+                'title' => 'Basic Registration',
+                'description' => 'Company registration with RDB and basic legal documentation.',
+            ],
+            'complete' => [
+                'title' => 'Complete Package',
+                'description' => 'Registration plus basic branding and business setup support.',
+            ],
+            'premium' => [
+                'title' => 'Premium Launch',
+                'description' => 'Full registration, professional branding, and comprehensive business launch support.',
+            ],
+        ],
+        'process' => [
+            'title' => 'Our Registration Process',
+            'subtitle' => 'A streamlined 5-step process that gets your business registered and ready to operate in Rwanda.',
+            'step1' => [
+                'title' => 'Consultation',
+                'description' => 'Initial consultation to understand your business needs and structure.',
+            ],
+            'step2' => [
+                'title' => 'Documentation',
+                'description' => 'Prepare and review all required legal documents and applications.',
+            ],
+            'step3' => [
+                'title' => 'Submission',
+                'description' => 'Submit applications to RDB and other relevant authorities.',
+            ],
+            'step4' => [
+                'title' => 'Processing',
+                'description' => 'Monitor application progress and handle any additional requirements.',
+            ],
+            'step5' => [
+                'title' => 'Completion',
+                'description' => 'Receive certificates and complete final setup requirements.',
+            ],
+        ],
+        'consultation' => [
+            'title' => 'Start Your Business Registration',
+            'subtitle' => 'Get started with a free consultation to discuss your business registration and branding needs.',
+        ],
+        'form' => [
+            'business_name' => 'Proposed Business Name',
+            'business_type' => 'Business Type',
+            'select_type' => 'Select your business type',
+            'types' => [
+                'private_company' => 'Private Limited Company',
+                'public_company' => 'Public Limited Company',
+                'partnership' => 'Partnership',
+                'sole_proprietorship' => 'Sole Proprietorship',
+                'ngo' => 'Non-Governmental Organization',
+            ],
+            'message_placeholder' => 'Tell us about your business idea and registration needs...',
+            'submit' => 'Start Registration Process',
+        ],
+        'related' => [
+            'title' => 'Launch Your Business Successfully',
+            'subtitle' => 'Complete your business setup with our additional professional services.',
+        ],
     ],
 
     // Financial Planning Service
     'financial_planning' => [
         'title' => 'Financial Planning & Advisory',
         'short_description' => 'Comprehensive financial planning services including investment strategy, risk management, and wealth building.',
+        'meta' => [
+            'title' => 'Financial Planning & Advisory Services | Investment Strategy | Rwanda',
+            'description' => 'Expert financial planning and advisory services in Rwanda. Investment strategy, risk management, wealth building, and retirement planning for individuals and businesses.',
+            'keywords' => 'financial planning Rwanda, investment advisory Kigali, wealth management East Africa, retirement planning Rwanda, financial advisor Rwanda',
+        ],
+        'hero' => [
+            'subtitle' => 'Build lasting wealth with strategic financial planning. Our expert advisors create personalized investment strategies, manage risk, and guide you toward your financial goals with proven methodologies and market expertise.',
+        ],
+        'stats' => [
+            'assets_managed' => 'Assets Managed',
+            'client_satisfaction' => 'Client Satisfaction',
+            'years_experience' => 'Years Experience',
+            'avg_returns' => 'Avg. Annual Returns',
+        ],
+        'cta' => [
+            'get_plan' => 'Get Financial Plan',
+            'view_services' => 'View Services',
+        ],
+        'overview' => [
+            'title' => 'Strategic Financial Planning & Wealth Management',
+            'description' => 'Our financial planning services combine investment expertise with personalized strategies to help you build, protect, and grow your wealth. We provide comprehensive financial advisory services that address your unique goals, risk tolerance, and time horizon.',
+            'expertise' => 'Our certified financial planners bring deep market knowledge and proven investment strategies to help you navigate complex financial decisions. From retirement planning to wealth building, we provide the guidance and tools you need to achieve financial success.',
+        ],
+        'services' => [
+            'investment_strategy' => [
+                'title' => 'Investment Strategy',
+                'description' => 'Customized investment portfolios designed to meet your financial goals.',
+                'detailed_description' => 'Comprehensive investment planning with portfolio design, asset allocation, and performance monitoring.',
+                'features' => [
+                    'portfolio_design' => 'Custom portfolio design',
+                    'asset_allocation' => 'Strategic asset allocation',
+                    'performance_monitoring' => 'Regular performance reviews',
+                ],
+            ],
+            'risk_management' => [
+                'title' => 'Risk Management',
+                'description' => 'Protect your wealth with comprehensive risk assessment and mitigation strategies.',
+                'detailed_description' => 'Professional risk assessment and insurance planning to protect your financial future.',
+                'features' => [
+                    'risk_assessment' => 'Comprehensive risk analysis',
+                    'insurance_planning' => 'Insurance needs assessment',
+                    'diversification' => 'Portfolio diversification',
+                ],
+            ],
+            'wealth_building' => [
+                'title' => 'Wealth Building',
+                'description' => 'Long-term strategies for sustainable wealth accumulation and growth.',
+            ],
+            'retirement_planning' => [
+                'title' => 'Retirement Planning',
+                'description' => 'Secure your future with comprehensive retirement planning strategies.',
+                'detailed_description' => 'Complete retirement planning with goal setting, savings strategies, and income planning.',
+                'features' => [
+                    'retirement_goals' => 'Retirement goal setting',
+                    'savings_strategy' => 'Savings optimization',
+                    'income_planning' => 'Retirement income planning',
+                ],
+            ],
+        ],
+        'contact' => [
+            'title' => 'Get Financial Advice',
+            'hours' => 'Mon-Fri 8AM-6PM CAT',
+            'cta' => 'Schedule Consultation',
+        ],
+        'calculator' => [
+            'title' => 'Investment Calculator',
+            'initial_investment' => 'Initial Investment',
+            'monthly_contribution' => 'Monthly Contribution',
+            'time_horizon' => 'Time Horizon',
+            'calculate' => 'Calculate Returns',
+        ],
+        'detailed_services' => [
+            'title' => 'Comprehensive Financial Services',
+            'subtitle' => 'Complete financial planning solutions tailored to your unique goals and circumstances.',
+        ],
+        'consultation' => [
+            'title' => 'Start Your Financial Journey',
+            'subtitle' => 'Schedule a consultation to discuss your financial goals and discover how we can help you achieve them.',
+        ],
+        'form' => [
+            'age' => 'Age Range',
+            'select_age' => 'Select your age range',
+            'financial_goals' => 'Primary Financial Goal',
+            'select_goals' => 'Select your primary goal',
+            'goals' => [
+                'retirement' => 'Retirement Planning',
+                'wealth_building' => 'Wealth Building',
+                'education' => 'Education Funding',
+                'home_purchase' => 'Home Purchase',
+                'business_investment' => 'Business Investment',
+            ],
+            'message_placeholder' => 'Tell us about your financial goals and current situation...',
+            'submit' => 'Request Financial Consultation',
+        ],
+        'related' => [
+            'title' => 'Complete Financial Solutions',
+            'subtitle' => 'Enhance your financial strategy with our additional professional services.',
+        ],
     ],
 
     // Training Service

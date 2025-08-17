@@ -220,16 +220,17 @@
                 <div>
                     <h3 class="text-lg font-semibold mb-4">{{ __('common.footer.contact_info') }}</h3>
                     <div class="space-y-2 text-gray-300">
-                        <p>{{ __('common.cta.email') }}</p>
-                        <p>{{ __('common.cta.phone') }}</p>
+                        <p>{{ __('common.footer.location.email') }}</p>
+                        <p>{{ __('common.footer.location.phone') }}</p>
                     </div>
                     <div class="mt-4">
-                        <h4 class="font-medium mb-2">{{ __('common.footer.offices') }}</h4>
+                        <h4 class="font-medium mb-2">{{ __('common.footer.office_location') }}</h4>
                         <div class="text-sm text-gray-400 space-y-1">
-                            <p>{{ __('common.footer.locations.rwanda') }}</p>
-                            <p>{{ __('common.footer.locations.canada') }}</p>
-                            <p>{{ __('common.footer.locations.usa') }}</p>
-                            <p>{{ __('common.footer.locations.cameroon') }}</p>
+                            <p>{{ __('common.footer.location.address') }}</p>
+                            <p>{{ __('common.footer.location.city') }}</p>
+                        </div>
+                        <div class="mt-3 text-xs text-gray-500">
+                            <p>{{ __('common.footer.global_service_note') }}</p>
                         </div>
                     </div>
                 </div>

@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title', __('common.contact.title'))
-@section('description', 'Contact our professional business consultancy team across Rwanda, Canada, US, and Cameroon')
+@section('description', 'Contact our professional business consultancy team in Kigali, Rwanda. Global service delivery with local expertise.')
 
 @section('content')
 <!-- Page Header -->
@@ -98,9 +98,9 @@
                 <h2 class="text-2xl font-bold text-gray-900 mb-6">{{ __('common.contact.info.title') }}</h2>
                 <p class="text-gray-600 mb-8">{{ __('common.contact.info.description') }}</p>
 
-                <!-- Office Locations -->
-                <div class="space-y-8">
-                    <!-- Rwanda Office -->
+                <!-- Office Location -->
+                <div class="bg-gray-50 rounded-xl p-6 mb-8">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-4">{{ __('common.footer.office_location') }}</h3>
                     <div class="flex items-start">
                         <div class="flex-shrink-0">
                             <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center">
@@ -108,55 +108,43 @@
                             </div>
                         </div>
                         <div class="ml-4">
-                            <h3 class="text-lg font-semibold text-gray-900">{{ __('common.footer.locations.rwanda') }}</h3>
-                            <p class="text-gray-600">KG 123 St, Gasabo District</p>
-                            <p class="text-gray-600">Kigali, Rwanda</p>
-                            <p class="text-primary-600 font-medium">+250 XXX XXX XXX</p>
+                            <h4 class="text-lg font-semibold text-gray-900">{{ __('common.footer.location.city') }}</h4>
+                            <p class="text-gray-600">{{ __('common.footer.location.address') }}</p>
+                            <p class="text-gray-600">{{ __('common.footer.location.city') }}</p>
+                            <p class="text-primary-600 font-medium">{{ __('common.footer.location.phone') }}</p>
+                            <p class="text-primary-600 font-medium">{{ __('common.footer.location.email') }}</p>
                         </div>
                     </div>
+                </div>
 
-                    <!-- Canada Office -->
-                    <div class="flex items-start">
-                        <div class="flex-shrink-0">
-                            <div class="w-12 h-12 bg-secondary-100 rounded-lg flex items-center justify-center">
-                                <span class="text-2xl">🇨🇦</span>
-                            </div>
+                <!-- Global Service Delivery -->
+                <div class="bg-gradient-to-r from-primary-50 to-secondary-50 rounded-xl p-6">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-3">{{ __('common.contact.global_service.title') }}</h3>
+                    <p class="text-gray-600 mb-4">{{ __('common.contact.global_service.description') }}</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+                        <div class="flex items-center">
+                            <svg class="w-4 h-4 text-secondary-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span class="text-gray-700">{{ __('common.contact.global_service.features.remote_consultation') }}</span>
                         </div>
-                        <div class="ml-4">
-                            <h3 class="text-lg font-semibold text-gray-900">{{ __('common.footer.locations.canada') }}</h3>
-                            <p class="text-gray-600">123 Bay Street, Suite 1000</p>
-                            <p class="text-gray-600">Toronto, ON M5H 2Y4</p>
-                            <p class="text-primary-600 font-medium">+1 416 XXX XXXX</p>
+                        <div class="flex items-center">
+                            <svg class="w-4 h-4 text-secondary-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span class="text-gray-700">{{ __('common.contact.global_service.features.specialist_partnerships') }}</span>
                         </div>
-                    </div>
-
-                    <!-- USA Office -->
-                    <div class="flex items-start">
-                        <div class="flex-shrink-0">
-                            <div class="w-12 h-12 bg-accent-100 rounded-lg flex items-center justify-center">
-                                <span class="text-2xl">🇺🇸</span>
-                            </div>
+                        <div class="flex items-center">
+                            <svg class="w-4 h-4 text-secondary-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span class="text-gray-700">{{ __('common.contact.global_service.features.cultural_competency') }}</span>
                         </div>
-                        <div class="ml-4">
-                            <h3 class="text-lg font-semibold text-gray-900">{{ __('common.footer.locations.usa') }}</h3>
-                            <p class="text-gray-600">123 Wall Street, Floor 15</p>
-                            <p class="text-gray-600">New York, NY 10005</p>
-                            <p class="text-primary-600 font-medium">+1 212 XXX XXXX</p>
-                        </div>
-                    </div>
-
-                    <!-- Cameroon Office -->
-                    <div class="flex items-start">
-                        <div class="flex-shrink-0">
-                            <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center">
-                                <span class="text-2xl">🇨🇲</span>
-                            </div>
-                        </div>
-                        <div class="ml-4">
-                            <h3 class="text-lg font-semibold text-gray-900">{{ __('common.footer.locations.cameroon') }}</h3>
-                            <p class="text-gray-600">Rue de la Liberté</p>
-                            <p class="text-gray-600">Douala, Cameroon</p>
-                            <p class="text-primary-600 font-medium">+237 XXX XXX XXX</p>
+                        <div class="flex items-center">
+                            <svg class="w-4 h-4 text-secondary-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span class="text-gray-700">{{ __('common.contact.global_service.features.local_expertise') }}</span>
                         </div>
                     </div>
                 </div>
