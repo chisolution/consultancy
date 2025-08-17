@@ -3,11 +3,12 @@
 
 ### **Core Business Rules**
 
-#### **1. Multi-Market Operations**
-- **Geographic Scope**: Services must be available across Rwanda, Canada, US, and Cameroon
-- **Legal Compliance**: All services must comply with local regulations in each jurisdiction
-- **Currency Handling**: Pricing must support multiple currencies (RWF, CAD, USD, XAF)
-- **Time Zone Management**: Business hours and scheduling must accommodate all 4 time zones
+#### **1. Global Service Delivery Model**
+- **Primary Location**: Single office based in Kigali, Rwanda
+- **Service Delivery**: Global reach through specialist partnerships and remote delivery
+- **Legal Compliance**: Rwanda business registration with international service capability
+- **Currency Handling**: Primary USD pricing with local currency options where applicable
+- **Time Zone Management**: Rwanda business hours (CAT) with flexible scheduling for global clients
 
 #### **2. Service Delivery Standards**
 - **Response Time**: Initial client contact within 24 hours during business days
@@ -32,6 +33,13 @@
 - **Continuing Education**: Minimum 40 hours annual professional development
 - **Conflict of Interest**: Mandatory disclosure and management procedures
 - **Confidentiality**: Strict client confidentiality and non-disclosure protocols
+
+#### **6. Office Operations**
+- **Physical Presence**: Professional office in Kigali, Rwanda with global service delivery
+- **Local Staff**: Core team based in Rwanda with specialist partners globally
+- **Office Hours**: Rwanda business hours (8:00 AM - 6:00 PM CAT) with flexible global scheduling
+- **Professional Standards**: Office meets international consultancy standards and Rwanda business requirements
+- **Contact Information**: Single Rwanda office contact details for all communications
 
 ---
 
