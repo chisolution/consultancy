@@ -158,4 +158,20 @@ return [
             'description' => 'Contactez-nous à travers n\'importe lequel de nos bureaux mondiaux.',
         ],
     ],
+
+    // Form Labels
+    'form' => [
+        'name' => 'Nom Complet',
+        'email' => 'Adresse Email',
+        'phone' => 'Numéro de Téléphone',
+        'company' => 'Nom de l\'Entreprise',
+        'message' => 'Message',
+        'submit' => 'Envoyer le Message',
+    ],
+
+    // Common Actions
+    'learn_more' => 'En Savoir Plus',
+    'get_started' => 'Commencer',
+    'contact_us' => 'Nous Contacter',
+    'read_more' => 'Lire Plus',
 ];

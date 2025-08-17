@@ -158,4 +158,20 @@ return [
             'description' => 'Reach out to us through any of our global offices.',
         ],
     ],
+
+    // Form Labels
+    'form' => [
+        'name' => 'Full Name',
+        'email' => 'Email Address',
+        'phone' => 'Phone Number',
+        'company' => 'Company Name',
+        'message' => 'Message',
+        'submit' => 'Send Message',
+    ],
+
+    // Common Actions
+    'learn_more' => 'Learn More',
+    'get_started' => 'Get Started',
+    'contact_us' => 'Contact Us',
+    'read_more' => 'Read More',
 ];
