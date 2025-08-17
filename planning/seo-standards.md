@@ -7,6 +7,29 @@
 **Geographic Focus**: Rwanda (primary), East Africa (secondary), Global (tertiary)  
 **Languages**: English (primary), French (secondary)
 
+**Local SEO Strategy**:
+**Cannibalization**: 10% of traffic from Rwanda to global markets 
+- avoid duplicate content
+- use canonical tags
+- use hreflang tags
+- use geo-targeting
+- use local schema markup
+- use local keywords
+- use local content
+- use local images
+- use local videos
+- use local links
+- use local backlinks
+- use local social media
+- use local reviews
+- use local events
+- use local news
+- use local press
+- use local partnerships
+- use local advertising
+**Competitors**: 10% of traffic from Rwanda to global markets
+
+
 ---
 
 ## **1. Technical SEO Standards**

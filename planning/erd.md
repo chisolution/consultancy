@@ -9,7 +9,7 @@ This ERD defines the data structure for our comprehensive accounting consultancy
 #### **1. Users & Authentication**
 
 **users**
-- id (Primary Key)
+- id (Primary Key) - UUID
 - email (Unique)
 - password_hash
 - first_name
@@ -25,18 +25,18 @@ This ERD defines the data structure for our comprehensive accounting consultancy
 - deleted_at
 
 **user_roles**
-- id (Primary Key)
-- user_id (Foreign Key → users.id)
+- id (Primary Key) - UUID
+- user_id (Foreign Key → users.id) - UUID
 - role_type (admin, consultant, client, staff)
 - permissions (JSON)
-- assigned_by (Foreign Key → users.id)
+- assigned_by (Foreign Key → users.id) - UUID
 - assigned_at
 - expires_at
 
 #### **2. Client Management**
 
 **clients**
-- id (Primary Key)
+- id (Primary Key) - UUID
 - company_name
 - registration_number
 - tax_identification_number
@@ -48,8 +48,8 @@ This ERD defines the data structure for our comprehensive accounting consultancy
 - city
 - state_province
 - postal_code
-- primary_contact_id (Foreign Key → contacts.id)
-- account_manager_id (Foreign Key → users.id)
+- primary_contact_id (Foreign Key → contacts.id) - UUID
+- account_manager_id (Foreign Key → users.id) - UUID
 - client_status (prospect, active, inactive, churned)
 - acquisition_source
 - annual_revenue
@@ -63,8 +63,8 @@ This ERD defines the data structure for our comprehensive accounting consultancy
 - updated_at
 
 **contacts**
-- id (Primary Key)
-- client_id (Foreign Key → clients.id)
+- id (Primary Key) - UUID
+- client_id (Foreign Key → clients.id) - UUID
 - first_name
 - last_name
 - title
@@ -81,7 +81,7 @@ This ERD defines the data structure for our comprehensive accounting consultancy
 #### **3. Service Management**
 
 **services**
-- id (Primary Key)
+- id (Primary Key) - UUID
 - service_code (Unique)
 - service_name
 - service_category (accounting, audit, tax, advisory, consulting)
@@ -99,7 +99,7 @@ This ERD defines the data structure for our comprehensive accounting consultancy
 - updated_at
 
 **service_packages**
-- id (Primary Key)
+- id (Primary Key) - UUID
 - package_name
 - package_description (Text)
 - target_market (startup, sme, enterprise)
@@ -111,9 +111,9 @@ This ERD defines the data structure for our comprehensive accounting consultancy
 - updated_at
 
 **package_services**
-- id (Primary Key)
-- package_id (Foreign Key → service_packages.id)
-- service_id (Foreign Key → services.id)
+- id (Primary Key) - UUID
+- package_id (Foreign Key → service_packages.id) - UUID
+- service_id (Foreign Key → services.id) - UUID
 - quantity
 - custom_price
 - is_optional
@@ -121,9 +121,9 @@ This ERD defines the data structure for our comprehensive accounting consultancy
 #### **4. Project & Engagement Management**
 
 **projects**
-- id (Primary Key)
+- id (Primary Key) - UUID
 - project_number (Unique)
-- client_id (Foreign Key → clients.id)
+- client_id (Foreign Key → clients.id) - UUID
 - project_name
 - project_type (audit, tax_return, business_setup, advisory)
 - project_status (planning, in_progress, review, completed, cancelled)
@@ -131,7 +131,7 @@ This ERD defines the data structure for our comprehensive accounting consultancy
 - start_date
 - estimated_completion_date
 - actual_completion_date
-- project_manager_id (Foreign Key → users.id)
+- project_manager_id (Foreign Key → users.id) - UUID
 - total_budget
 - currency
 - billing_method (fixed, hourly, milestone)
@@ -142,9 +142,9 @@ This ERD defines the data structure for our comprehensive accounting consultancy
 - updated_at
 
 **project_team_members**
-- id (Primary Key)
-- project_id (Foreign Key → projects.id)
-- user_id (Foreign Key → users.id)
+- id (Primary Key) - UUID
+- project_id (Foreign Key → projects.id) - UUID
+- user_id (Foreign Key → users.id) - UUID
 - role (lead, senior, junior, reviewer)
 - hourly_rate
 - allocated_hours
@@ -153,8 +153,8 @@ This ERD defines the data structure for our comprehensive accounting consultancy
 - end_date
 
 **project_milestones**
-- id (Primary Key)
-- project_id (Foreign Key → projects.id)
+- id (Primary Key) - UUID
+- project_id (Foreign Key → projects.id) - UUID
 - milestone_name
 - description (Text)
 - due_date
@@ -163,16 +163,16 @@ This ERD defines the data structure for our comprehensive accounting consultancy
 - status (pending, in_progress, completed, overdue)
 - deliverables (JSON)
 - approval_required
-- approved_by (Foreign Key → users.id)
+- approved_by (Foreign Key → users.id) - UUID
 - approved_at
 
 #### **5. Time Tracking & Billing**
 
 **time_entries**
-- id (Primary Key)
-- user_id (Foreign Key → users.id)
-- project_id (Foreign Key → projects.id)
-- service_id (Foreign Key → services.id)
+- id (Primary Key) - UUID
+- user_id (Foreign Key → users.id) - UUID
+- project_id (Foreign Key → projects.id) - UUID
+- service_id (Foreign Key → services.id) - UUID
 - entry_date
 - start_time
 - end_time
@@ -182,16 +182,16 @@ This ERD defines the data structure for our comprehensive accounting consultancy
 - hourly_rate
 - total_amount
 - status (draft, submitted, approved, billed)
-- approved_by (Foreign Key → users.id)
+- approved_by (Foreign Key → users.id) - UUID
 - approved_at
 - created_at
 - updated_at
 
 **invoices**
-- id (Primary Key)
+- id (Primary Key) - UUID
 - invoice_number (Unique)
-- client_id (Foreign Key → clients.id)
-- project_id (Foreign Key → projects.id)
+- client_id (Foreign Key → clients.id) - UUID
+- project_id (Foreign Key → projects.id) - UUID
 - invoice_date
 - due_date
 - subtotal
@@ -205,14 +205,14 @@ This ERD defines the data structure for our comprehensive accounting consultancy
 - payment_date
 - payment_reference
 - notes (Text)
-- created_by (Foreign Key → users.id)
+- created_by (Foreign Key → users.id) - UUID
 - created_at
 - updated_at
 
 **invoice_line_items**
-- id (Primary Key)
-- invoice_id (Foreign Key → invoices.id)
-- service_id (Foreign Key → services.id)
+- id (Primary Key) - UUID
+- invoice_id (Foreign Key → invoices.id) - UUID
+- service_id (Foreign Key → services.id) - UUID
 - description
 - quantity
 - unit_price
@@ -223,9 +223,9 @@ This ERD defines the data structure for our comprehensive accounting consultancy
 #### **6. Document Management**
 
 **documents**
-- id (Primary Key)
-- client_id (Foreign Key → clients.id)
-- project_id (Foreign Key → projects.id)
+- id (Primary Key) - UUID
+- client_id (Foreign Key → clients.id) - UUID
+- project_id (Foreign Key → projects.id) - UUID
 - document_name
 - document_type (contract, financial_statement, tax_return, report)
 - file_path
@@ -235,27 +235,27 @@ This ERD defines the data structure for our comprehensive accounting consultancy
 - confidentiality_level (public, internal, confidential, restricted)
 - version_number
 - is_current_version
-- uploaded_by (Foreign Key → users.id)
+- uploaded_by (Foreign Key → users.id) - UUID
 - access_permissions (JSON)
 - retention_period_years
 - created_at
 - updated_at
 
 **document_versions**
-- id (Primary Key)
-- document_id (Foreign Key → documents.id)
+- id (Primary Key) - UUID
+- document_id (Foreign Key → documents.id) - UUID
 - version_number
 - file_path
 - change_description (Text)
-- uploaded_by (Foreign Key → users.id)
+- uploaded_by (Foreign Key → users.id) - UUID
 - uploaded_at
 
 #### **7. Communication & CRM**
 
 **communications**
-- id (Primary Key)
-- client_id (Foreign Key → clients.id)
-- project_id (Foreign Key → projects.id)
+- id (Primary Key) - UUID
+- client_id (Foreign Key → clients.id) - UUID
+- project_id (Foreign Key → projects.id) - UUID
 - communication_type (email, phone, meeting, note)
 - subject
 - content (Text)
@@ -264,13 +264,13 @@ This ERD defines the data structure for our comprehensive accounting consultancy
 - follow_up_required
 - follow_up_date
 - priority_level
-- created_by (Foreign Key → users.id)
+- created_by (Foreign Key → users.id) - UUID
 - created_at
 
 **meetings**
-- id (Primary Key)
-- client_id (Foreign Key → clients.id)
-- project_id (Foreign Key → projects.id)
+- id (Primary Key) - UUID
+- client_id (Foreign Key → clients.id) - UUID
+- project_id (Foreign Key → projects.id) - UUID
 - meeting_title
 - meeting_type (consultation, review, presentation)
 - scheduled_date
@@ -280,14 +280,14 @@ This ERD defines the data structure for our comprehensive accounting consultancy
 - agenda (Text)
 - minutes (Text)
 - action_items (JSON)
-- organizer_id (Foreign Key → users.id)
+- organizer_id (Foreign Key → users.id) - UUID
 - status (scheduled, completed, cancelled)
 - created_at
 - updated_at
 
 **meeting_attendees**
-- id (Primary Key)
-- meeting_id (Foreign Key → meetings.id)
+- id (Primary Key) - UUID
+- meeting_id (Foreign Key → meetings.id) - UUID
 - attendee_type (user, contact)
 - attendee_id (user_id or contact_id)
 - attendance_status (invited, accepted, declined, attended)
@@ -296,7 +296,7 @@ This ERD defines the data structure for our comprehensive accounting consultancy
 #### **8. Knowledge Management**
 
 **knowledge_base**
-- id (Primary Key)
+- id (Primary Key) - UUID
 - title
 - content (Text)
 - category (tax_law, accounting_standards, procedures, templates)
@@ -304,8 +304,8 @@ This ERD defines the data structure for our comprehensive accounting consultancy
 - language
 - tags (JSON)
 - access_level (public, internal, restricted)
-- author_id (Foreign Key → users.id)
-- reviewer_id (Foreign Key → users.id)
+- author_id (Foreign Key → users.id) - UUID
+- reviewer_id (Foreign Key → users.id) - UUID
 - review_date
 - expiry_date
 - view_count
@@ -314,7 +314,7 @@ This ERD defines the data structure for our comprehensive accounting consultancy
 - updated_at
 
 **templates**
-- id (Primary Key)
+- id (Primary Key) - UUID
 - template_name
 - template_type (contract, report, checklist, form)
 - template_category
@@ -325,7 +325,7 @@ This ERD defines the data structure for our comprehensive accounting consultancy
 - language
 - version
 - is_active
-- created_by (Foreign Key → users.id)
+- created_by (Foreign Key → users.id) - UUID
 - created_at
 - updated_at
 

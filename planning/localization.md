@@ -87,7 +87,7 @@ https://consultancy.rw/sw/ (Swahili)
 -- Translatable content structure
 CREATE TABLE service_translations (
     id BIGINT PRIMARY KEY,
-    service_id BIGINT,
+    service_id UUID,
     locale VARCHAR(5),
     title VARCHAR(255),
     description TEXT,
