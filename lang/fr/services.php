@@ -780,4 +780,294 @@ return [
             'subtitle' => 'Complétez votre développement de carrière avec nos services professionnels supplémentaires.',
         ],
     ],
+
+    // Market Research & Competitor Analysis Service
+    'market_research' => [
+        'title' => 'Recherche de Marché & Analyse Concurrentielle',
+        'short_description' => 'Recherche de marché complète, analyse concurrentielle et insights sectoriels pour éclairer les décisions commerciales stratégiques et les stratégies d\'entrée sur le marché.',
+        'meta' => [
+            'title' => 'Recherche de Marché & Analyse Concurrentielle | Intelligence Sectorielle & Stratégique | Rwanda',
+            'description' => 'Services experts de recherche de marché et analyse concurrentielle au Rwanda et en Afrique de l\'Est. Insights sectoriels complets, dimensionnement de marché, intelligence concurrentielle et recommandations stratégiques pour le succès commercial.',
+            'keywords' => 'recherche de marché Rwanda, analyse concurrentielle Kigali, recherche sectorielle Afrique de l\'Est, intelligence de marché Rwanda, recherche commerciale Cameroun, analyse stratégique Rwanda',
+        ],
+        'hero' => [
+            'subtitle' => 'Prenez des décisions commerciales éclairées avec une intelligence de marché complète. Nos services de recherche fournissent des insights de marché approfondis, une analyse concurrentielle et des recommandations stratégiques qui favorisent des résultats commerciaux réussis et un positionnement sur le marché.',
+        ],
+        'stats' => [
+            'research_projects' => 'Projets de Recherche',
+            'markets_analyzed' => 'Marchés Analysés',
+            'years_experience' => 'Années d\'Expérience',
+            'client_satisfaction' => 'Satisfaction Client',
+        ],
+        'cta' => [
+            'get_research' => 'Obtenir une Recherche de Marché',
+            'view_samples' => 'Voir des Rapports Échantillons',
+        ],
+        'overview' => [
+            'title' => 'Intelligence de Marché Stratégique & Analyse Concurrentielle',
+            'description' => 'Nos services de recherche de marché fournissent l\'intelligence critique dont vous avez besoin pour prendre des décisions commerciales éclairées. Nous menons une analyse de marché complète, une recherche concurrentielle et des études sectorielles qui révèlent les opportunités, identifient les menaces et éclairent la planification stratégique.',
+            'expertise' => 'Notre équipe de recherche combine des méthodologies analytiques avancées avec une connaissance approfondie du marché local pour fournir des insights exploitables. Nous nous spécialisons dans les marchés émergents à travers l\'Afrique de l\'Est, fournissant des recherches quantitatives et qualitatives qui favorisent le succès commercial.',
+        ],
+        'services' => [
+            'market_analysis' => [
+                'title' => 'Analyse de Marché',
+                'description' => 'Dimensionnement de marché complet, segmentation et évaluation des opportunités.',
+                'detailed_description' => 'Analyse approfondie de la taille du marché, des tendances de croissance, des segments clients et de la dynamique du marché.',
+                'features' => [
+                    'market_sizing' => 'Dimensionnement et projections de croissance du marché',
+                    'segmentation' => 'Analyse de segmentation client',
+                    'trends_analysis' => 'Tendances et moteurs du marché',
+                ],
+            ],
+            'competitor_analysis' => [
+                'title' => 'Analyse Concurrentielle',
+                'description' => 'Analyse détaillée du paysage concurrentiel et insights de positionnement stratégique.',
+                'detailed_description' => 'Profilage concurrentiel complet, analyse SWOT et stratégies de positionnement concurrentiel.',
+                'features' => [
+                    'competitor_profiling' => 'Profils détaillés des concurrents',
+                    'swot_analysis' => 'Forces, faiblesses, opportunités, menaces',
+                    'positioning_analysis' => 'Insights de positionnement concurrentiel',
+                ],
+            ],
+            'industry_research' => [
+                'title' => 'Recherche Sectorielle',
+                'description' => 'Analyse sectorielle complète et insights spécifiques au secteur.',
+                'detailed_description' => 'Recherche sectorielle approfondie couvrant les réglementations, tendances, acteurs clés et opportunités de croissance.',
+                'features' => [
+                    'industry_overview' => 'Paysage sectoriel complet',
+                    'regulatory_analysis' => 'Évaluation de l\'environnement réglementaire',
+                    'growth_opportunities' => 'Identification des opportunités émergentes',
+                ],
+            ],
+            'customer_insights' => [
+                'title' => 'Insights Client',
+                'description' => 'Analyse du comportement client et recherche des préférences du marché.',
+                'detailed_description' => 'Recherche primaire et secondaire pour comprendre les besoins, préférences et comportements d\'achat des clients.',
+                'features' => [
+                    'customer_surveys' => 'Recherche client primaire',
+                    'behavior_analysis' => 'Modèles de comportement client',
+                    'preference_mapping' => 'Analyse des préférences client',
+                ],
+            ],
+        ],
+        'contact' => [
+            'title' => 'Obtenir une Intelligence de Marché',
+            'hours' => 'Lun-Ven 8h-18h CAT',
+            'cta' => 'Démarrer un Projet de Recherche',
+        ],
+        'packages' => [
+            'title' => 'Forfaits de Recherche',
+            'basic' => [
+                'title' => 'Aperçu du Marché',
+                'description' => 'Analyse de marché essentielle avec insights clés et aperçu concurrentiel.',
+                'price' => 'À partir de 2 500 $',
+            ],
+            'comprehensive' => [
+                'title' => 'Étude de Marché Complète',
+                'description' => 'Recherche de marché complète avec analyse concurrentielle détaillée et recommandations stratégiques.',
+                'price' => 'À partir de 5 000 $',
+            ],
+            'strategic' => [
+                'title' => 'Intelligence Stratégique',
+                'description' => 'Package d\'intelligence de marché complet avec surveillance continue et mises à jour trimestrielles.',
+                'price' => 'Devis Personnalisé',
+            ],
+        ],
+        'process' => [
+            'title' => 'Notre Méthodologie de Recherche',
+            'subtitle' => 'Une approche systématique de la recherche de marché qui fournit des insights exploitables grâce à une analyse rigoureuse et une expertise du marché local.',
+            'step1' => [
+                'title' => 'Conception de Recherche',
+                'description' => 'Définir les objectifs de recherche, la méthodologie et la stratégie de collecte de données.',
+            ],
+            'step2' => [
+                'title' => 'Collecte de Données',
+                'description' => 'Rassembler des données primaires et secondaires par le biais d\'enquêtes, d\'entretiens et de recherche documentaire.',
+            ],
+            'step3' => [
+                'title' => 'Analyse & Insights',
+                'description' => 'Analyser les données en utilisant des outils analytiques avancés et extraire des insights exploitables.',
+            ],
+            'step4' => [
+                'title' => 'Rapports & Recommandations',
+                'description' => 'Livrer des rapports complets avec des recommandations stratégiques et des conseils d\'implémentation.',
+            ],
+        ],
+        'consultation' => [
+            'title' => 'Démarrez Votre Projet de Recherche de Marché',
+            'subtitle' => 'Planifiez une consultation pour discuter de vos besoins de recherche et développer un plan de recherche personnalisé.',
+        ],
+        'form' => [
+            'research_type' => 'Type de Recherche',
+            'select_type' => 'Sélectionnez votre focus de recherche',
+            'target_market' => 'Marché Cible',
+            'select_market' => 'Sélectionnez votre marché cible',
+            'types' => [
+                'market_entry' => 'Recherche d\'Entrée sur le Marché',
+                'competitor_analysis' => 'Analyse Concurrentielle',
+                'customer_research' => 'Recherche Client',
+                'industry_analysis' => 'Analyse Sectorielle',
+                'opportunity_assessment' => 'Évaluation des Opportunités',
+            ],
+            'markets' => [
+                'rwanda' => 'Rwanda',
+                'cameroon' => 'Cameroun',
+                'east_africa' => 'Région Afrique de l\'Est',
+                'central_africa' => 'Région Afrique Centrale',
+                'multiple_markets' => 'Marchés Multiples',
+            ],
+            'message_placeholder' => 'Décrivez vos objectifs de recherche et besoins d\'information spécifiques...',
+            'submit' => 'Demander une Recherche de Marché',
+        ],
+        'related' => [
+            'title' => 'Solutions d\'Intelligence de Marché Complètes',
+            'subtitle' => 'Renforcez votre recherche de marché avec nos services stratégiques supplémentaires.',
+        ],
+    ],
+
+    // Feasibility Studies Service
+    'feasibility_studies' => [
+        'title' => 'Études de Faisabilité & Entrée sur le Marché',
+        'short_description' => 'Études de faisabilité complètes pour les entreprises commerciales au Rwanda et au Cameroun, incluant l\'évaluation de la viabilité du marché, l\'analyse de localisation et les recommandations d\'entrée stratégique.',
+        'meta' => [
+            'title' => 'Études de Faisabilité & Entrée sur le Marché | Évaluation de Viabilité Commerciale | Rwanda & Cameroun',
+            'description' => 'Études de faisabilité expertes pour les entreprises commerciales au Rwanda et au Cameroun. Évaluation complète de viabilité, analyse de localisation, conseils réglementaires et stratégies d\'entrée sur le marché pour un lancement commercial réussi.',
+            'keywords' => 'étude de faisabilité Rwanda, viabilité commerciale Cameroun, entrée sur le marché Rwanda, opportunités d\'investissement Afrique de l\'Est, création d\'entreprise Kigali, emplacements stratégiques Rwanda',
+        ],
+        'hero' => [
+            'subtitle' => 'Validez vos idées commerciales avec une analyse de faisabilité complète. Nos études fournissent une évaluation détaillée de la viabilité du marché, des recommandations de localisation et des insights stratégiques pour des entreprises commerciales réussies au Rwanda et au Cameroun.',
+        ],
+        'stats' => [
+            'studies_completed' => 'Études Complétées',
+            'success_rate' => 'Taux de Réussite des Projets',
+            'years_experience' => 'Années d\'Expérience',
+            'markets_covered' => 'Marchés Couverts',
+        ],
+        'cta' => [
+            'get_study' => 'Obtenir une Étude de Faisabilité',
+            'view_locations' => 'Voir les Emplacements Stratégiques',
+        ],
+        'overview' => [
+            'title' => 'Évaluation Complète de Viabilité Commerciale & d\'Entrée sur le Marché',
+            'description' => 'Nos études de faisabilité fournissent une analyse approfondie des opportunités commerciales au Rwanda et au Cameroun. Nous évaluons la viabilité du marché, analysons les emplacements stratégiques, évaluons les exigences réglementaires et fournissons des recommandations détaillées pour une entrée sur le marché réussie et un établissement commercial.',
+            'expertise' => 'Notre équipe combine une connaissance approfondie du marché local avec une expertise commerciale internationale pour fournir des évaluations de faisabilité complètes. Nous nous spécialisons dans les marchés émergents et comprenons les opportunités et défis uniques de faire des affaires en Afrique de l\'Est et Centrale.',
+        ],
+        'services' => [
+            'market_viability' => [
+                'title' => 'Évaluation de Viabilité du Marché',
+                'description' => 'Analyse complète de la demande du marché, de la concurrence et du potentiel commercial.',
+                'detailed_description' => 'Évaluation détaillée de la taille du marché, des modèles de demande, du paysage concurrentiel et du potentiel de revenus.',
+                'features' => [
+                    'demand_analysis' => 'Évaluation de la demande du marché',
+                    'revenue_projections' => 'Projections de revenus et de rentabilité',
+                    'risk_assessment' => 'Évaluation des risques commerciaux',
+                ],
+            ],
+            'location_analysis' => [
+                'title' => 'Analyse d\'Emplacement Stratégique',
+                'description' => 'Identification et évaluation des emplacements commerciaux optimaux et des avantages stratégiques.',
+                'detailed_description' => 'Évaluation complète d\'emplacement incluant l\'infrastructure, l\'accessibilité, les coûts et les avantages stratégiques.',
+                'features' => [
+                    'site_evaluation' => 'Évaluation de site stratégique',
+                    'infrastructure_assessment' => 'Analyse de l\'infrastructure et des services publics',
+                    'cost_analysis' => 'Comparaison des coûts d\'emplacement',
+                ],
+            ],
+            'regulatory_guidance' => [
+                'title' => 'Évaluation Réglementaire & Légale',
+                'description' => 'Analyse complète de l\'environnement réglementaire et des exigences de conformité.',
+                'detailed_description' => 'Analyse détaillée des exigences réglementaires, des procédures de licence et des considérations légales.',
+                'features' => [
+                    'regulatory_mapping' => 'Cartographie des exigences réglementaires',
+                    'licensing_guidance' => 'Conseils sur les licences et permis',
+                    'compliance_framework' => 'Développement du cadre de conformité',
+                ],
+            ],
+            'financial_modeling' => [
+                'title' => 'Modélisation Financière & Projections',
+                'description' => 'Analyse financière détaillée et projections de retour sur investissement.',
+                'detailed_description' => 'Modélisation financière complète incluant les exigences d\'investissement, les projections de flux de trésorerie et l\'analyse du ROI.',
+                'features' => [
+                    'investment_analysis' => 'Analyse des exigences d\'investissement',
+                    'cash_flow_modeling' => 'Projections de flux de trésorerie',
+                    'roi_assessment' => 'Analyse du retour sur investissement',
+                ],
+            ],
+        ],
+        'contact' => [
+            'title' => 'Démarrez Votre Étude de Faisabilité',
+            'hours' => 'Lun-Ven 8h-18h CAT',
+            'cta' => 'Commencer l\'Évaluation',
+        ],
+        'packages' => [
+            'title' => 'Forfaits d\'Étude de Faisabilité',
+            'market_entry' => [
+                'title' => 'Étude d\'Entrée sur le Marché',
+                'description' => 'Évaluation de faisabilité essentielle pour l\'entrée sur le marché avec recommandations d\'emplacement.',
+                'price' => 'À partir de 3 500 $',
+            ],
+            'comprehensive' => [
+                'title' => 'Faisabilité Complète',
+                'description' => 'Étude de faisabilité complète avec modélisation financière détaillée et recommandations stratégiques.',
+                'price' => 'À partir de 7 500 $',
+            ],
+            'investment_grade' => [
+                'title' => 'Étude de Qualité Investissement',
+                'description' => 'Étude de faisabilité détaillée adaptée aux présentations d\'investisseurs et aux demandes de financement.',
+                'price' => 'À partir de 12 000 $',
+            ],
+        ],
+        'process' => [
+            'title' => 'Notre Processus d\'Étude de Faisabilité',
+            'subtitle' => 'Une approche systématique de l\'évaluation de viabilité commerciale qui fournit des insights complets pour des décisions d\'investissement éclairées.',
+            'step1' => [
+                'title' => 'Définition du Projet',
+                'description' => 'Définir les objectifs, la portée et la méthodologie de l\'étude basés sur votre concept commercial.',
+            ],
+            'step2' => [
+                'title' => 'Recherche de Marché',
+                'description' => 'Mener une recherche de marché complète et une analyse concurrentielle.',
+            ],
+            'step3' => [
+                'title' => 'Analyse de Viabilité',
+                'description' => 'Analyser la viabilité du marché, les projections financières et l\'évaluation des risques.',
+            ],
+            'step4' => [
+                'title' => 'Recommandations',
+                'description' => 'Livrer des recommandations détaillées avec une feuille de route d\'implémentation et les prochaines étapes.',
+            ],
+        ],
+        'consultation' => [
+            'title' => 'Validez Votre Concept Commercial',
+            'subtitle' => 'Planifiez une consultation pour discuter de votre idée commerciale et développer un plan d\'étude de faisabilité complet.',
+        ],
+        'form' => [
+            'business_concept' => 'Concept Commercial',
+            'select_concept' => 'Décrivez votre concept commercial',
+            'target_location' => 'Emplacement Cible',
+            'select_location' => 'Sélectionnez votre emplacement préféré',
+            'investment_range' => 'Gamme d\'Investissement',
+            'select_range' => 'Sélectionnez votre gamme d\'investissement',
+            'locations' => [
+                'kigali' => 'Kigali, Rwanda',
+                'rwanda_other' => 'Autres Emplacements Rwanda',
+                'douala' => 'Douala, Cameroun',
+                'yaounde' => 'Yaoundé, Cameroun',
+                'cameroon_other' => 'Autres Emplacements Cameroun',
+            ],
+            'ranges' => [
+                'under_50k' => 'Moins de 50 000 $',
+                '50k_200k' => '50 000 $ - 200 000 $',
+                '200k_500k' => '200 000 $ - 500 000 $',
+                '500k_1m' => '500 000 $ - 1 000 000 $',
+                'over_1m' => 'Plus de 1 000 000 $',
+            ],
+            'message_placeholder' => 'Décrivez votre concept commercial, marché cible et questions de faisabilité spécifiques...',
+            'submit' => 'Demander une Étude de Faisabilité',
+        ],
+        'related' => [
+            'title' => 'Solutions d\'Entrée sur le Marché Complètes',
+            'subtitle' => 'Soutenez votre étude de faisabilité avec nos services complets de configuration d\'entreprise et de conseil.',
+        ],
+    ],
 ];
