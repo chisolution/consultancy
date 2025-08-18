@@ -248,6 +248,55 @@ Phase 4: Optimization & Launch (Sprints 13-18)
 | **Status** | ✅ Fixed |
 | **Prevention** | Always escape @ symbols in JSON-LD with @@ in Blade templates. Use @json() helper for complex structured data. Never remove @context from schema.org markup. Test structured data with Google Rich Results Test. |
 
+### 🔧 Issue #007: CSS Fighting Tailwind - White Text on Light Background
+
+| Field | Details |
+|-------|---------|
+| **Date** | 2025-08-18 |
+| **Reported By** | @user |
+| **Tags** | #tailwind #css #gradients #cross-browser #performance |
+| **Problem Summary** | Hero section showing white text on light background due to CSS overrides breaking Tailwind's gradient system |
+| **Location** | `resources/css/app.css` - cross-browser compatibility overrides |
+| **Impact** | Invisible hero text, broken gradient backgrounds, poor user experience, styling inconsistencies |
+| **Root Cause** | Custom CSS overrides for `.bg-gradient-to-br`, `.flex`, `.grid`, `.transform`, etc. were conflicting with Tailwind's internal gradient variables (`--tw-gradient-from`, `--tw-gradient-to`) and utility implementations |
+| **Sample Code (Before)** |
+```css
+/* Problematic overrides in app.css */
+.bg-gradient-to-br {
+    background: linear-gradient(to bottom right, var(--tw-gradient-from), var(--tw-gradient-to));
+    background: -webkit-linear-gradient(to bottom right, var(--tw-gradient-from), var(--tw-gradient-to));
+    /* Multiple vendor prefixes breaking Tailwind's gradient system */
+}
+
+.flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+/* 300+ lines of utility overrides */
+``` |
+| **Sample Code (Fix)** |
+```css
+/* Clean Tailwind v4 approach */
+@import "tailwindcss";
+
+@theme {
+  --color-primary-600: #2563eb;
+  --color-primary-800: #1e40af;
+}
+
+@layer components {
+  .btn-primary {
+    display: inline-flex;
+    background-color: var(--color-primary-600);
+    /* Standard CSS without @apply conflicts */
+  }
+}
+``` |
+| **Fix Explanation** | Removed all conflicting utility overrides and cross-browser fallbacks. Tailwind v4 + Autoprefixer handles cross-browser compatibility automatically. Used standard CSS in @layer components instead of @apply with undefined classes. This restored Tailwind's gradient system functionality. |
+| **Status** | ✅ Fixed |
+| **Prevention** | Never override core Tailwind utilities (`.bg-gradient-*`, `.flex`, `.grid`, etc.). Let Autoprefixer handle vendor prefixes. Use @layer components for custom styles. Test gradient backgrounds after CSS changes. Avoid @apply with undefined classes. |
+
 ---
 
 ## **💡 Prevention Best Practices**
@@ -301,8 +350,8 @@ _Add more entries below this point using the table template above._
 
 | Status | Count | Percentage |
 |--------|-------|------------|
-| ✅ Fixed | 4 | 80% |
-| 🔄 In Progress | 1 | 20% |
+| ✅ Fixed | 6 | 86% |
+| 🔄 In Progress | 1 | 14% |
 | ❌ Unresolved | 0 | 0% |
 | ⚠️ Workaround | 0 | 0% |
 
@@ -310,9 +359,10 @@ _Add more entries below this point using the table template above._
 
 ## 🎯 Common Issue Categories
 
-1. **Build & Configuration** (40%) - Vite, Tailwind, Laravel setup issues
-2. **Documentation Consistency** (40%) - Business model, planning alignment
-3. **Routing & Localization** (20%) - Multi-language implementation
+1. **Build & Configuration** (43%) - Vite, Tailwind, Laravel setup issues
+2. **CSS & Styling Conflicts** (29%) - Tailwind overrides, gradient issues, cross-browser conflicts
+3. **Documentation Consistency** (14%) - Business model, planning alignment
+4. **Routing & Localization** (14%) - Multi-language implementation
 
 ---
 
