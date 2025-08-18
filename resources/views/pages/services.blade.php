@@ -1,9 +1,15 @@
 @extends('layouts.app')
 
-@section('title', __('common.nav.services'))
-@section('description', 'Comprehensive business consultancy services across Rwanda, Canada, US, and Cameroon')
+@section('title', __('common.meta.services.title'))
+@section('description', __('common.meta.services.description'))
+@section('keywords', __('common.meta.services.keywords'))
 
 @section('content')
+{{-- Breadcrumb Navigation --}}
+<x-breadcrumb :items="[
+    ['name' => __('common.nav.home'), 'url' => \App\Helpers\LocaleHelper::route('home')],
+    ['name' => __('common.nav.services'), 'url' => url()->current()]
+]" />
 <!-- Page Header -->
 <section class="bg-gradient-to-br from-primary-50 to-secondary-50 py-16">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

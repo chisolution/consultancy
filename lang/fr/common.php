@@ -25,6 +25,30 @@ return [
         ],
     ],
 
+    // SEO Meta Data
+    'meta' => [
+        'home' => [
+            'title' => 'Conseil Professionnel en Affaires Rwanda | Services Comptables & Fiscaux Experts',
+            'description' => 'Cabinet de conseil en affaires leader au Rwanda offrant comptabilité, conseil fiscal, planification financière et enregistrement d\'entreprise. Servons Rwanda, Canada, États-Unis et Cameroun. Obtenez des conseils d\'experts aujourd\'hui.',
+            'keywords' => 'conseil en affaires Rwanda, services comptables Kigali, conseil fiscal Rwanda, planification financière, enregistrement d\'entreprise, conseil professionnel Afrique',
+        ],
+        'services' => [
+            'title' => 'Services de Conseil en Affaires | Comptabilité, Fiscalité & Conseil Financier Rwanda',
+            'description' => 'Services d\'affaires complets incluant comptabilité, conseil fiscal, planification financière, enregistrement d\'entreprise, conformité d\'audit et formation d\'entreprise. Conseil expert de Kigali.',
+            'keywords' => 'services d\'affaires Rwanda, conseil comptable, services fiscaux, conseil financier, enregistrement d\'entreprise Kigali, conformité d\'audit',
+        ],
+        'about' => [
+            'title' => 'À Propos du Conseil Professionnel en Affaires Rwanda | Équipe Experte & Portée Mondiale',
+            'description' => 'Découvrez notre équipe d\'experts de professionnels certifiés fournissant des services de conseil en affaires, comptabilité et financiers du Rwanda aux clients mondiaux. L\'expertise culturelle rencontre l\'excellence.',
+            'keywords' => 'à propos conseil en affaires Rwanda, équipe professionnelle, comptables certifiés, services d\'affaires mondiaux, experts conseil Rwanda',
+        ],
+        'contact' => [
+            'title' => 'Contacter le Conseil Professionnel en Affaires Rwanda | Obtenez des Conseils d\'Experts Aujourd\'hui',
+            'description' => 'Contactez notre équipe de conseil en affaires expert à Kigali, Rwanda. Obtenez des services professionnels de comptabilité, conseil fiscal et planification financière. Consultation gratuite disponible.',
+            'keywords' => 'contacter conseil en affaires Rwanda, services comptables Kigali, consultation professionnelle, conseil d\'affaires Rwanda, services financiers experts',
+        ],
+    ],
+
     // Services
     'services' => [
         'title' => 'Nos Services Principaux',
@@ -140,11 +164,12 @@ return [
         'loading' => 'Chargement...',
     ],
 
-    // Contact Form
+    // Contact Page
     'contact' => [
         'title' => 'Entrer en Contact',
         'subtitle' => 'Prêt à commencer votre parcours de transformation d\'entreprise?',
         'form' => [
+            'title' => 'Envoyez-nous un message',
             'name' => 'Nom Complet',
             'email' => 'Adresse Email',
             'phone' => 'Numéro de Téléphone',
@@ -153,31 +178,13 @@ return [
             'message' => 'Message',
             'send_message' => 'Envoyer le Message',
             'required' => 'Champ requis',
+            'select_service' => 'Sélectionner un service',
+            'message_placeholder' => 'Parlez-nous de vos besoins commerciaux...',
         ],
         'info' => [
             'title' => 'Informations de Contact',
             'description' => 'Contactez-nous à travers n\'importe lequel de nos bureaux mondiaux.',
         ],
-    ],
-
-    // Form Labels
-    'form' => [
-        'name' => 'Nom Complet',
-        'email' => 'Adresse Email',
-        'phone' => 'Numéro de Téléphone',
-        'company' => 'Nom de l\'Entreprise',
-        'message' => 'Message',
-        'submit' => 'Envoyer le Message',
-    ],
-
-    // Common Actions
-    'learn_more' => 'En Savoir Plus',
-    'get_started' => 'Commencer',
-    'contact_us' => 'Nous Contacter',
-    'read_more' => 'Lire Plus',
-
-    // Contact Page
-    'contact' => [
         'global_service' => [
             'title' => 'Prestation de Services Mondiale',
             'description' => 'Bien que notre bureau soit basé au Rwanda, nous servons des clients dans le monde entier grâce à des consultations à distance, des partenariats spécialisés et une compétence culturelle qui s\'étend sur divers marchés.',
@@ -188,5 +195,29 @@ return [
                 'local_expertise' => 'Expertise Locale',
             ],
         ],
+        'office' => [
+            'title' => 'Notre Bureau',
+            'address' => 'KG 123 St, District de Gasabo',
+            'city' => 'Kigali, Rwanda',
+            'phone' => '+250 XXX XXX XXX',
+            'email' => 'hello@consultancy.rw',
+        ],
+        'cta' => [
+            'title' => 'Entrer en contact',
+            'email' => 'hello@consultancy.com',
+            'phone' => '+1-XXX-XXX-XXXX',
+        ],
+        'map' => [
+            'title' => 'Notre Présence Mondiale',
+            'subtitle' => 'Trouvez-nous dans quatre pays',
+            'coming_soon' => 'Carte interactive bientôt disponible',
+            'showing_locations' => 'Affichage de tous les emplacements de bureaux',
+        ],
     ],
+
+    // Common Actions
+    'learn_more' => 'En Savoir Plus',
+    'get_started' => 'Commencer',
+    'contact_us' => 'Nous Contacter',
+    'read_more' => 'Lire Plus',
 ];

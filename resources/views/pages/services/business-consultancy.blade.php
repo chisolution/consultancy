@@ -34,6 +34,12 @@
 @endpush
 
 @section('content')
+{{-- Breadcrumb Navigation --}}
+<x-breadcrumb :items="[
+    ['name' => __('common.nav.home'), 'url' => \App\Helpers\LocaleHelper::route('home')],
+    ['name' => __('common.nav.services'), 'url' => \App\Helpers\LocaleHelper::route('services')],
+    ['name' => __('services.business_consultancy.title'), 'url' => url()->current()]
+]" />
 <!-- Breadcrumb -->
 <nav class="bg-gray-50 py-4" aria-label="Breadcrumb">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

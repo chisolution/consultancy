@@ -25,6 +25,30 @@ return [
         ],
     ],
 
+    // SEO Meta Data
+    'meta' => [
+        'home' => [
+            'title' => 'Professional Business Consultancy Rwanda | Expert Accounting & Tax Services',
+            'description' => 'Leading business consultancy in Rwanda offering accounting, tax advisory, financial planning & business registration. Serving Rwanda, Canada, USA & Cameroon. Get expert guidance today.',
+            'keywords' => 'business consultancy Rwanda, accounting services Kigali, tax advisory Rwanda, financial planning, business registration, professional consultancy Africa',
+        ],
+        'services' => [
+            'title' => 'Business Consultancy Services | Accounting, Tax & Financial Advisory Rwanda',
+            'description' => 'Comprehensive business services including accounting, tax advisory, financial planning, business registration, audit compliance & corporate training. Expert consultancy from Kigali.',
+            'keywords' => 'business services Rwanda, accounting consultancy, tax services, financial advisory, business registration Kigali, audit compliance',
+        ],
+        'about' => [
+            'title' => 'About Professional Business Consultancy Rwanda | Expert Team & Global Reach',
+            'description' => 'Learn about our expert team of certified professionals providing business consultancy, accounting & financial services from Rwanda to global clients. Cultural expertise meets excellence.',
+            'keywords' => 'about business consultancy Rwanda, professional team, certified accountants, global business services, Rwanda consultancy experts',
+        ],
+        'contact' => [
+            'title' => 'Contact Professional Business Consultancy Rwanda | Get Expert Advice Today',
+            'description' => 'Contact our expert business consultancy team in Kigali, Rwanda. Get professional accounting, tax advisory & financial planning services. Free consultation available.',
+            'keywords' => 'contact business consultancy Rwanda, Kigali accounting services, professional consultation, business advice Rwanda, expert financial services',
+        ],
+    ],
+
     // Services
     'services' => [
         'title' => 'Our Core Services',
@@ -140,11 +164,12 @@ return [
         'loading' => 'Loading...',
     ],
 
-    // Contact Form
+    // Contact Page
     'contact' => [
         'title' => 'Get In Touch',
         'subtitle' => 'Ready to start your business transformation journey?',
         'form' => [
+            'title' => 'Send us a message',
             'name' => 'Full Name',
             'email' => 'Email Address',
             'phone' => 'Phone Number',
@@ -153,31 +178,13 @@ return [
             'message' => 'Message',
             'send_message' => 'Send Message',
             'required' => 'Required field',
+            'select_service' => 'Select a service',
+            'message_placeholder' => 'Tell us about your business needs...',
         ],
         'info' => [
             'title' => 'Contact Information',
             'description' => 'Reach out to us through any of our global offices.',
         ],
-    ],
-
-    // Form Labels
-    'form' => [
-        'name' => 'Full Name',
-        'email' => 'Email Address',
-        'phone' => 'Phone Number',
-        'company' => 'Company Name',
-        'message' => 'Message',
-        'submit' => 'Send Message',
-    ],
-
-    // Common Actions
-    'learn_more' => 'Learn More',
-    'get_started' => 'Get Started',
-    'contact_us' => 'Contact Us',
-    'read_more' => 'Read More',
-
-    // Contact Page
-    'contact' => [
         'global_service' => [
             'title' => 'Global Service Delivery',
             'description' => 'While our office is based in Rwanda, we serve clients worldwide through remote consultations, specialist partnerships, and cultural competency that spans diverse markets.',
@@ -188,5 +195,29 @@ return [
                 'local_expertise' => 'Local Expertise',
             ],
         ],
+        'office' => [
+            'title' => 'Our Office',
+            'address' => 'KG 123 St, Gasabo District',
+            'city' => 'Kigali, Rwanda',
+            'phone' => '+250 XXX XXX XXX',
+            'email' => 'hello@consultancy.rw',
+        ],
+        'cta' => [
+            'title' => 'Get in touch',
+            'email' => 'hello@consultancy.com',
+            'phone' => '+1-XXX-XXX-XXXX',
+        ],
+        'map' => [
+            'title' => 'Our Global Presence',
+            'subtitle' => 'Find us across four countries',
+            'coming_soon' => 'Interactive map coming soon',
+            'showing_locations' => 'Showing all office locations',
+        ],
     ],
+
+    // Common Actions
+    'learn_more' => 'Learn More',
+    'get_started' => 'Get Started',
+    'contact_us' => 'Contact Us',
+    'read_more' => 'Read More',
 ];

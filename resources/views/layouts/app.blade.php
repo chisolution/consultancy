@@ -5,13 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     
-    <title>@yield('title', __('common.hero.title')) - Professional Business Consultancy</title>
-    <meta name="description" content="@yield('description', __('common.hero.subtitle'))">
-    
+    <title>@yield('title', __('common.meta.home.title'))</title>
+    <meta name="description" content="@yield('description', __('common.meta.home.description'))">
+
     <!-- SEO Meta Tags -->
-    <meta name="keywords" content="business consultancy, accounting services, tax advisory, Rwanda, Canada, USA, Cameroon">
+    <meta name="keywords" content="@yield('keywords', __('common.meta.home.keywords'))">
     <meta name="author" content="Professional Business Consultancy">
     <meta name="robots" content="index, follow">
+    <meta name="language" content="{{ app()->getLocale() }}">
+    <meta name="geo.region" content="RW">
+    <meta name="geo.placename" content="Kigali">
+    <meta name="geo.position" content="-1.9441;30.0619">
+    <meta name="ICBM" content="-1.9441, 30.0619">
     
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="@yield('title', __('common.hero.title'))">
@@ -38,14 +43,18 @@
     <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}">
     <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('images/apple-touch-icon.png') }}">
     
-    <!-- Fonts -->
+    <!-- Fonts with performance optimization -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet"></noscript>
     
     <!-- Styles -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     
+    <!-- Structured Data -->
+    @stack('structured-data')
+
     <!-- Additional Head Content -->
     @stack('head')
 </head>
@@ -286,6 +295,9 @@
             }
         });
     </script>
+
+    <!-- Performance Monitoring -->
+    <x-performance-monitor />
 
     <!-- Additional Scripts -->
     @stack('scripts')
