@@ -25,6 +25,30 @@ return [
         ],
     ],
 
+    // SEO Meta Data
+    'meta' => [
+        'home' => [
+            'title' => 'Professional Business Consultancy Rwanda | Expert Accounting & Tax Services',
+            'description' => 'Leading business consultancy in Rwanda offering accounting, tax advisory, financial planning & business registration. Serving Rwanda, Canada, USA & Cameroon. Get expert guidance today.',
+            'keywords' => 'business consultancy Rwanda, accounting services Kigali, tax advisory Rwanda, financial planning, business registration, professional consultancy Africa',
+        ],
+        'services' => [
+            'title' => 'Business Consultancy Services | Accounting, Tax & Financial Advisory Rwanda',
+            'description' => 'Comprehensive business services including accounting, tax advisory, financial planning, business registration, audit compliance & corporate training. Expert consultancy from Kigali.',
+            'keywords' => 'business services Rwanda, accounting consultancy, tax services, financial advisory, business registration Kigali, audit compliance',
+        ],
+        'about' => [
+            'title' => 'About Professional Business Consultancy Rwanda | Expert Team & Global Reach',
+            'description' => 'Learn about our expert team of certified professionals providing business consultancy, accounting & financial services from Rwanda to global clients. Cultural expertise meets excellence.',
+            'keywords' => 'about business consultancy Rwanda, professional team, certified accountants, global business services, Rwanda consultancy experts',
+        ],
+        'contact' => [
+            'title' => 'Contact Professional Business Consultancy Rwanda | Get Expert Advice Today',
+            'description' => 'Contact our expert business consultancy team in Kigali, Rwanda. Get professional accounting, tax advisory & financial planning services. Free consultation available.',
+            'keywords' => 'contact business consultancy Rwanda, Kigali accounting services, professional consultation, business advice Rwanda, expert financial services',
+        ],
+    ],
+
     // Services
     'services' => [
         'title' => 'Our Core Services',

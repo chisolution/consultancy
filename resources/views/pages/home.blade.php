@@ -1,7 +1,8 @@
 @extends('layouts.app')
 
-@section('title', __('common.hero.title'))
-@section('description', __('common.hero.subtitle'))
+@section('title', __('common.meta.home.title'))
+@section('description', __('common.meta.home.description'))
+@section('keywords', __('common.meta.home.keywords'))
 
 @push('structured-data')
     <x-seo.structured-data type="organization" />
@@ -38,25 +39,25 @@
                 <!-- Trust Indicators -->
                 <div class="grid grid-cols-2 gap-4 text-sm">
                     <div class="flex items-center">
-                        <svg class="h-5 w-5 text-secondary-600 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                        <svg class="h-5 w-5 text-secondary-600 mr-2" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
                             <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                         </svg>
                         {{ __('common.hero.features.certified') }}
                     </div>
                     <div class="flex items-center">
-                        <svg class="h-5 w-5 text-secondary-600 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                        <svg class="h-5 w-5 text-secondary-600 mr-2" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
                             <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                         </svg>
                         {{ __('common.hero.features.cultural') }}
                     </div>
                     <div class="flex items-center">
-                        <svg class="h-5 w-5 text-secondary-600 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                        <svg class="h-5 w-5 text-secondary-600 mr-2" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
                             <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                         </svg>
                         {{ __('common.hero.features.affordable') }}
                     </div>
                     <div class="flex items-center">
-                        <svg class="h-5 w-5 text-secondary-600 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                        <svg class="h-5 w-5 text-secondary-600 mr-2" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
                             <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                         </svg>
                         {{ __('common.hero.features.delivery') }}

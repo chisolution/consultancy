@@ -5,13 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     
-    <title>@yield('title', __('common.hero.title')) - Professional Business Consultancy</title>
-    <meta name="description" content="@yield('description', __('common.hero.subtitle'))">
-    
+    <title>@yield('title', __('common.meta.home.title'))</title>
+    <meta name="description" content="@yield('description', __('common.meta.home.description'))">
+
     <!-- SEO Meta Tags -->
-    <meta name="keywords" content="business consultancy, accounting services, tax advisory, Rwanda, Canada, USA, Cameroon">
+    <meta name="keywords" content="@yield('keywords', __('common.meta.home.keywords'))">
     <meta name="author" content="Professional Business Consultancy">
     <meta name="robots" content="index, follow">
+    <meta name="language" content="{{ app()->getLocale() }}">
+    <meta name="geo.region" content="RW">
+    <meta name="geo.placename" content="Kigali">
+    <meta name="geo.position" content="-1.9441;30.0619">
+    <meta name="ICBM" content="-1.9441, 30.0619">
     
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="@yield('title', __('common.hero.title'))">
