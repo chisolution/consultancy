@@ -298,18 +298,18 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                         <label for="name" class="block text-sm font-medium text-gray-700 mb-2">{{ __('common.contact.form.name') }} *</label>
-                        <input type="text" id="name" name="name" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-secondary-500 focus:border-secondary-500 transition-colors duration-200">
+                        <input type="text" id="name" name="name" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-secondary-500 focus:border-secondary-500 transition-colors duration-200 text-gray-900 bg-white">
                     </div>
                     <div>
                         <label for="email" class="block text-sm font-medium text-gray-700 mb-2">{{ __('common.contact.form.email') }} *</label>
-                        <input type="email" id="email" name="email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-secondary-500 focus:border-secondary-500 transition-colors duration-200">
+                        <input type="email" id="email" name="email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-secondary-500 focus:border-secondary-500 transition-colors duration-200 text-gray-900 bg-white">
                     </div>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                         <label for="target_location" class="block text-sm font-medium text-gray-700 mb-2">{{ __('services.feasibility_studies.form.target_location') }}</label>
-                        <select id="target_location" name="target_location" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-secondary-500 focus:border-secondary-500 transition-colors duration-200">
+                        <select id="target_location" name="target_location" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-secondary-500 focus:border-secondary-500 transition-colors duration-200 text-gray-900 bg-white">
                             <option value="">{{ __('services.feasibility_studies.form.select_location') }}</option>
                             @foreach(__('services.feasibility_studies.form.locations') as $key => $location)
                             <option value="{{ $key }}">{{ $location }}</option>
@@ -318,7 +318,7 @@
                     </div>
                     <div>
                         <label for="investment_range" class="block text-sm font-medium text-gray-700 mb-2">{{ __('services.feasibility_studies.form.investment_range') }}</label>
-                        <select id="investment_range" name="investment_range" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-secondary-500 focus:border-secondary-500 transition-colors duration-200">
+                        <select id="investment_range" name="investment_range" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-secondary-500 focus:border-secondary-500 transition-colors duration-200 text-gray-900 bg-white">
                             <option value="">{{ __('services.feasibility_studies.form.select_range') }}</option>
                             @foreach(__('services.feasibility_studies.form.ranges') as $key => $range)
                             <option value="{{ $key }}">{{ $range }}</option>
@@ -329,7 +329,7 @@
 
                 <div>
                     <label for="business_concept" class="block text-sm font-medium text-gray-700 mb-2">{{ __('services.feasibility_studies.form.business_concept') }} *</label>
-                    <textarea id="business_concept" name="business_concept" rows="6" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-secondary-500 focus:border-secondary-500 transition-colors duration-200" placeholder="{{ __('services.feasibility_studies.form.message_placeholder') }}"></textarea>
+                    <textarea id="business_concept" name="business_concept" rows="6" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-secondary-500 focus:border-secondary-500 transition-colors duration-200 text-gray-900 bg-white" placeholder="{{ __('services.feasibility_studies.form.message_placeholder') }}"></textarea>
                 </div>
 
                 <button type="submit" class="w-full bg-secondary-600 hover:bg-secondary-700 text-white py-4 rounded-lg font-semibold transition-colors duration-200">

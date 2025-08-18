@@ -228,18 +228,18 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                         <label for="name" class="block text-sm font-medium text-gray-700 mb-2">{{ __('common.contact.form.name') }} *</label>
-                        <input type="text" id="name" name="name" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors duration-200">
+                        <input type="text" id="name" name="name" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors duration-200 text-gray-900 bg-white">
                     </div>
                     <div>
                         <label for="email" class="block text-sm font-medium text-gray-700 mb-2">{{ __('common.contact.form.email') }} *</label>
-                        <input type="email" id="email" name="email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors duration-200">
+                        <input type="email" id="email" name="email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors duration-200 text-gray-900 bg-white">
                     </div>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                         <label for="research_type" class="block text-sm font-medium text-gray-700 mb-2">{{ __('services.market_research.form.research_type') }}</label>
-                        <select id="research_type" name="research_type" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors duration-200">
+                        <select id="research_type" name="research_type" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors duration-200 text-gray-900 bg-white">
                             <option value="">{{ __('services.market_research.form.select_type') }}</option>
                             @foreach(__('services.market_research.form.types') as $key => $type)
                             <option value="{{ $key }}">{{ $type }}</option>
@@ -248,7 +248,7 @@
                     </div>
                     <div>
                         <label for="target_market" class="block text-sm font-medium text-gray-700 mb-2">{{ __('services.market_research.form.target_market') }}</label>
-                        <select id="target_market" name="target_market" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors duration-200">
+                        <select id="target_market" name="target_market" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors duration-200 text-gray-900 bg-white">
                             <option value="">{{ __('services.market_research.form.select_market') }}</option>
                             @foreach(__('services.market_research.form.markets') as $key => $market)
                             <option value="{{ $key }}">{{ $market }}</option>
@@ -259,7 +259,7 @@
 
                 <div>
                     <label for="message" class="block text-sm font-medium text-gray-700 mb-2">{{ __('common.contact.form.message') }} *</label>
-                    <textarea id="message" name="message" rows="6" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors duration-200" placeholder="{{ __('services.market_research.form.message_placeholder') }}"></textarea>
+                    <textarea id="message" name="message" rows="6" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors duration-200 text-gray-900 bg-white" placeholder="{{ __('services.market_research.form.message_placeholder') }}"></textarea>
                 </div>
 
                 <button type="submit" class="w-full bg-primary-600 hover:bg-primary-700 text-white py-4 rounded-lg font-semibold transition-colors duration-200">
