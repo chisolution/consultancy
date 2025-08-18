@@ -46,6 +46,9 @@
     <!-- Styles -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     
+    <!-- Structured Data -->
+    @stack('structured-data')
+
     <!-- Additional Head Content -->
     @stack('head')
 </head>

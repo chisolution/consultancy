@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\App;
+use App\Http\Controllers\SitemapController;
 
 // Default route (redirect to default language)
 Route::get('/', function () {
@@ -15,6 +16,9 @@ Route::get('/language/{locale}', function ($locale) {
     }
     return redirect()->back();
 })->name('language.switch');
+
+// SEO Routes
+Route::get('/sitemap.xml', [SitemapController::class, 'index'])->name('sitemap');
 
 // Localized routes
 Route::prefix('{locale}')->where(['locale' => 'en|fr'])->group(function () {
