@@ -896,4 +896,470 @@ return [
             'subtitle' => 'Enhance your career development with our additional professional services.',
         ],
     ],
+
+    // Market Research & Competitor Analysis Service
+    'market_research' => [
+        'title' => 'Market Research & Competitor Analysis',
+        'short_description' => 'Comprehensive market research, competitor analysis, and industry insights to inform strategic business decisions and market entry strategies.',
+        'meta' => [
+            'title' => 'Market Research & Competitor Analysis | Industry Insights & Strategic Intelligence | Rwanda',
+            'description' => 'Expert market research and competitor analysis services in Rwanda and East Africa. Comprehensive industry insights, market sizing, competitive intelligence, and strategic recommendations for business success.',
+            'keywords' => 'market research Rwanda, competitor analysis Kigali, industry research East Africa, market intelligence Rwanda, business research Cameroon, strategic analysis Rwanda',
+        ],
+        'hero' => [
+            'subtitle' => 'Make informed business decisions with comprehensive market intelligence. Our research services provide deep market insights, competitive analysis, and strategic recommendations that drive successful business outcomes and market positioning.',
+        ],
+        'stats' => [
+            'research_projects' => 'Research Projects',
+            'markets_analyzed' => 'Markets Analyzed',
+            'years_experience' => 'Years Experience',
+            'client_satisfaction' => 'Client Satisfaction',
+        ],
+        'cta' => [
+            'get_research' => 'Get Market Research',
+            'view_samples' => 'View Sample Reports',
+        ],
+        'overview' => [
+            'title' => 'Strategic Market Intelligence & Competitive Analysis',
+            'description' => 'Our market research services provide the critical intelligence you need to make informed business decisions. We conduct comprehensive market analysis, competitor research, and industry studies that reveal opportunities, identify threats, and inform strategic planning.',
+            'expertise' => 'Our research team combines advanced analytical methodologies with deep local market knowledge to deliver actionable insights. We specialize in emerging markets across East Africa, providing both quantitative and qualitative research that drives business success.',
+        ],
+        'services' => [
+            'market_analysis' => [
+                'title' => 'Market Analysis',
+                'description' => 'Comprehensive market sizing, segmentation, and opportunity assessment.',
+                'detailed_description' => 'In-depth analysis of market size, growth trends, customer segments, and market dynamics.',
+                'features' => [
+                    'market_sizing' => 'Market size and growth projections',
+                    'segmentation' => 'Customer segmentation analysis',
+                    'trends_analysis' => 'Market trends and drivers',
+                ],
+            ],
+            'competitor_analysis' => [
+                'title' => 'Competitor Analysis',
+                'description' => 'Detailed competitive landscape analysis and strategic positioning insights.',
+                'detailed_description' => 'Comprehensive competitor profiling, SWOT analysis, and competitive positioning strategies.',
+                'features' => [
+                    'competitor_profiling' => 'Detailed competitor profiles',
+                    'swot_analysis' => 'Strengths, weaknesses, opportunities, threats',
+                    'positioning_analysis' => 'Competitive positioning insights',
+                ],
+            ],
+            'industry_research' => [
+                'title' => 'Industry Research',
+                'description' => 'Comprehensive industry analysis and sector-specific insights.',
+                'detailed_description' => 'Deep-dive industry research covering regulations, trends, key players, and growth opportunities.',
+                'features' => [
+                    'industry_overview' => 'Comprehensive industry landscape',
+                    'regulatory_analysis' => 'Regulatory environment assessment',
+                    'growth_opportunities' => 'Emerging opportunities identification',
+                ],
+            ],
+            'customer_insights' => [
+                'title' => 'Customer Insights',
+                'description' => 'Customer behavior analysis and market preferences research.',
+                'detailed_description' => 'Primary and secondary research to understand customer needs, preferences, and buying behavior.',
+                'features' => [
+                    'customer_surveys' => 'Primary customer research',
+                    'behavior_analysis' => 'Customer behavior patterns',
+                    'preference_mapping' => 'Customer preference analysis',
+                ],
+            ],
+        ],
+        'contact' => [
+            'title' => 'Get Market Intelligence',
+            'hours' => 'Mon-Fri 8AM-6PM CAT',
+            'cta' => 'Start Research Project',
+        ],
+        'packages' => [
+            'title' => 'Research Packages',
+            'basic' => [
+                'title' => 'Market Overview',
+                'description' => 'Essential market analysis with key insights and competitor overview.',
+                'price' => 'From $2,500',
+            ],
+            'comprehensive' => [
+                'title' => 'Full Market Study',
+                'description' => 'Comprehensive market research with detailed competitor analysis and strategic recommendations.',
+                'price' => 'From $5,000',
+            ],
+            'strategic' => [
+                'title' => 'Strategic Intelligence',
+                'description' => 'Complete market intelligence package with ongoing monitoring and quarterly updates.',
+                'price' => 'Custom Quote',
+            ],
+        ],
+        'process' => [
+            'title' => 'Our Research Methodology',
+            'subtitle' => 'A systematic approach to market research that delivers actionable insights through rigorous analysis and local market expertise.',
+            'step1' => [
+                'title' => 'Research Design',
+                'description' => 'Define research objectives, methodology, and data collection strategy.',
+            ],
+            'step2' => [
+                'title' => 'Data Collection',
+                'description' => 'Gather primary and secondary data through surveys, interviews, and desk research.',
+            ],
+            'step3' => [
+                'title' => 'Analysis & Insights',
+                'description' => 'Analyze data using advanced analytical tools and extract actionable insights.',
+            ],
+            'step4' => [
+                'title' => 'Reporting & Recommendations',
+                'description' => 'Deliver comprehensive reports with strategic recommendations and implementation guidance.',
+            ],
+        ],
+        'consultation' => [
+            'title' => 'Start Your Market Research Project',
+            'subtitle' => 'Schedule a consultation to discuss your research needs and develop a customized research plan.',
+        ],
+        'form' => [
+            'research_type' => 'Research Type',
+            'select_type' => 'Select your research focus',
+            'target_market' => 'Target Market',
+            'select_market' => 'Select your target market',
+            'types' => [
+                'market_entry' => 'Market Entry Research',
+                'competitor_analysis' => 'Competitor Analysis',
+                'customer_research' => 'Customer Research',
+                'industry_analysis' => 'Industry Analysis',
+                'opportunity_assessment' => 'Opportunity Assessment',
+            ],
+            'markets' => [
+                'rwanda' => 'Rwanda',
+                'cameroon' => 'Cameroon',
+                'east_africa' => 'East Africa Region',
+                'central_africa' => 'Central Africa Region',
+                'multiple_markets' => 'Multiple Markets',
+            ],
+            'message_placeholder' => 'Describe your research objectives and specific information needs...',
+            'submit' => 'Request Market Research',
+        ],
+        'related' => [
+            'title' => 'Complete Market Intelligence Solutions',
+            'subtitle' => 'Enhance your market research with our additional strategic services.',
+        ],
+    ],
+
+    // Feasibility Studies Service
+    'feasibility_studies' => [
+        'title' => 'Feasibility Studies & Market Entry',
+        'short_description' => 'Comprehensive feasibility studies for business ventures in Rwanda and Cameroon, including market viability assessment, location analysis, and strategic entry recommendations.',
+        'meta' => [
+            'title' => 'Feasibility Studies & Market Entry | Business Viability Assessment | Rwanda & Cameroon',
+            'description' => 'Expert feasibility studies for business ventures in Rwanda and Cameroon. Comprehensive viability assessment, location analysis, regulatory guidance, and market entry strategies for successful business launch.',
+            'keywords' => 'feasibility study Rwanda, business viability Cameroon, market entry Rwanda, investment opportunities East Africa, business setup Kigali, strategic locations Rwanda',
+        ],
+        'hero' => [
+            'subtitle' => 'Validate your business ideas with comprehensive feasibility analysis. Our studies provide detailed market viability assessment, location recommendations, and strategic insights for successful business ventures in Rwanda and Cameroon.',
+        ],
+        'stats' => [
+            'studies_completed' => 'Studies Completed',
+            'success_rate' => 'Project Success Rate',
+            'years_experience' => 'Years Experience',
+            'markets_covered' => 'Markets Covered',
+        ],
+        'cta' => [
+            'get_study' => 'Get Feasibility Study',
+            'view_locations' => 'View Strategic Locations',
+        ],
+        'overview' => [
+            'title' => 'Comprehensive Business Viability & Market Entry Assessment',
+            'description' => 'Our feasibility studies provide thorough analysis of business opportunities in Rwanda and Cameroon. We assess market viability, analyze strategic locations, evaluate regulatory requirements, and provide detailed recommendations for successful market entry and business establishment.',
+            'expertise' => 'Our team combines deep local market knowledge with international business expertise to deliver comprehensive feasibility assessments. We specialize in emerging markets and understand the unique opportunities and challenges of doing business in East and Central Africa.',
+        ],
+        'services' => [
+            'market_viability' => [
+                'title' => 'Market Viability Assessment',
+                'description' => 'Comprehensive analysis of market demand, competition, and business potential.',
+                'detailed_description' => 'Detailed assessment of market size, demand patterns, competitive landscape, and revenue potential.',
+                'features' => [
+                    'demand_analysis' => 'Market demand assessment',
+                    'revenue_projections' => 'Revenue and profitability projections',
+                    'risk_assessment' => 'Business risk evaluation',
+                ],
+            ],
+            'location_analysis' => [
+                'title' => 'Strategic Location Analysis',
+                'description' => 'Identification and evaluation of optimal business locations and strategic advantages.',
+                'detailed_description' => 'Comprehensive location assessment including infrastructure, accessibility, costs, and strategic benefits.',
+                'features' => [
+                    'site_evaluation' => 'Strategic site evaluation',
+                    'infrastructure_assessment' => 'Infrastructure and utilities analysis',
+                    'cost_analysis' => 'Location cost comparison',
+                ],
+            ],
+            'regulatory_guidance' => [
+                'title' => 'Regulatory & Legal Assessment',
+                'description' => 'Complete regulatory environment analysis and compliance requirements.',
+                'detailed_description' => 'Detailed analysis of regulatory requirements, licensing procedures, and legal considerations.',
+                'features' => [
+                    'regulatory_mapping' => 'Regulatory requirements mapping',
+                    'licensing_guidance' => 'Licensing and permits guidance',
+                    'compliance_framework' => 'Compliance framework development',
+                ],
+            ],
+            'financial_modeling' => [
+                'title' => 'Financial Modeling & Projections',
+                'description' => 'Detailed financial analysis and investment return projections.',
+                'detailed_description' => 'Comprehensive financial modeling including investment requirements, cash flow projections, and ROI analysis.',
+                'features' => [
+                    'investment_analysis' => 'Investment requirements analysis',
+                    'cash_flow_modeling' => 'Cash flow projections',
+                    'roi_assessment' => 'Return on investment analysis',
+                ],
+            ],
+        ],
+        'contact' => [
+            'title' => 'Start Your Feasibility Study',
+            'hours' => 'Mon-Fri 8AM-6PM CAT',
+            'cta' => 'Begin Assessment',
+        ],
+        'packages' => [
+            'title' => 'Feasibility Study Packages',
+            'market_entry' => [
+                'title' => 'Market Entry Study',
+                'description' => 'Essential feasibility assessment for market entry with location recommendations.',
+                'price' => 'From $3,500',
+            ],
+            'comprehensive' => [
+                'title' => 'Comprehensive Feasibility',
+                'description' => 'Complete feasibility study with detailed financial modeling and strategic recommendations.',
+                'price' => 'From $7,500',
+            ],
+            'investment_grade' => [
+                'title' => 'Investment-Grade Study',
+                'description' => 'Detailed feasibility study suitable for investor presentations and funding applications.',
+                'price' => 'From $12,000',
+            ],
+        ],
+        'process' => [
+            'title' => 'Our Feasibility Study Process',
+            'subtitle' => 'A systematic approach to business viability assessment that provides comprehensive insights for informed investment decisions.',
+            'step1' => [
+                'title' => 'Project Scoping',
+                'description' => 'Define study objectives, scope, and methodology based on your business concept.',
+            ],
+            'step2' => [
+                'title' => 'Market Research',
+                'description' => 'Conduct comprehensive market research and competitive analysis.',
+            ],
+            'step3' => [
+                'title' => 'Viability Analysis',
+                'description' => 'Analyze market viability, financial projections, and risk assessment.',
+            ],
+            'step4' => [
+                'title' => 'Recommendations',
+                'description' => 'Deliver detailed recommendations with implementation roadmap and next steps.',
+            ],
+        ],
+        'consultation' => [
+            'title' => 'Validate Your Business Concept',
+            'subtitle' => 'Schedule a consultation to discuss your business idea and develop a comprehensive feasibility study plan.',
+        ],
+        'form' => [
+            'business_concept' => 'Business Concept',
+            'select_concept' => 'Describe your business concept',
+            'target_location' => 'Target Location',
+            'select_location' => 'Select your preferred location',
+            'investment_range' => 'Investment Range',
+            'select_range' => 'Select your investment range',
+            'locations' => [
+                'kigali' => 'Kigali, Rwanda',
+                'rwanda_other' => 'Other Rwanda Locations',
+                'douala' => 'Douala, Cameroon',
+                'yaounde' => 'Yaoundé, Cameroon',
+                'cameroon_other' => 'Other Cameroon Locations',
+            ],
+            'ranges' => [
+                'under_50k' => 'Under $50,000',
+                '50k_200k' => '$50,000 - $200,000',
+                '200k_500k' => '$200,000 - $500,000',
+                '500k_1m' => '$500,000 - $1,000,000',
+                'over_1m' => 'Over $1,000,000',
+            ],
+            'message_placeholder' => 'Describe your business concept, target market, and specific feasibility questions...',
+            'submit' => 'Request Feasibility Study',
+        ],
+        'related' => [
+            'title' => 'Complete Market Entry Solutions',
+            'subtitle' => 'Support your feasibility study with our comprehensive business setup and advisory services.',
+        ],
+    ],
+
+    // Business Intelligence & Data Analytics Service
+    'data_analytics' => [
+        'title' => 'Business Intelligence & Data Analytics',
+        'short_description' => 'Advanced data collection, analysis, and visualization services using Excel, Python, SQL, Power BI, and Tableau to transform data into actionable business insights.',
+        'meta' => [
+            'title' => 'Business Intelligence & Data Analytics | Data Visualization & Analysis | Rwanda',
+            'description' => 'Expert business intelligence and data analytics services in Rwanda. Advanced data collection, analysis, and visualization using Excel, Python, SQL, Power BI, and Tableau for data-driven business decisions.',
+            'keywords' => 'business intelligence Rwanda, data analytics Kigali, data visualization East Africa, Power BI services Rwanda, Tableau consulting Cameroon, SQL analysis Rwanda',
+        ],
+        'hero' => [
+            'subtitle' => 'Transform your data into competitive advantage with advanced analytics and visualization. Our BI services help you collect, analyze, and visualize data to make informed decisions and drive business growth.',
+        ],
+        'stats' => [
+            'data_projects' => 'Data Projects',
+            'insights_generated' => 'Insights Generated',
+            'years_experience' => 'Years Experience',
+            'tools_mastered' => 'Analytics Tools',
+        ],
+        'cta' => [
+            'get_analytics' => 'Get Data Analytics',
+            'view_dashboards' => 'View Sample Dashboards',
+        ],
+        'overview' => [
+            'title' => 'Advanced Data Analytics & Business Intelligence Solutions',
+            'description' => 'Our data analytics services transform raw data into actionable business insights. We specialize in data collection, analysis, and visualization using industry-leading tools to help organizations make data-driven decisions and optimize performance.',
+            'expertise' => 'Our analytics team combines technical expertise in modern data tools with deep business acumen to deliver meaningful insights. We work with Excel, Python, SQL, Power BI, and Tableau to create comprehensive analytics solutions that drive business value.',
+        ],
+        'services' => [
+            'data_collection' => [
+                'title' => 'Data Collection & Integration',
+                'description' => 'Comprehensive data collection and integration from multiple sources.',
+                'detailed_description' => 'Design and implement data collection strategies, integrate multiple data sources, and ensure data quality.',
+                'features' => [
+                    'data_sourcing' => 'Multi-source data collection',
+                    'data_integration' => 'Data integration and consolidation',
+                    'quality_assurance' => 'Data quality and validation',
+                ],
+            ],
+            'data_analysis' => [
+                'title' => 'Advanced Data Analysis',
+                'description' => 'Statistical analysis and data modeling using Python, SQL, and advanced analytics.',
+                'detailed_description' => 'Perform complex data analysis, statistical modeling, and predictive analytics using Python and SQL.',
+                'features' => [
+                    'statistical_analysis' => 'Statistical analysis and modeling',
+                    'predictive_analytics' => 'Predictive modeling and forecasting',
+                    'pattern_recognition' => 'Pattern and trend identification',
+                ],
+            ],
+            'data_visualization' => [
+                'title' => 'Data Visualization & Dashboards',
+                'description' => 'Interactive dashboards and visualizations using Power BI, Tableau, and Excel.',
+                'detailed_description' => 'Create compelling visualizations and interactive dashboards that make complex data accessible and actionable.',
+                'features' => [
+                    'dashboard_development' => 'Interactive dashboard creation',
+                    'visualization_design' => 'Custom visualization design',
+                    'reporting_automation' => 'Automated reporting solutions',
+                ],
+            ],
+            'business_intelligence' => [
+                'title' => 'Business Intelligence Solutions',
+                'description' => 'Comprehensive BI solutions for performance monitoring and strategic insights.',
+                'detailed_description' => 'Develop complete BI solutions including KPI tracking, performance monitoring, and strategic analytics.',
+                'features' => [
+                    'kpi_tracking' => 'KPI and performance tracking',
+                    'strategic_analytics' => 'Strategic business analytics',
+                    'decision_support' => 'Decision support systems',
+                ],
+            ],
+        ],
+        'contact' => [
+            'title' => 'Start Your Analytics Project',
+            'hours' => 'Mon-Fri 8AM-6PM CAT',
+            'cta' => 'Begin Analytics',
+        ],
+        'tools' => [
+            'title' => 'Our Analytics Toolkit',
+            'excel' => [
+                'name' => 'Microsoft Excel',
+                'description' => 'Advanced Excel modeling, pivot tables, and data analysis.',
+            ],
+            'python' => [
+                'name' => 'Python',
+                'description' => 'Statistical analysis, machine learning, and data processing.',
+            ],
+            'sql' => [
+                'name' => 'SQL',
+                'description' => 'Database querying, data extraction, and analysis.',
+            ],
+            'powerbi' => [
+                'name' => 'Power BI',
+                'description' => 'Interactive dashboards and business intelligence.',
+            ],
+            'tableau' => [
+                'name' => 'Tableau',
+                'description' => 'Advanced data visualization and analytics.',
+            ],
+        ],
+        'packages' => [
+            'title' => 'Analytics Packages',
+            'basic' => [
+                'title' => 'Data Analysis',
+                'description' => 'Essential data analysis with Excel and basic visualizations.',
+                'price' => 'From $1,500',
+            ],
+            'advanced' => [
+                'title' => 'Business Intelligence',
+                'description' => 'Comprehensive BI solution with interactive dashboards and advanced analytics.',
+                'price' => 'From $4,000',
+            ],
+            'enterprise' => [
+                'title' => 'Enterprise Analytics',
+                'description' => 'Complete analytics platform with custom development and ongoing support.',
+                'price' => 'Custom Quote',
+            ],
+        ],
+        'process' => [
+            'title' => 'Our Analytics Process',
+            'subtitle' => 'A systematic approach to data analytics that transforms raw data into actionable business insights and strategic recommendations.',
+            'step1' => [
+                'title' => 'Data Assessment',
+                'description' => 'Evaluate data sources, quality, and analytics requirements.',
+            ],
+            'step2' => [
+                'title' => 'Data Collection & Preparation',
+                'description' => 'Collect, clean, and prepare data for analysis using appropriate tools.',
+            ],
+            'step3' => [
+                'title' => 'Analysis & Modeling',
+                'description' => 'Perform advanced analysis and create predictive models using Python and SQL.',
+            ],
+            'step4' => [
+                'title' => 'Visualization & Insights',
+                'description' => 'Create interactive dashboards and deliver actionable insights and recommendations.',
+            ],
+        ],
+        'consultation' => [
+            'title' => 'Unlock Your Data\'s Potential',
+            'subtitle' => 'Schedule a consultation to discuss your data analytics needs and develop a customized analytics solution.',
+        ],
+        'form' => [
+            'data_source' => 'Primary Data Source',
+            'select_source' => 'Select your main data source',
+            'analytics_goal' => 'Analytics Goal',
+            'select_goal' => 'Select your primary analytics objective',
+            'preferred_tool' => 'Preferred Tool',
+            'select_tool' => 'Select your preferred analytics tool',
+            'sources' => [
+                'excel_files' => 'Excel Files',
+                'databases' => 'Databases',
+                'web_data' => 'Web Data',
+                'surveys' => 'Surveys/Forms',
+                'multiple_sources' => 'Multiple Sources',
+            ],
+            'goals' => [
+                'performance_tracking' => 'Performance Tracking',
+                'predictive_analytics' => 'Predictive Analytics',
+                'customer_insights' => 'Customer Insights',
+                'operational_efficiency' => 'Operational Efficiency',
+                'strategic_planning' => 'Strategic Planning',
+            ],
+            'tools' => [
+                'excel' => 'Excel',
+                'powerbi' => 'Power BI',
+                'tableau' => 'Tableau',
+                'python' => 'Python',
+                'no_preference' => 'No Preference',
+            ],
+            'message_placeholder' => 'Describe your data analytics needs and specific objectives...',
+            'submit' => 'Request Analytics Solution',
+        ],
+        'related' => [
+            'title' => 'Complete Data-Driven Solutions',
+            'subtitle' => 'Enhance your analytics capabilities with our comprehensive business intelligence and research services.',
+        ],
+    ],
 ];

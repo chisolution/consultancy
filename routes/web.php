@@ -74,4 +74,17 @@ Route::prefix('{locale}')->where(['locale' => 'en|fr'])->group(function () {
     Route::get('/services/career-development', function () {
         return view('pages.services.career-development');
     })->name('services.career-development');
+
+    // New Research & Analytics Services
+    Route::get('/services/market-research', function () {
+        return view('pages.services.market-research');
+    })->name('services.market-research');
+
+    Route::get('/services/feasibility-studies', function () {
+        return view('pages.services.feasibility-studies');
+    })->name('services.feasibility-studies');
+
+    Route::get('/services/data-analytics', function () {
+        return view('pages.services.data-analytics');
+    })->name('services.data-analytics');
 });
