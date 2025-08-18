@@ -1,2 +1,28 @@
 User-agent: *
-Disallow:
+Allow: /
+
+# Sitemap
+Sitemap: https://professionalbusinessconsultancy.com/sitemap.xml
+
+# Disallow admin areas
+Disallow: /admin/
+Disallow: /dashboard/
+Disallow: /api/
+
+# Disallow build assets and system files
+Disallow: /build/
+Disallow: /.env
+Disallow: /storage/
+
+# Allow important pages
+Allow: /en/
+Allow: /fr/
+Allow: /en/services/
+Allow: /fr/services/
+Allow: /en/about
+Allow: /fr/about
+Allow: /en/contact
+Allow: /fr/contact
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1

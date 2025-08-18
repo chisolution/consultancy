@@ -3,6 +3,14 @@
 @section('title', __('common.hero.title'))
 @section('description', __('common.hero.subtitle'))
 
+@push('structured-data')
+    <x-seo.structured-data type="organization" />
+    <x-seo.structured-data type="webpage" :data="[
+        'title' => __('common.hero.title'),
+        'description' => __('common.hero.subtitle')
+    ]" />
+@endpush
+
 @section('content')
 <!-- Hero Section -->
 <section class="relative bg-gradient-to-br from-primary-50 to-secondary-50 overflow-hidden">
