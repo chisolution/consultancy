@@ -164,11 +164,12 @@ return [
         'loading' => 'Loading...',
     ],
 
-    // Contact Form
+    // Contact Page
     'contact' => [
         'title' => 'Get In Touch',
         'subtitle' => 'Ready to start your business transformation journey?',
         'form' => [
+            'title' => 'Send us a message',
             'name' => 'Full Name',
             'email' => 'Email Address',
             'phone' => 'Phone Number',
@@ -177,31 +178,13 @@ return [
             'message' => 'Message',
             'send_message' => 'Send Message',
             'required' => 'Required field',
+            'select_service' => 'Select a service',
+            'message_placeholder' => 'Tell us about your business needs...',
         ],
         'info' => [
             'title' => 'Contact Information',
             'description' => 'Reach out to us through any of our global offices.',
         ],
-    ],
-
-    // Form Labels
-    'form' => [
-        'name' => 'Full Name',
-        'email' => 'Email Address',
-        'phone' => 'Phone Number',
-        'company' => 'Company Name',
-        'message' => 'Message',
-        'submit' => 'Send Message',
-    ],
-
-    // Common Actions
-    'learn_more' => 'Learn More',
-    'get_started' => 'Get Started',
-    'contact_us' => 'Contact Us',
-    'read_more' => 'Read More',
-
-    // Contact Page
-    'contact' => [
         'global_service' => [
             'title' => 'Global Service Delivery',
             'description' => 'While our office is based in Rwanda, we serve clients worldwide through remote consultations, specialist partnerships, and cultural competency that spans diverse markets.',
@@ -212,5 +195,29 @@ return [
                 'local_expertise' => 'Local Expertise',
             ],
         ],
+        'office' => [
+            'title' => 'Our Office',
+            'address' => 'KG 123 St, Gasabo District',
+            'city' => 'Kigali, Rwanda',
+            'phone' => '+250 XXX XXX XXX',
+            'email' => 'hello@consultancy.rw',
+        ],
+        'cta' => [
+            'title' => 'Get in touch',
+            'email' => 'hello@consultancy.com',
+            'phone' => '+1-XXX-XXX-XXXX',
+        ],
+        'map' => [
+            'title' => 'Our Global Presence',
+            'subtitle' => 'Find us across four countries',
+            'coming_soon' => 'Interactive map coming soon',
+            'showing_locations' => 'Showing all office locations',
+        ],
     ],
+
+    // Common Actions
+    'learn_more' => 'Learn More',
+    'get_started' => 'Get Started',
+    'contact_us' => 'Contact Us',
+    'read_more' => 'Read More',
 ];
