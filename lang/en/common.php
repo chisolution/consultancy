@@ -110,7 +110,7 @@ return [
     'footer' => [
         'company_description' => 'Professional business consultancy, accounting, and financial advisory services from Rwanda, serving clients globally.',
         'quick_links' => 'Quick Links',
-        'services_title' => 'Services',
+        'services' => 'Our Services',
         'contact_info' => 'Contact Information',
         'office_location' => 'Our Office',
         'location' => [

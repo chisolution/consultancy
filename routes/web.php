@@ -63,9 +63,9 @@ Route::prefix('{locale}')->where(['locale' => 'en|fr'])->group(function () {
         return view('pages.services.audit-compliance');
     })->name('services.audit-compliance');
 
-    Route::get('/services/training', function () {
-        return view('pages.services.training');
-    })->name('services.training');
+    Route::get('/services/corporate-training', function () {
+        return view('pages.services.corporate-training');
+    })->name('services.corporate-training');
 
     Route::get('/services/career-development', function () {
         return view('pages.services.career-development');

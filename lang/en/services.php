@@ -557,11 +557,343 @@ return [
     'audit_compliance' => [
         'title' => 'Audit & Compliance Services',
         'short_description' => 'Professional audit services and regulatory compliance support for businesses of all sizes.',
+        'meta' => [
+            'title' => 'Audit & Compliance Services | Financial Audit | Regulatory Compliance | Rwanda',
+            'description' => 'Professional audit and compliance services in Rwanda. Financial audits, regulatory compliance, internal controls, and risk assessment for businesses.',
+            'keywords' => 'audit services Rwanda, compliance audit Kigali, financial audit East Africa, regulatory compliance Rwanda, internal audit Rwanda',
+        ],
+        'hero' => [
+            'subtitle' => 'Ensure regulatory compliance and financial transparency with our comprehensive audit services. Our certified auditors provide thorough assessments, risk management, and compliance solutions that protect your business and build stakeholder confidence.',
+        ],
+        'stats' => [
+            'audits_completed' => 'Audits Completed',
+            'compliance_rate' => 'Compliance Rate',
+            'years_experience' => 'Years Experience',
+            'response_time' => 'Response Time',
+        ],
+        'cta' => [
+            'request_audit' => 'Request Audit',
+            'view_services' => 'View Services',
+        ],
+        'overview' => [
+            'title' => 'Comprehensive Audit & Compliance Solutions',
+            'description' => 'Our audit and compliance services provide independent assurance on your financial statements, internal controls, and regulatory adherence. We help businesses maintain transparency, manage risks, and meet all regulatory requirements in Rwanda and internationally.',
+            'expertise' => 'Our certified auditors bring extensive experience in financial auditing, compliance assessment, and risk management. We work with businesses of all sizes to ensure they meet the highest standards of financial reporting and regulatory compliance.',
+        ],
+        'services' => [
+            'financial_audit' => [
+                'title' => 'Financial Audit',
+                'description' => 'Independent examination of financial statements and accounting records.',
+            ],
+            'regulatory_compliance' => [
+                'title' => 'Regulatory Compliance',
+                'description' => 'Ensuring adherence to all applicable laws and regulations.',
+            ],
+            'internal_controls' => [
+                'title' => 'Internal Controls',
+                'description' => 'Assessment and improvement of internal control systems.',
+            ],
+            'risk_assessment' => [
+                'title' => 'Risk Assessment',
+                'description' => 'Comprehensive evaluation of business risks and mitigation strategies.',
+            ],
+        ],
+        'contact' => [
+            'title' => 'Schedule Audit',
+            'hours' => 'Mon-Fri 8AM-6PM CAT',
+            'cta' => 'Request Consultation',
+        ],
+        'checklist' => [
+            'title' => 'Compliance Checklist',
+            'items' => [
+                'financial_statements' => 'Financial Statements Review',
+                'tax_compliance' => 'Tax Compliance Check',
+                'regulatory_filings' => 'Regulatory Filings',
+                'internal_controls' => 'Internal Controls Assessment',
+                'risk_management' => 'Risk Management Review',
+            ],
+            'note' => 'Comprehensive compliance assessment available',
+        ],
+        'process' => [
+            'title' => 'Our Audit Process',
+            'subtitle' => 'A systematic 4-step approach ensuring thorough examination and reliable results.',
+            'step1' => [
+                'title' => 'Planning',
+                'description' => 'Initial assessment and audit planning with risk evaluation.',
+            ],
+            'step2' => [
+                'title' => 'Fieldwork',
+                'description' => 'Detailed examination of records and testing of controls.',
+            ],
+            'step3' => [
+                'title' => 'Analysis',
+                'description' => 'Analysis of findings and identification of issues.',
+            ],
+            'step4' => [
+                'title' => 'Reporting',
+                'description' => 'Comprehensive audit report with recommendations.',
+            ],
+        ],
+        'consultation' => [
+            'title' => 'Request Audit Consultation',
+            'subtitle' => 'Get started with a consultation to discuss your audit and compliance needs.',
+        ],
+        'form' => [
+            'company' => 'Company Name',
+            'audit_type' => 'Audit Type',
+            'select_type' => 'Select audit type',
+            'types' => [
+                'financial_audit' => 'Financial Audit',
+                'compliance_audit' => 'Compliance Audit',
+                'internal_audit' => 'Internal Audit',
+                'risk_assessment' => 'Risk Assessment',
+                'due_diligence' => 'Due Diligence',
+            ],
+            'message_placeholder' => 'Tell us about your audit requirements and compliance needs...',
+            'submit' => 'Request Audit Consultation',
+        ],
+        'related' => [
+            'title' => 'Complete Compliance Solutions',
+            'subtitle' => 'Enhance your compliance framework with our additional professional services.',
+        ],
+    ],
+
+    // Corporate Training
+    'corporate_training' => [
+        'title' => 'Corporate Training & Capacity Building',
+        'short_description' => 'Professional corporate training programs and capacity building solutions for organizational development and employee growth.',
+        'meta' => [
+            'title' => 'Corporate Training & Capacity Building | Professional Development | Rwanda',
+            'description' => 'Corporate training and capacity building services in Rwanda. Leadership development, financial literacy, team building, and digital skills training for organizations.',
+            'keywords' => 'corporate training Rwanda, capacity building Kigali, professional development East Africa, leadership training Rwanda, team building Rwanda',
+        ],
+        'hero' => [
+            'subtitle' => 'Build organizational capacity and develop your team with our comprehensive corporate training programs. We deliver customized training solutions that enhance skills, improve performance, and drive business results.',
+        ],
+        'stats' => [
+            'professionals_trained' => 'Professionals Trained',
+            'satisfaction_rate' => 'Satisfaction Rate',
+            'companies_served' => 'Companies Served',
+            'years_experience' => 'Years Experience',
+        ],
+        'cta' => [
+            'book_training' => 'Book Training',
+            'view_programs' => 'View Programs',
+        ],
+        'overview' => [
+            'title' => 'Comprehensive Corporate Training Solutions',
+            'description' => 'Our corporate training services help organizations build capacity, develop talent, and improve performance. We offer customized training programs that address specific business needs and drive measurable results.',
+            'expertise' => 'Our experienced trainers and facilitators bring deep expertise in adult learning, organizational development, and performance improvement. We work with companies of all sizes to design and deliver training programs that create lasting impact.',
+        ],
+        'areas' => [
+            'leadership' => [
+                'title' => 'Leadership Development',
+                'description' => 'Comprehensive leadership training programs for managers and executives.',
+            ],
+            'financial_literacy' => [
+                'title' => 'Financial Literacy',
+                'description' => 'Financial management and literacy training for all organizational levels.',
+            ],
+            'team_development' => [
+                'title' => 'Team Development',
+                'description' => 'Team building and collaboration skills development programs.',
+            ],
+            'digital_skills' => [
+                'title' => 'Digital Skills',
+                'description' => 'Technology and digital transformation training for modern workplaces.',
+            ],
+        ],
+        'contact' => [
+            'title' => 'Plan Your Training',
+            'hours' => 'Mon-Fri 8AM-6PM CAT',
+            'cta' => 'Get Quote',
+        ],
+        'formats' => [
+            'title' => 'Training Formats',
+            'onsite' => [
+                'title' => 'On-site Training',
+                'description' => 'In-person training at your location',
+            ],
+            'virtual' => [
+                'title' => 'Virtual Training',
+                'description' => 'Online interactive sessions',
+            ],
+            'hybrid' => [
+                'title' => 'Hybrid Programs',
+                'description' => 'Combined online and in-person',
+            ],
+        ],
+        'programs' => [
+            'title' => 'Training Programs',
+            'subtitle' => 'Professional development programs designed to build capacity and drive organizational success.',
+            'duration' => 'Duration',
+            'participants' => 'Participants',
+            'leadership' => [
+                'title' => 'Leadership Excellence',
+                'description' => 'Comprehensive leadership development program for managers and executives.',
+                'duration' => '3 days',
+                'participants' => '15-20',
+                'price' => '$1,200/person',
+            ],
+            'financial' => [
+                'title' => 'Financial Management',
+                'description' => 'Financial literacy and management skills for non-financial professionals.',
+                'duration' => '2 days',
+                'participants' => '20-25',
+                'price' => '$800/person',
+            ],
+            'digital' => [
+                'title' => 'Digital Transformation',
+                'description' => 'Digital skills and technology adoption training for modern workplaces.',
+                'duration' => '4 days',
+                'participants' => '12-18',
+                'price' => '$1,000/person',
+            ],
+        ],
+        'consultation' => [
+            'title' => 'Plan Your Corporate Training',
+            'subtitle' => 'Schedule a consultation to discuss your training needs and customize a program for your organization.',
+        ],
+        'form' => [
+            'company' => 'Company Name',
+            'team_size' => 'Team Size',
+            'select_size' => 'Select team size',
+            'employees' => 'employees',
+            'training_area' => 'Training Area',
+            'select_area' => 'Select training area',
+            'areas' => [
+                'leadership' => 'Leadership Development',
+                'financial' => 'Financial Management',
+                'digital' => 'Digital Skills',
+                'team_building' => 'Team Building',
+                'custom' => 'Custom Program',
+            ],
+            'message_placeholder' => 'Tell us about your training needs and organizational goals...',
+            'submit' => 'Request Training Proposal',
+        ],
+        'related' => [
+            'title' => 'Build Organizational Excellence',
+            'subtitle' => 'Enhance your training programs with our additional professional services.',
+        ],
     ],
 
     // Career Development
     'career_development' => [
         'title' => 'Career Development Coaching',
         'short_description' => 'Professional career coaching and development programs to advance your career and achieve your goals.',
+        'meta' => [
+            'title' => 'Career Development Coaching | Professional Career Coaching | Rwanda',
+            'description' => 'Professional career development coaching in Rwanda. Career coaching, resume optimization, interview preparation, and skill development for career advancement.',
+            'keywords' => 'career coaching Rwanda, career development Kigali, professional coaching East Africa, career advancement Rwanda, executive coaching Rwanda',
+        ],
+        'hero' => [
+            'subtitle' => 'Accelerate your career growth with personalized coaching and development programs. Our expert career coaches provide strategic guidance, skill development, and actionable plans to help you achieve your professional goals and advance your career.',
+        ],
+        'stats' => [
+            'careers_advanced' => 'Careers Advanced',
+            'success_rate' => 'Success Rate',
+            'years_experience' => 'Years Experience',
+            'promotion_rate' => 'Promotion Rate',
+        ],
+        'cta' => [
+            'start_coaching' => 'Start Coaching',
+            'view_programs' => 'View Programs',
+        ],
+        'overview' => [
+            'title' => 'Professional Career Development & Coaching',
+            'description' => 'Our career development services provide personalized coaching and strategic guidance to help professionals at all levels advance their careers. We offer comprehensive programs that address career planning, skill development, leadership growth, and professional positioning.',
+            'expertise' => 'Our certified career coaches bring extensive experience in talent development, executive coaching, and career strategy. We work with individuals and organizations to create customized development plans that drive measurable career advancement and professional success.',
+        ],
+        'services' => [
+            'career_coaching' => [
+                'title' => 'Career Coaching',
+                'description' => 'One-on-one coaching sessions to develop your career strategy and goals.',
+            ],
+            'resume_optimization' => [
+                'title' => 'Resume Optimization',
+                'description' => 'Professional resume and LinkedIn profile optimization for maximum impact.',
+            ],
+            'interview_prep' => [
+                'title' => 'Interview Preparation',
+                'description' => 'Comprehensive interview coaching and preparation for career opportunities.',
+            ],
+            'skill_development' => [
+                'title' => 'Skill Development',
+                'description' => 'Targeted skill building programs for professional growth and advancement.',
+            ],
+        ],
+        'contact' => [
+            'title' => 'Start Your Journey',
+            'hours' => 'Mon-Fri 8AM-6PM CAT',
+            'cta' => 'Book Consultation',
+        ],
+        'assessment' => [
+            'title' => 'Free Career Assessment',
+            'description' => 'Get a comprehensive evaluation of your career potential and development opportunities.',
+            'items' => [
+                'strengths' => 'Strengths Analysis',
+                'goals' => 'Goal Setting',
+                'opportunities' => 'Opportunity Mapping',
+                'action_plan' => 'Action Plan Development',
+            ],
+            'cta' => 'Take Assessment',
+        ],
+        'programs' => [
+            'title' => 'Career Development Programs',
+            'subtitle' => 'Choose the coaching program that best fits your career goals and development needs.',
+            'duration' => 'Duration',
+            'format' => 'Format',
+            'individual' => [
+                'title' => 'Individual Coaching',
+                'description' => 'Personalized one-on-one career coaching sessions tailored to your specific goals.',
+                'duration' => '3-6 months',
+                'format' => '1-on-1 sessions',
+                'price' => '$200/session',
+            ],
+            'group' => [
+                'title' => 'Group Workshops',
+                'description' => 'Interactive group sessions focusing on career development skills and strategies.',
+                'duration' => '4-8 weeks',
+                'format' => 'Group workshops',
+                'price' => '$150/person',
+            ],
+            'executive' => [
+                'title' => 'Executive Coaching',
+                'description' => 'Advanced coaching for senior professionals and executives seeking leadership growth.',
+                'duration' => '6-12 months',
+                'format' => 'Executive sessions',
+                'price' => '$500/session',
+            ],
+        ],
+        'consultation' => [
+            'title' => 'Start Your Career Development Journey',
+            'subtitle' => 'Schedule a consultation to discuss your career goals and development opportunities.',
+        ],
+        'form' => [
+            'current_role' => 'Current Role/Position',
+            'experience_level' => 'Experience Level',
+            'select_level' => 'Select your experience level',
+            'levels' => [
+                'entry' => 'Entry Level (0-2 years)',
+                'mid' => 'Mid Level (3-7 years)',
+                'senior' => 'Senior Level (8-15 years)',
+                'executive' => 'Executive Level (15+ years)',
+            ],
+            'coaching_focus' => 'Coaching Focus Area',
+            'select_focus' => 'Select your focus area',
+            'focus' => [
+                'career_change' => 'Career Change',
+                'promotion' => 'Promotion/Advancement',
+                'leadership' => 'Leadership Development',
+                'skills' => 'Skill Development',
+                'interview' => 'Interview Preparation',
+            ],
+            'message_placeholder' => 'Tell us about your career goals and development needs...',
+            'submit' => 'Request Career Consultation',
+        ],
+        'related' => [
+            'title' => 'Accelerate Your Professional Growth',
+            'subtitle' => 'Enhance your career development with our additional professional services.',
+        ],
     ],
 ];

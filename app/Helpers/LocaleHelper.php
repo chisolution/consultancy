@@ -42,7 +42,26 @@ class LocaleHelper
      */
     public static function switchLanguageUrl(string $locale): string
     {
-        return route('language.switch', ['locale' => $locale]);
+        $currentRoute = request()->route();
+
+        if (!$currentRoute) {
+            return route('language.switch', ['locale' => $locale]);
+        }
+
+        $routeName = $currentRoute->getName();
+        $parameters = $currentRoute->parameters();
+
+        // Remove the current locale from parameters and add the new one
+        unset($parameters['locale']);
+        $parameters['locale'] = $locale;
+
+        try {
+            // Try to generate the route with the new locale
+            return route($routeName, $parameters);
+        } catch (\Exception $e) {
+            // Fallback to language switch route if route generation fails
+            return route('language.switch', ['locale' => $locale]);
+        }
     }
 
     /**

@@ -44,7 +44,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- Styles -->
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
+    @vite(['resources/css/app.css', 'resources/css/cross-browser.css', 'resources/js/app.js'])
     
     <!-- Additional Head Content -->
     @stack('head')
@@ -180,9 +180,9 @@
     <!-- Footer -->
     <footer class="bg-gray-900 text-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <!-- Company Info -->
-                <div class="col-span-1 md:col-span-2">
+                <div class="lg:col-span-1">
                     <div class="flex items-center mb-4">
                         <img class="h-8 w-auto" src="{{ asset('images/logo-white.svg') }}" alt="Professional Consultancy Logo">
                         <span class="ml-2 text-xl font-bold">Consultancy</span>
@@ -205,6 +205,19 @@
                     </div>
                 </div>
 
+                <!-- Services -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">{{ __('common.footer.services') }}</h3>
+                    <ul class="space-y-2">
+                        <li><a href="{{ \App\Helpers\LocaleHelper::route('services.business-consultancy') }}" class="text-gray-300 hover:text-white transition-colors duration-200">{{ __('services.business_consultancy.title') }}</a></li>
+                        <li><a href="{{ \App\Helpers\LocaleHelper::route('services.accounting') }}" class="text-gray-300 hover:text-white transition-colors duration-200">{{ __('services.accounting.title') }}</a></li>
+                        <li><a href="{{ \App\Helpers\LocaleHelper::route('services.tax-advisory') }}" class="text-gray-300 hover:text-white transition-colors duration-200">{{ __('services.tax_advisory.title') }}</a></li>
+                        <li><a href="{{ \App\Helpers\LocaleHelper::route('services.financial-planning') }}" class="text-gray-300 hover:text-white transition-colors duration-200">{{ __('services.financial_planning.title') }}</a></li>
+                        <li><a href="{{ \App\Helpers\LocaleHelper::route('services.business-registration') }}" class="text-gray-300 hover:text-white transition-colors duration-200">{{ __('services.business_registration.title') }}</a></li>
+                        <li><a href="{{ \App\Helpers\LocaleHelper::route('services.audit-compliance') }}" class="text-gray-300 hover:text-white transition-colors duration-200">{{ __('services.audit_compliance.title') }}</a></li>
+                    </ul>
+                </div>
+
                 <!-- Quick Links -->
                 <div>
                     <h3 class="text-lg font-semibold mb-4">{{ __('common.footer.quick_links') }}</h3>
@@ -213,6 +226,8 @@
                         <li><a href="{{ \App\Helpers\LocaleHelper::route('services') }}" class="text-gray-300 hover:text-white transition-colors duration-200">{{ __('common.nav.services') }}</a></li>
                         <li><a href="{{ \App\Helpers\LocaleHelper::route('about') }}" class="text-gray-300 hover:text-white transition-colors duration-200">{{ __('common.nav.about') }}</a></li>
                         <li><a href="{{ \App\Helpers\LocaleHelper::route('contact') }}" class="text-gray-300 hover:text-white transition-colors duration-200">{{ __('common.nav.contact') }}</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors duration-200">{{ __('common.footer.privacy') }}</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors duration-200">{{ __('common.footer.terms') }}</a></li>
                     </ul>
                 </div>
 
