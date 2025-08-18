@@ -85,6 +85,7 @@ return [
             'description' => 'Career coaching and professional development',
         ],
         'learn_more' => 'Learn More',
+        'view_all' => 'View All Services',
     ],
 
     // Why Choose Us

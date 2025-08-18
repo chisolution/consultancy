@@ -85,6 +85,7 @@ return [
             'description' => 'Coaching de carrière et développement professionnel',
         ],
         'learn_more' => 'En Savoir Plus',
+        'view_all' => 'Voir Tous les Services',
     ],
 
     // Why Choose Us

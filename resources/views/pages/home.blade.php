@@ -96,7 +96,7 @@
             </p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
             <!-- Business Consultancy -->
             <div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 p-6 border border-gray-100">
                 <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mb-4">
@@ -208,6 +208,58 @@
                     {{ __('common.services.learn_more') }} →
                 </a>
             </div>
+
+            <!-- Market Research & Competitor Analysis -->
+            <div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 p-6 border border-gray-100">
+                <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                    <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-900 mb-2">{{ __('services.market_research.title') }}</h3>
+                <p class="text-gray-600 mb-4">Market intelligence and competitive analysis for strategic decisions</p>
+                <a href="{{ \App\Helpers\LocaleHelper::route('services.market-research') }}" class="text-primary-600 hover:text-primary-700 font-medium">
+                    {{ __('common.services.learn_more') }} →
+                </a>
+            </div>
+
+            <!-- Feasibility Studies -->
+            <div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 p-6 border border-gray-100">
+                <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
+                    <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-900 mb-2">{{ __('services.feasibility_studies.title') }}</h3>
+                <p class="text-gray-600 mb-4">Business viability assessment for Rwanda and Cameroon markets</p>
+                <a href="{{ \App\Helpers\LocaleHelper::route('services.feasibility-studies') }}" class="text-primary-600 hover:text-primary-700 font-medium">
+                    {{ __('common.services.learn_more') }} →
+                </a>
+            </div>
+
+            <!-- Business Intelligence & Data Analytics -->
+            <div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 p-6 border border-gray-100">
+                <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
+                    <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z"></path>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-900 mb-2">{{ __('services.data_analytics.title') }}</h3>
+                <p class="text-gray-600 mb-4">Advanced data analysis and visualization with modern tools</p>
+                <a href="{{ \App\Helpers\LocaleHelper::route('services.data-analytics') }}" class="text-primary-600 hover:text-primary-700 font-medium">
+                    {{ __('common.services.learn_more') }} →
+                </a>
+            </div>
+        </div>
+
+        <!-- View All Services CTA -->
+        <div class="text-center mt-12">
+            <a href="{{ \App\Helpers\LocaleHelper::route('services') }}" class="inline-flex items-center px-8 py-4 bg-primary-600 hover:bg-primary-700 text-white font-semibold rounded-lg transition-colors duration-200">
+                {{ __('common.services.view_all') }}
+                <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                </svg>
+            </a>
         </div>
     </div>
 </section>
