@@ -10,4 +10,25 @@ export default defineConfig({
         }),
         tailwindcss(),
     ],
+    build: {
+        // Optimize bundle size
+        rollupOptions: {
+            output: {
+                manualChunks: {
+                    // Separate vendor chunks for better caching
+                    vendor: ['axios'],
+                },
+            },
+        },
+        // Enable minification (using esbuild instead of terser)
+        minify: 'esbuild',
+        // Optimize CSS
+        cssMinify: true,
+        // Set chunk size warning limit
+        chunkSizeWarningLimit: 1000,
+    },
+    // Optimize dependencies
+    optimizeDeps: {
+        include: ['axios'],
+    },
 });
