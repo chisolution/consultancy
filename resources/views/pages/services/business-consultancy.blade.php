@@ -370,7 +370,7 @@
                 </div>
                 <h3 class="text-xl font-semibold text-gray-900 mb-2">{{ __('services.training.title') }}</h3>
                 <p class="text-gray-600 mb-4">{{ __('services.training.short_description') }}</p>
-                <a href="{{ route('services.training', app()->getLocale()) }}" class="text-primary-600 hover:text-primary-700 font-semibold">
+                <a href="{{ route('services.corporate-training', app()->getLocale()) }}" class="text-primary-600 hover:text-primary-700 font-semibold">
                     {{ __('common.learn_more') }} →
                 </a>
             </div>
