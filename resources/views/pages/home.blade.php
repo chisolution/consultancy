@@ -181,7 +181,7 @@
                 </div>
                 <h3 class="text-xl font-semibold text-gray-900 mb-2">{{ __('common.services.training.title') }}</h3>
                 <p class="text-gray-600 mb-4">{{ __('common.services.training.description') }}</p>
-                <a href="{{ \App\Helpers\LocaleHelper::route('services.training') }}" class="text-primary-600 hover:text-primary-700 font-medium">
+                <a href="{{ \App\Helpers\LocaleHelper::route('services.corporate-training') }}" class="text-primary-600 hover:text-primary-700 font-medium">
                     {{ __('common.services.learn_more') }} →
                 </a>
             </div>
