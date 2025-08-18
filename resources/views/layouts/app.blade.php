@@ -45,9 +45,6 @@
     
     <!-- Styles -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
-
-    <!-- Cross-Browser Compatibility CSS -->
-    <link rel="stylesheet" href="{{ asset('css/cross-browser.css') }}">
     
     <!-- Additional Head Content -->
     @stack('head')
