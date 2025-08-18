@@ -238,14 +238,58 @@ Phase 4: Optimization & Launch (Sprints 13-18)
 ```php
 <script type="application/ld+json">
 {
+  "@@context": "https://schema.org",
   "@type": "Service",
   "name": "{{ __('services.accounting.title') }}"
 }
 </script>
 ``` |
-| **Fix Explanation** | Removed the `"@context": "https://schema.org",` line from all structured data blocks. While this line is standard for JSON-LD, it's causing Blade parsing conflicts and should be excluded from Laravel Blade templates. |
+| **Fix Explanation** | The issue was Blade interpreting `@context` as a Blade directive. Fixed by escaping with `@@context` which renders as single `@context` in output. Alternative solutions: use `@json()` helper or `json_encode()` for complex data. The schema.org context line should NOT be removed as it's essential for proper JSON-LD. |
 | **Status** | ✅ Fixed |
-| **Prevention** | Avoid using @context in Blade templates with JSON-LD. Use alternative schema markup methods or exclude @context line. Test all structured data implementations thoroughly. |
+| **Prevention** | Always escape @ symbols in JSON-LD with @@ in Blade templates. Use @json() helper for complex structured data. Never remove @context from schema.org markup. Test structured data with Google Rich Results Test. |
+
+---
+
+## **💡 Prevention Best Practices**
+
+Below are key best practices compiled from resolved issues to help reduce repeat technical problems across the project.
+
+### **1. Blade & JSON-LD Syntax**
+- **Always escape @ symbols** in JSON-LD with `@@` in Blade templates
+- **Use `@json()` helper** for complex structured data from controllers
+- **Use `json_encode()`** for manual JSON output in Blade
+- **Never remove `@context`** from schema.org markup - it's essential for SEO
+- **Test structured data** with Google Rich Results Test after changes
+
+### **2. Tailwind Utility Usage**
+- **Only use official Tailwind utility classes** inside `@apply`
+- **Avoid shorthand or invented class names** unless defined in `@layer`
+- **Reference Tailwind docs** before creating custom classes
+- **Run `npm run build`** after Tailwind configuration changes
+
+### **3. Build Pipeline Reliability**
+- **Ensure correct package versions** (vite, tailwind, etc.) are installed
+- **Run `npm run build`** after environment or dependency changes
+- **Clear `node_modules`** and run `npm install` for unexplained issues
+- **Check Laravel Mix/Vite configuration** for asset compilation problems
+
+### **4. Content Source Validation**
+- **Validate source files** (JSON, config, blade) through linters before build
+- **Avoid external format syntax** conflicts in Laravel Blade templates
+- **Test all dynamic content** with various language settings
+- **Use proper escaping** for user-generated content
+
+### **5. Documentation and Logs**
+- **Use Algorithm.md** to document both fixed and unresolved issues
+- **Include date, author, and exact fix** with copy-pasteable code samples
+- **Review past issues** before starting new modules or refactors
+- **Update documentation** alongside code changes
+
+### **6. Team Communication**
+- **Mention issues** in daily standups or commit messages
+- **Push Algorithm.md updates** alongside related code changes
+- **Share solutions** with team members facing similar issues
+- **Create reusable patterns** from common problem solutions
 
 ---
 

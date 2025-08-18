@@ -7,6 +7,7 @@
 @push('structured-data')
 <script type="application/ld+json">
 {
+  "@@context": "https://schema.org",
   "@type": "Service",
   "name": "{{ __('services.accounting.title') }}",
   "description": "{{ __('services.accounting.meta.description') }}",
