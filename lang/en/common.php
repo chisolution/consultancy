@@ -231,7 +231,7 @@ return [
                 'title' => 'Professional Credentials & Expertise',
                 'mba' => 'Master of Business Administration (MBA)',
                 'experience' => '10+ Years Business Consulting Experience',
-                'languages' => 'Multilingual: English, French, Kinyarwanda',
+                'languages' => 'Multilingual: English, French',
                 'markets' => 'East & Central Africa Market Expertise',
                 'specialization' => 'Strategic Planning & Financial Management',
                 'leadership' => 'Organizational Development & Leadership',

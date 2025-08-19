@@ -222,7 +222,7 @@
 
                     <!-- Main image container -->
                     <div class="relative bg-white rounded-2xl p-8 shadow-xl">
-                        <img src="{{ asset('images/founder-profile.png') }}"
+                        <img src="{{ asset('images/founder-profile.webp') }}"
                              alt="{{ __('common.about.founder.name') }} - {{ __('common.about.founder.title_position') }}"
                              class="w-full h-auto max-w-md mx-auto">
 
