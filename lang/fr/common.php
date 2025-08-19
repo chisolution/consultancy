@@ -216,6 +216,30 @@ return [
         ],
     ],
 
+    // Page À Propos
+    'about' => [
+        'founder' => [
+            'title' => 'Rencontrez Notre Fondatrice',
+            'subtitle' => 'Leadership visionnaire stimulant l\'excellence commerciale à travers l\'Afrique de l\'Est',
+            'name' => 'Bénédicte Uwimana',
+            'title_position' => 'Fondatrice & PDG, MBA',
+            'badge' => 'MBA',
+            'bio_intro' => 'Avec un MBA et une vaste expérience en conseil d\'entreprise, Bénédicte a fondé notre cabinet de conseil avec la vision d\'autonomiser les entreprises à travers le Rwanda et l\'Afrique de l\'Est. Son expertise couvre la planification stratégique, la gestion financière et le développement organisationnel.',
+            'bio_experience' => 'Ayant travaillé avec des clients diversifiés, des startups aux entreprises établies, elle apporte une richesse de connaissances pour naviguer dans les défis et opportunités uniques du paysage commercial de l\'Afrique de l\'Est.',
+            'bio_vision' => 'Bénédicte est passionnée par la promotion de la croissance commerciale durable et croit au pouvoir du conseil stratégique pour transformer les organisations et stimuler le développement économique dans la région.',
+            'credentials' => [
+                'title' => 'Diplômes Professionnels & Expertise',
+                'mba' => 'Master en Administration des Affaires (MBA)',
+                'experience' => '10+ Années d\'Expérience en Conseil d\'Entreprise',
+                'languages' => 'Multilingue : Anglais, Français, Kinyarwanda',
+                'markets' => 'Expertise des Marchés d\'Afrique de l\'Est & Centrale',
+                'specialization' => 'Planification Stratégique & Gestion Financière',
+                'leadership' => 'Développement Organisationnel & Leadership',
+            ],
+            'cta' => 'Planifier une Consultation',
+        ],
+    ],
+
     // Common Actions
     'learn_more' => 'En Savoir Plus',
     'get_started' => 'Commencer',
