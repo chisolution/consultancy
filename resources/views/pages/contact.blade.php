@@ -31,7 +31,8 @@
             <!-- Contact Form -->
             <div class="bg-gray-50 rounded-2xl p-8">
                 <h2 class="text-2xl font-bold text-gray-900 mb-6">{{ __('common.contact.form.title') }}</h2>
-                <form class="space-y-6">
+                <form id="contact-form" class="space-y-6">
+                    @csrf
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                         <div>
                             <label for="name" class="block text-sm font-medium text-gray-700 mb-2">
@@ -93,9 +94,30 @@
                                   placeholder="{{ __('common.contact.form.message_placeholder') }}"></textarea>
                     </div>
                     
-                    <button type="submit" class="btn-primary w-full">
-                        {{ __('common.contact.form.send_message') }}
+                    <button type="submit" class="btn-primary w-full" id="submit-btn">
+                        <span id="submit-text">{{ __('common.contact.form.send_message') }}</span>
+                        <span id="loading-text" class="hidden">{{ __('common.ui.loading') }}</span>
                     </button>
+
+                    <!-- Success/Error Messages -->
+                    <div id="form-messages" class="hidden">
+                        <div id="success-message" class="hidden bg-green-50 border border-green-200 text-green-700 px-4 py-3 rounded-lg">
+                            <div class="flex">
+                                <svg class="w-5 h-5 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span id="success-text"></span>
+                            </div>
+                        </div>
+                        <div id="error-message" class="hidden bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-lg">
+                            <div class="flex">
+                                <svg class="w-5 h-5 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span id="error-text"></span>
+                            </div>
+                        </div>
+                    </div>
                 </form>
             </div>
 
@@ -200,4 +222,71 @@
         </div>
     </div>
 </section>
+
+@push('scripts')
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('contact-form');
+    const submitBtn = document.getElementById('submit-btn');
+    const submitText = document.getElementById('submit-text');
+    const loadingText = document.getElementById('loading-text');
+    const formMessages = document.getElementById('form-messages');
+    const successMessage = document.getElementById('success-message');
+    const errorMessage = document.getElementById('error-message');
+    const successText = document.getElementById('success-text');
+    const errorText = document.getElementById('error-text');
+
+    form.addEventListener('submit', async function(e) {
+        e.preventDefault();
+
+        // Show loading state
+        submitBtn.disabled = true;
+        submitText.classList.add('hidden');
+        loadingText.classList.remove('hidden');
+
+        // Hide previous messages
+        formMessages.classList.add('hidden');
+        successMessage.classList.add('hidden');
+        errorMessage.classList.add('hidden');
+
+        try {
+            const formData = new FormData(form);
+
+            const response = await fetch('{{ route("contact.submit") }}', {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'X-Requested-With': 'XMLHttpRequest',
+                }
+            });
+
+            const data = await response.json();
+
+            if (data.success) {
+                // Show success message
+                successText.textContent = data.message;
+                successMessage.classList.remove('hidden');
+                formMessages.classList.remove('hidden');
+
+                // Reset form
+                form.reset();
+            } else {
+                throw new Error(data.message || 'An error occurred');
+            }
+
+        } catch (error) {
+            // Show error message
+            errorText.textContent = error.message || '{{ __("common.contact.form.error_message") }}';
+            errorMessage.classList.remove('hidden');
+            formMessages.classList.remove('hidden');
+        } finally {
+            // Reset button state
+            submitBtn.disabled = false;
+            submitText.classList.remove('hidden');
+            loadingText.classList.add('hidden');
+        }
+    });
+});
+</script>
+@endpush
 @endsection

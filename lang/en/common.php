@@ -86,6 +86,11 @@ return [
         ],
         'learn_more' => 'Learn More',
         'view_all' => 'View All Services',
+        'form' => [
+            'success_message' => 'Thank you for your service inquiry! We will review your requirements and get back to you within 24 hours.',
+            'error_message' => 'Sorry, there was an error submitting your inquiry. Please try again or contact us directly.',
+            'confirmation_subject' => 'Thank you for your :service inquiry',
+        ],
     ],
 
     // Why Choose Us
@@ -165,6 +170,16 @@ return [
         'loading' => 'Loading...',
     ],
 
+    // Common Form Fields
+    'form' => [
+        'name' => 'Full Name',
+        'email' => 'Email Address',
+        'phone' => 'Phone Number',
+        'company' => 'Company Name',
+        'message' => 'Message',
+        'required' => 'Required field',
+    ],
+
     // Contact Page
     'contact' => [
         'title' => 'Get In Touch',
@@ -181,6 +196,9 @@ return [
             'required' => 'Required field',
             'select_service' => 'Select a service',
             'message_placeholder' => 'Tell us about your business needs...',
+            'success_message' => 'Thank you for your inquiry! We will get back to you within 24 hours.',
+            'error_message' => 'Sorry, there was an error submitting your inquiry. Please try again or contact us directly.',
+            'confirmation_subject' => 'Thank you for contacting us',
         ],
         'info' => [
             'title' => 'Contact Information',
@@ -245,4 +263,7 @@ return [
     'get_started' => 'Get Started',
     'contact_us' => 'Contact Us',
     'read_more' => 'Read More',
+    'ui' => [
+        'loading' => 'Loading...',
+    ],
 ];
