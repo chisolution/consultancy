@@ -1070,4 +1070,180 @@ return [
             'subtitle' => 'Soutenez votre étude de faisabilité avec nos services complets de configuration d\'entreprise et de conseil.',
         ],
     ],
+
+    // Business Intelligence & Data Analytics Service
+    'data_analytics' => [
+        'title' => 'Intelligence d\'Affaires & Analyse de Données',
+        'short_description' => 'Services avancés de collecte, analyse et visualisation de données utilisant Excel, Python, SQL, Power BI et Tableau pour transformer les données en insights commerciaux exploitables.',
+        'meta' => [
+            'title' => 'Intelligence d\'Affaires & Analyse de Données | Visualisation & Analyse de Données | Rwanda',
+            'description' => 'Services experts d\'intelligence d\'affaires et d\'analyse de données au Rwanda. Collecte, analyse et visualisation avancées de données utilisant Excel, Python, SQL, Power BI et Tableau pour des décisions commerciales basées sur les données.',
+            'keywords' => 'intelligence d\'affaires Rwanda, analyse de données Kigali, visualisation de données Afrique de l\'Est, services Power BI Rwanda, conseil Tableau Cameroun, analyse SQL Rwanda',
+        ],
+        'hero' => [
+            'subtitle' => 'Transformez vos données en avantage concurrentiel avec des analyses et visualisations avancées. Nos services BI vous aident à collecter, analyser et visualiser les données pour prendre des décisions éclairées et stimuler la croissance commerciale.',
+        ],
+        'stats' => [
+            'data_projects' => 'Projets de Données',
+            'insights_generated' => 'Insights Générés',
+            'years_experience' => 'Années d\'Expérience',
+            'tools_mastered' => 'Outils d\'Analyse',
+        ],
+        'cta' => [
+            'get_analytics' => 'Obtenir une Analyse de Données',
+            'view_dashboards' => 'Voir des Tableaux de Bord Échantillons',
+        ],
+        'overview' => [
+            'title' => 'Solutions Avancées d\'Analyse de Données & d\'Intelligence d\'Affaires',
+            'description' => 'Nos services d\'analyse de données transforment les données brutes en insights commerciaux exploitables. Nous nous spécialisons dans la collecte, l\'analyse et la visualisation de données en utilisant des outils de pointe pour aider les organisations à prendre des décisions basées sur les données et optimiser les performances.',
+            'expertise' => 'Notre équipe d\'analyse combine l\'expertise technique dans les outils de données modernes avec une profonde acuité commerciale pour fournir des insights significatifs. Nous travaillons avec Excel, Python, SQL, Power BI et Tableau pour créer des solutions d\'analyse complètes qui apportent de la valeur commerciale.',
+        ],
+        'services' => [
+            'data_collection' => [
+                'title' => 'Collecte & Intégration de Données',
+                'description' => 'Collecte et intégration complètes de données provenant de sources multiples.',
+                'detailed_description' => 'Concevoir et implémenter des stratégies de collecte de données, intégrer plusieurs sources de données et assurer la qualité des données.',
+                'features' => [
+                    'data_sourcing' => 'Collecte de données multi-sources',
+                    'data_integration' => 'Intégration et consolidation de données',
+                    'quality_assurance' => 'Qualité et validation des données',
+                ],
+            ],
+            'data_analysis' => [
+                'title' => 'Analyse Avancée de Données',
+                'description' => 'Analyse statistique et modélisation de données utilisant Python, SQL et analyses avancées.',
+                'detailed_description' => 'Effectuer une analyse complexe de données, une modélisation statistique et des analyses prédictives utilisant Python et SQL.',
+                'features' => [
+                    'statistical_analysis' => 'Analyse et modélisation statistiques',
+                    'predictive_analytics' => 'Modélisation prédictive et prévisions',
+                    'pattern_recognition' => 'Identification de modèles et tendances',
+                ],
+            ],
+            'data_visualization' => [
+                'title' => 'Visualisation de Données & Tableaux de Bord',
+                'description' => 'Tableaux de bord interactifs et visualisations utilisant Power BI, Tableau et Excel.',
+                'detailed_description' => 'Créer des visualisations convaincantes et des tableaux de bord interactifs qui rendent les données complexes accessibles et exploitables.',
+                'features' => [
+                    'dashboard_development' => 'Création de tableaux de bord interactifs',
+                    'visualization_design' => 'Conception de visualisation personnalisée',
+                    'reporting_automation' => 'Solutions de rapports automatisés',
+                ],
+            ],
+            'business_intelligence' => [
+                'title' => 'Solutions d\'Intelligence d\'Affaires',
+                'description' => 'Solutions BI complètes pour la surveillance des performances et les insights stratégiques.',
+                'detailed_description' => 'Développer des solutions BI complètes incluant le suivi des KPI, la surveillance des performances et l\'analyse stratégique.',
+                'features' => [
+                    'kpi_tracking' => 'Suivi des KPI et des performances',
+                    'strategic_analytics' => 'Analyse commerciale stratégique',
+                    'decision_support' => 'Systèmes de support de décision',
+                ],
+            ],
+        ],
+        'contact' => [
+            'title' => 'Démarrez Votre Projet d\'Analyse',
+            'hours' => 'Lun-Ven 8h-18h CAT',
+            'cta' => 'Commencer l\'Analyse',
+        ],
+        'tools' => [
+            'title' => 'Notre Boîte à Outils d\'Analyse',
+            'excel' => [
+                'name' => 'Microsoft Excel',
+                'description' => 'Modélisation Excel avancée, tableaux croisés dynamiques et analyse de données.',
+            ],
+            'python' => [
+                'name' => 'Python',
+                'description' => 'Analyse statistique, apprentissage automatique et traitement de données.',
+            ],
+            'sql' => [
+                'name' => 'SQL',
+                'description' => 'Requêtes de base de données, extraction et analyse de données.',
+            ],
+            'powerbi' => [
+                'name' => 'Power BI',
+                'description' => 'Tableaux de bord interactifs et intelligence d\'affaires.',
+            ],
+            'tableau' => [
+                'name' => 'Tableau',
+                'description' => 'Visualisation de données avancée et analyse.',
+            ],
+        ],
+        'packages' => [
+            'title' => 'Forfaits d\'Analyse',
+            'basic' => [
+                'title' => 'Analyse de Données',
+                'description' => 'Analyse de données essentielle avec Excel et visualisations de base.',
+                'price' => 'À partir de 1 500 $',
+            ],
+            'advanced' => [
+                'title' => 'Intelligence d\'Affaires',
+                'description' => 'Solution BI complète avec tableaux de bord interactifs et analyses avancées.',
+                'price' => 'À partir de 4 000 $',
+            ],
+            'enterprise' => [
+                'title' => 'Analyse d\'Entreprise',
+                'description' => 'Plateforme d\'analyse complète avec développement personnalisé et support continu.',
+                'price' => 'Devis Personnalisé',
+            ],
+        ],
+        'process' => [
+            'title' => 'Notre Processus d\'Analyse',
+            'subtitle' => 'Une approche systématique de l\'analyse de données qui transforme les données brutes en insights commerciaux exploitables et recommandations stratégiques.',
+            'step1' => [
+                'title' => 'Évaluation des Données',
+                'description' => 'Évaluer les sources de données, la qualité et les exigences d\'analyse.',
+            ],
+            'step2' => [
+                'title' => 'Collecte & Préparation des Données',
+                'description' => 'Collecter, nettoyer et préparer les données pour l\'analyse en utilisant les outils appropriés.',
+            ],
+            'step3' => [
+                'title' => 'Analyse & Modélisation',
+                'description' => 'Effectuer une analyse avancée et créer des modèles prédictifs utilisant Python et SQL.',
+            ],
+            'step4' => [
+                'title' => 'Visualisation & Insights',
+                'description' => 'Créer des tableaux de bord interactifs et fournir des insights exploitables et des recommandations.',
+            ],
+        ],
+        'consultation' => [
+            'title' => 'Libérez le Potentiel de Vos Données',
+            'subtitle' => 'Planifiez une consultation pour discuter de vos besoins d\'analyse de données et développer une solution d\'analyse personnalisée.',
+        ],
+        'form' => [
+            'data_source' => 'Source de Données Principale',
+            'select_source' => 'Sélectionnez votre source de données principale',
+            'analytics_goal' => 'Objectif d\'Analyse',
+            'select_goal' => 'Sélectionnez votre objectif d\'analyse principal',
+            'preferred_tool' => 'Outil Préféré',
+            'select_tool' => 'Sélectionnez votre outil d\'analyse préféré',
+            'sources' => [
+                'excel_files' => 'Fichiers Excel',
+                'databases' => 'Bases de Données',
+                'web_data' => 'Données Web',
+                'surveys' => 'Enquêtes/Formulaires',
+                'multiple_sources' => 'Sources Multiples',
+            ],
+            'goals' => [
+                'performance_tracking' => 'Suivi des Performances',
+                'predictive_analytics' => 'Analyse Prédictive',
+                'customer_insights' => 'Insights Client',
+                'operational_efficiency' => 'Efficacité Opérationnelle',
+                'strategic_planning' => 'Planification Stratégique',
+            ],
+            'tools' => [
+                'excel' => 'Excel',
+                'powerbi' => 'Power BI',
+                'tableau' => 'Tableau',
+                'python' => 'Python',
+                'no_preference' => 'Aucune Préférence',
+            ],
+            'message_placeholder' => 'Décrivez vos besoins d\'analyse de données et objectifs spécifiques...',
+            'submit' => 'Demander une Solution d\'Analyse',
+        ],
+        'related' => [
+            'title' => 'Solutions Complètes Basées sur les Données',
+            'subtitle' => 'Renforcez vos capacités d\'analyse avec nos services complets d\'intelligence d\'affaires et de recherche.',
+        ],
+    ],
 ];

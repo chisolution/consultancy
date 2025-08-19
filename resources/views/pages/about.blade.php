@@ -123,65 +123,114 @@
     </div>
 </section>
 
-<!-- Team Section -->
+<!-- Founder Section -->
 <section class="py-20 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-16">
-            <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Meet Our Team</h2>
+            <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">{{ __('common.about.founder.title') }}</h2>
             <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                Experienced professionals dedicated to your business success
+                {{ __('common.about.founder.subtitle') }}
             </p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <!-- Team Member 1 -->
-            <div class="text-center">
-                <div class="w-32 h-32 bg-primary-200 rounded-full mx-auto mb-6 flex items-center justify-center">
-                    <span class="text-3xl text-primary-600 font-bold">JD</span>
-                </div>
-                <h3 class="text-xl font-semibold text-gray-900 mb-2">John Doe</h3>
-                <p class="text-primary-600 font-medium mb-3">CEO & Founder</p>
-                <p class="text-gray-600 mb-4">CPA, MBA - 15+ years international experience</p>
-                <div class="flex justify-center space-x-3">
-                    <a href="#" class="text-gray-400 hover:text-primary-600 transition-colors duration-200">
-                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                        </svg>
-                    </a>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <!-- Content Column -->
+            <div class="order-2 lg:order-1">
+                <div class="space-y-6">
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">{{ __('common.about.founder.name') }}</h3>
+                        <p class="text-lg text-primary-600 font-semibold mb-4">{{ __('common.about.founder.title_position') }}</p>
+                    </div>
+
+                    <div class="prose prose-lg text-gray-600">
+                        <p class="mb-4">
+                            {{ __('common.about.founder.bio_intro') }}
+                        </p>
+                        <p class="mb-4">
+                            {{ __('common.about.founder.bio_experience') }}
+                        </p>
+                        <p class="mb-6">
+                            {{ __('common.about.founder.bio_vision') }}
+                        </p>
+                    </div>
+
+                    <!-- Credentials & Expertise -->
+                    <div class="bg-gray-50 rounded-xl p-6">
+                        <h4 class="text-lg font-semibold text-gray-900 mb-4">{{ __('common.about.founder.credentials.title') }}</h4>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="space-y-3">
+                                <div class="flex items-start">
+                                    <svg class="w-5 h-5 text-primary-600 mt-1 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                    </svg>
+                                    <span class="text-gray-700">{{ __('common.about.founder.credentials.mba') }}</span>
+                                </div>
+                                <div class="flex items-start">
+                                    <svg class="w-5 h-5 text-primary-600 mt-1 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                    </svg>
+                                    <span class="text-gray-700">{{ __('common.about.founder.credentials.experience') }}</span>
+                                </div>
+                                <div class="flex items-start">
+                                    <svg class="w-5 h-5 text-primary-600 mt-1 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                    </svg>
+                                    <span class="text-gray-700">{{ __('common.about.founder.credentials.languages') }}</span>
+                                </div>
+                            </div>
+                            <div class="space-y-3">
+                                <div class="flex items-start">
+                                    <svg class="w-5 h-5 text-primary-600 mt-1 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                    </svg>
+                                    <span class="text-gray-700">{{ __('common.about.founder.credentials.markets') }}</span>
+                                </div>
+                                <div class="flex items-start">
+                                    <svg class="w-5 h-5 text-primary-600 mt-1 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                    </svg>
+                                    <span class="text-gray-700">{{ __('common.about.founder.credentials.specialization') }}</span>
+                                </div>
+                                <div class="flex items-start">
+                                    <svg class="w-5 h-5 text-primary-600 mt-1 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                    </svg>
+                                    <span class="text-gray-700">{{ __('common.about.founder.credentials.leadership') }}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact CTA -->
+                    <div class="pt-6">
+                        <a href="{{ \App\Helpers\LocaleHelper::route('contact') }}" class="inline-flex items-center px-6 py-3 bg-primary-600 hover:bg-primary-700 text-white font-semibold rounded-lg transition-colors duration-200">
+                            {{ __('common.about.founder.cta') }}
+                            <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                            </svg>
+                        </a>
+                    </div>
                 </div>
             </div>
 
-            <!-- Team Member 2 -->
-            <div class="text-center">
-                <div class="w-32 h-32 bg-secondary-200 rounded-full mx-auto mb-6 flex items-center justify-center">
-                    <span class="text-3xl text-secondary-600 font-bold">JS</span>
-                </div>
-                <h3 class="text-xl font-semibold text-gray-900 mb-2">Jane Smith</h3>
-                <p class="text-secondary-600 font-medium mb-3">Senior Consultant</p>
-                <p class="text-gray-600 mb-4">CPA, Tax Specialist - Cross-border expertise</p>
-                <div class="flex justify-center space-x-3">
-                    <a href="#" class="text-gray-400 hover:text-secondary-600 transition-colors duration-200">
-                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                        </svg>
-                    </a>
-                </div>
-            </div>
+            <!-- Image Column -->
+            <div class="order-1 lg:order-2">
+                <div class="relative">
+                    <!-- Background decoration -->
+                    <div class="absolute inset-0 bg-gradient-to-br from-primary-100 to-secondary-100 rounded-2xl transform rotate-3"></div>
+                    <div class="absolute inset-0 bg-gradient-to-br from-secondary-100 to-accent-100 rounded-2xl transform -rotate-3"></div>
 
-            <!-- Team Member 3 -->
-            <div class="text-center">
-                <div class="w-32 h-32 bg-accent-200 rounded-full mx-auto mb-6 flex items-center justify-center">
-                    <span class="text-3xl text-accent-600 font-bold">MD</span>
-                </div>
-                <h3 class="text-xl font-semibold text-gray-900 mb-2">Marie Dubois</h3>
-                <p class="text-accent-600 font-medium mb-3">Tax Specialist</p>
-                <p class="text-gray-600 mb-4">Bilingual expertise - French & English markets</p>
-                <div class="flex justify-center space-x-3">
-                    <a href="#" class="text-gray-400 hover:text-accent-600 transition-colors duration-200">
-                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                        </svg>
-                    </a>
+                    <!-- Main image container -->
+                    <div class="relative bg-white rounded-2xl p-8 shadow-xl">
+                        <img src="{{ asset('images/founder-profile.webp') }}"
+                             alt="{{ __('common.about.founder.name') }} - {{ __('common.about.founder.title_position') }}"
+                             class="w-full h-auto max-w-md mx-auto">
+
+                        <!-- Professional badge -->
+                        <div class="absolute top-4 right-4 bg-primary-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                            {{ __('common.about.founder.badge') }}
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

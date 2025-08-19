@@ -85,6 +85,7 @@ return [
             'description' => 'Career coaching and professional development',
         ],
         'learn_more' => 'Learn More',
+        'view_all' => 'View All Services',
     ],
 
     // Why Choose Us
@@ -212,6 +213,30 @@ return [
             'subtitle' => 'Find us across four countries',
             'coming_soon' => 'Interactive map coming soon',
             'showing_locations' => 'Showing all office locations',
+        ],
+    ],
+
+    // About page
+    'about' => [
+        'founder' => [
+            'title' => 'Meet Our Founder',
+            'subtitle' => 'Visionary leadership driving business excellence across East Africa',
+            'name' => 'Bernadette Azinwi',
+            'title_position' => 'Founder & CEO, MBA',
+            'badge' => 'MBA',
+            'bio_intro' => 'With an MBA and extensive experience in business consulting, Bernadette founded our consultancy with a vision to empower businesses across Rwanda and East Africa. Her expertise spans strategic planning, financial management, and organizational development.',
+            'bio_experience' => 'Having worked with diverse clients from startups to established corporations, she brings a wealth of knowledge in navigating the unique challenges and opportunities of the East African business landscape.',
+            'bio_vision' => 'Bernadette is passionate about fostering sustainable business growth and believes in the power of strategic consulting to transform organizations and drive economic development in the region.',
+            'credentials' => [
+                'title' => 'Professional Credentials & Expertise',
+                'mba' => 'Master of Business Administration (MBA)',
+                'experience' => '10+ Years Business Consulting Experience',
+                'languages' => 'Multilingual: English, French',
+                'markets' => 'East & Central Africa Market Expertise',
+                'specialization' => 'Strategic Planning & Financial Management',
+                'leadership' => 'Organizational Development & Leadership',
+            ],
+            'cta' => 'Schedule a Consultation',
         ],
     ],
 

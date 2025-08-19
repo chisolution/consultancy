@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="400" height="300" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Business Plan Illustration -->
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3B82F6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1E40AF;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="400" height="300" fill="#F8FAFC"/>
+  
+  <!-- Desk -->
+  <rect x="50" y="200" width="300" height="80" rx="10" fill="#E2E8F0"/>
+  <rect x="50" y="200" width="300" height="10" rx="5" fill="#CBD5E1"/>
+  
+  <!-- Laptop -->
+  <rect x="120" y="160" width="160" height="100" rx="8" fill="#374151"/>
+  <rect x="125" y="165" width="150" height="90" rx="5" fill="#1F2937"/>
+  <rect x="130" y="170" width="140" height="80" rx="3" fill="#111827"/>
+  
+  <!-- Laptop Screen Content -->
+  <rect x="135" y="175" width="130" height="70" rx="2" fill="#3B82F6"/>
+  <rect x="140" y="180" width="40" height="6" rx="1" fill="white"/>
+  <rect x="140" y="190" width="60" height="4" rx="1" fill="white"/>
+  <rect x="140" y="198" width="50" height="4" rx="1" fill="white"/>
+  <rect x="140" y="206" width="70" height="4" rx="1" fill="white"/>
+  
+  <!-- Charts on screen -->
+  <rect x="220" y="180" width="35" height="25" rx="2" fill="white"/>
+  <rect x="222" y="195" width="6" height="8" fill="#3B82F6"/>
+  <rect x="230" y="190" width="6" height="13" fill="#10B981"/>
+  <rect x="238" y="185" width="6" height="18" fill="#F59E0B"/>
+  <rect x="246" y="188" width="6" height="15" fill="#EF4444"/>
+  
+  <!-- Documents -->
+  <rect x="80" y="140" width="60" height="80" rx="4" fill="white" stroke="#E5E7EB" stroke-width="2"/>
+  <rect x="85" y="150" width="50" height="4" rx="1" fill="#6B7280"/>
+  <rect x="85" y="160" width="40" height="3" rx="1" fill="#9CA3AF"/>
+  <rect x="85" y="168" width="45" height="3" rx="1" fill="#9CA3AF"/>
+  <rect x="85" y="176" width="35" height="3" rx="1" fill="#9CA3AF"/>
+  
+  <!-- Pie chart on document -->
+  <circle cx="110" cy="195" r="15" fill="#E5E7EB"/>
+  <path d="M 110 180 A 15 15 0 0 1 125 195 L 110 195 Z" fill="#3B82F6"/>
+  <path d="M 110 195 A 15 15 0 0 1 100 208 L 110 195 Z" fill="#10B981"/>
+  <path d="M 100 208 A 15 15 0 0 1 110 180 L 110 195 Z" fill="#F59E0B"/>
+  
+  <!-- Coffee Cup -->
+  <ellipse cx="320" cy="185" rx="12" ry="8" fill="#8B4513"/>
+  <ellipse cx="320" cy="182" rx="10" ry="6" fill="#D2691E"/>
+  <ellipse cx="320" cy="180" rx="8" ry="4" fill="#F4A460"/>
+  <path d="M 332 182 Q 340 182 340 190 Q 340 195 335 195" stroke="#8B4513" stroke-width="2" fill="none"/>
+  
+  <!-- Pen -->
+  <rect x="280" y="170" width="3" height="25" rx="1" fill="#1F2937" transform="rotate(25 281.5 182.5)"/>
+  <rect x="279" y="168" width="5" height="4" rx="1" fill="#3B82F6" transform="rotate(25 281.5 170)"/>
+  
+  <!-- Person -->
+  <circle cx="200" cy="120" r="20" fill="#FBBF24"/>
+  <rect x="185" y="140" width="30" height="40" rx="15" fill="#3B82F6"/>
+  <rect x="175" y="155" width="15" height="30" rx="7" fill="#FBBF24"/>
+  <rect x="210" y="155" width="15" height="30" rx="7" fill="#FBBF24"/>
+  <rect x="190" y="180" width="10" height="25" rx="5" fill="#1F2937"/>
+  <rect x="200" y="180" width="10" height="25" rx="5" fill="#1F2937"/>
+  
+  <!-- Floating Elements -->
+  <circle cx="80" cy="80" r="3" fill="#3B82F6" opacity="0.6"/>
+  <circle cx="320" cy="60" r="4" fill="#10B981" opacity="0.6"/>
+  <circle cx="350" cy="120" r="2" fill="#F59E0B" opacity="0.6"/>
+  
+  <!-- Growth Arrow -->
+  <path d="M 60 100 Q 80 80 100 85 Q 120 90 140 70" stroke="#10B981" stroke-width="3" fill="none"/>
+  <path d="M 135 65 L 145 70 L 140 80 Z" fill="#10B981"/>
+</svg>
