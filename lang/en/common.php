@@ -221,12 +221,12 @@ return [
         'founder' => [
             'title' => 'Meet Our Founder',
             'subtitle' => 'Visionary leadership driving business excellence across East Africa',
-            'name' => 'Benedicte Uwimana',
+            'name' => 'Bernadette Azinwi',
             'title_position' => 'Founder & CEO, MBA',
             'badge' => 'MBA',
-            'bio_intro' => 'With an MBA and extensive experience in business consulting, Benedicte founded our consultancy with a vision to empower businesses across Rwanda and East Africa. Her expertise spans strategic planning, financial management, and organizational development.',
+            'bio_intro' => 'With an MBA and extensive experience in business consulting, Bernadette founded our consultancy with a vision to empower businesses across Rwanda and East Africa. Her expertise spans strategic planning, financial management, and organizational development.',
             'bio_experience' => 'Having worked with diverse clients from startups to established corporations, she brings a wealth of knowledge in navigating the unique challenges and opportunities of the East African business landscape.',
-            'bio_vision' => 'Benedicte is passionate about fostering sustainable business growth and believes in the power of strategic consulting to transform organizations and drive economic development in the region.',
+            'bio_vision' => 'Bernadette is passionate about fostering sustainable business growth and believes in the power of strategic consulting to transform organizations and drive economic development in the region.',
             'credentials' => [
                 'title' => 'Professional Credentials & Expertise',
                 'mba' => 'Master of Business Administration (MBA)',

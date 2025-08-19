@@ -19,6 +19,15 @@
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <!-- Hero Content -->
             <div class="animate-fade-in-up">
+                <!-- Animated Services Text -->
+                <div class="mb-4">
+                    <p class="text-lg text-gray-600">
+                        We do consultancy in
+                        <span id="animated-service" class="text-primary-600 font-semibold"></span>
+                        <span class="animate-pulse">|</span>
+                    </p>
+                </div>
+
                 <h1 class="text-4xl lg:text-6xl font-bold text-gray-900 mb-6 text-balance">
                     {{ __('common.hero.title') }}
                 </h1>
@@ -65,18 +74,16 @@
                 </div>
             </div>
 
-            <!-- Hero Visual (Placeholder for Spline 3D) -->
+            <!-- Hero Visual with Spline 3D -->
             <div class="relative">
-                <div class="bg-gradient-to-br from-primary-100 to-secondary-100 rounded-2xl p-8 h-96 flex items-center justify-center">
-                    <!-- Placeholder for Spline 3D Animation -->
-                    <div class="text-center">
-                        <div class="w-32 h-32 bg-primary-200 rounded-full mx-auto mb-4 flex items-center justify-center">
-                            <svg class="w-16 h-16 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
-                            </svg>
-                        </div>
-                        <p class="text-gray-600 text-sm">3D Animation Placeholder</p>
-                        <p class="text-gray-500 text-xs mt-1">Spline integration coming soon</p>
+                <div class="bg-gradient-to-br from-primary-100 to-secondary-100 rounded-2xl p-8 h-96 flex items-center justify-center overflow-hidden">
+                    <!-- Spline 3D Animation Container -->
+                    <div id="spline-container" class="w-full h-full">
+                        <!-- Fallback unDraw illustration -->
+                        <img src="{{ asset('images/undraw-business-plan.svg') }}"
+                             alt="Business Consultancy Illustration"
+                             class="w-full h-full object-contain max-w-sm mx-auto"
+                             id="fallback-illustration">
                     </div>
                 </div>
             </div>
@@ -317,19 +324,12 @@
                 </div>
             </div>
 
-            <!-- Illustration Placeholder -->
+            <!-- unDraw Illustration -->
             <div class="relative">
                 <div class="bg-gradient-to-br from-primary-100 to-secondary-100 rounded-2xl p-8 h-96 flex items-center justify-center">
-                    <!-- Placeholder for unDraw illustration -->
-                    <div class="text-center">
-                        <div class="w-32 h-32 bg-secondary-200 rounded-full mx-auto mb-4 flex items-center justify-center">
-                            <svg class="w-16 h-16 text-secondary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                            </svg>
-                        </div>
-                        <p class="text-gray-600 text-sm">Cultural Diversity Illustration</p>
-                        <p class="text-gray-500 text-xs mt-1">unDraw illustration placeholder</p>
-                    </div>
+                    <img src="{{ asset('images/undraw-team-work.svg') }}"
+                         alt="Why Choose Our Consultancy - Cultural Diversity"
+                         class="w-full h-full object-contain max-w-md mx-auto">
                 </div>
             </div>
         </div>
@@ -424,4 +424,111 @@
         </div>
     </div>
 </section>
+
+@push('scripts')
+<!-- Spline 3D Integration -->
+<script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.28/build/spline-viewer.js"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Initialize Spline 3D Animation
+    function initSpline() {
+        const splineContainer = document.getElementById('spline-container');
+        const fallbackIllustration = document.getElementById('fallback-illustration');
+
+        if (splineContainer) {
+            // Create Spline viewer element
+            const splineViewer = document.createElement('spline-viewer');
+            splineViewer.setAttribute('url', 'https://prod.spline.design/6Wq1Q7YGyM-iab9i/scene.splinecode');
+            splineViewer.style.width = '100%';
+            splineViewer.style.height = '100%';
+
+            // Hide fallback and show Spline when loaded
+            splineViewer.addEventListener('load', function() {
+                if (fallbackIllustration) {
+                    fallbackIllustration.style.display = 'none';
+                }
+            });
+
+            // Show fallback if Spline fails to load
+            splineViewer.addEventListener('error', function() {
+                console.log('Spline failed to load, showing fallback illustration');
+                if (fallbackIllustration) {
+                    fallbackIllustration.style.display = 'block';
+                }
+            });
+
+            splineContainer.appendChild(splineViewer);
+        }
+    }
+
+    // Services array for animation
+    const services = [
+        '{{ __("common.services.business_consultancy.title") }}',
+        '{{ __("common.services.accounting.title") }}',
+        '{{ __("common.services.tax_advisory.title") }}',
+        '{{ __("common.services.financial_planning.title") }}',
+        '{{ __("common.services.business_registration.title") }}',
+        '{{ __("common.services.audit_compliance.title") }}',
+        '{{ __("common.services.training.title") }}',
+        '{{ __("common.services.career_development.title") }}',
+        'Feasibility Studies',
+        'Business Intelligence & Data Analytics',
+        'Market Research'
+    ];
+
+    const animatedServiceElement = document.getElementById('animated-service');
+    let currentIndex = 0;
+
+    function typeWriter(text, element, callback) {
+        let i = 0;
+        element.textContent = '';
+
+        function type() {
+            if (i < text.length) {
+                element.textContent += text.charAt(i);
+                i++;
+                setTimeout(type, 100); // Typing speed
+            } else {
+                setTimeout(callback, 2000); // Pause before next service
+            }
+        }
+        type();
+    }
+
+    function eraseText(element, callback) {
+        const text = element.textContent;
+        let i = text.length;
+
+        function erase() {
+            if (i > 0) {
+                element.textContent = text.substring(0, i - 1);
+                i--;
+                setTimeout(erase, 50); // Erasing speed
+            } else {
+                setTimeout(callback, 500); // Pause before typing next
+            }
+        }
+        erase();
+    }
+
+    function animateServices() {
+        const currentService = services[currentIndex];
+
+        typeWriter(currentService, animatedServiceElement, function() {
+            eraseText(animatedServiceElement, function() {
+                currentIndex = (currentIndex + 1) % services.length;
+                animateServices();
+            });
+        });
+    }
+
+    // Initialize Spline 3D animation
+    initSpline();
+
+    // Start the services text animation
+    animateServices();
+});
+</script>
+@endpush
 @endsection
