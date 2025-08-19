@@ -492,6 +492,9 @@
     <!-- Performance Monitoring -->
     <x-performance-monitor />
 
+    <!-- Service Forms Handler -->
+    @vite('resources/js/service-forms.js')
+
     <!-- Additional Scripts -->
     @stack('scripts')
 </body>

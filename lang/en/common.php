@@ -263,4 +263,7 @@ return [
     'get_started' => 'Get Started',
     'contact_us' => 'Contact Us',
     'read_more' => 'Read More',
+    'ui' => [
+        'loading' => 'Loading...',
+    ],
 ];

@@ -245,4 +245,7 @@ return [
     'get_started' => 'Commencer',
     'contact_us' => 'Nous Contacter',
     'read_more' => 'Lire Plus',
+    'ui' => [
+        'loading' => 'Chargement...',
+    ],
 ];
