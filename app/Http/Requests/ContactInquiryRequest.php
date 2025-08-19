@@ -43,7 +43,7 @@ class ContactInquiryRequest extends FormRequest
             'email.email' => 'Please provide a valid email address.',
             'message.required' => 'Message is required.',
             'message.max' => 'Message cannot exceed 5000 characters.',
-            'service.in' => 'Please select a valid service.',
+            'service.in' => __('common.contact.form.service_invalid'),
         ];
     }
 
