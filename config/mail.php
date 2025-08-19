@@ -115,4 +115,20 @@ return [
         'name' => env('MAIL_FROM_NAME', 'Example'),
     ],
 
+    /*
+    |--------------------------------------------------------------------------
+    | Admin Email Addresses
+    |--------------------------------------------------------------------------
+    |
+    | These email addresses will receive notifications for form submissions
+    | and other admin-related communications.
+    |
+    */
+
+    'admin_emails' => [
+        env('ADMIN_EMAIL_1', 'admin@consultancy.rw'),
+        env('ADMIN_EMAIL_2', 'info@consultancy.rw'),
+        // Add more admin emails as needed
+    ],
+
 ];

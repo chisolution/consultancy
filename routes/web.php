@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\App;
 use App\Http\Controllers\SitemapController;
+use App\Http\Controllers\ContactController;
+use App\Http\Controllers\ServiceInquiryController;
 
 // Default route (redirect to default language)
 Route::get('/', function () {
@@ -87,4 +89,10 @@ Route::prefix('{locale}')->where(['locale' => 'en|fr'])->group(function () {
     Route::get('/services/data-analytics', function () {
         return view('pages.services.data-analytics');
     })->name('services.data-analytics');
+});
+
+// Form submission routes (public, with rate limiting)
+Route::middleware(['throttle:10,1'])->group(function () {
+    Route::post('/contact/submit', [ContactController::class, 'submit'])->name('contact.submit');
+    Route::post('/services/inquiry', [ServiceInquiryController::class, 'submit'])->name('services.inquiry.submit');
 });
