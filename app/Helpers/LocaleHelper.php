@@ -32,7 +32,7 @@ class LocaleHelper
     public static function route(string $name, array $parameters = [], string $locale = null): string
     {
         $locale = $locale ?: self::getCurrentLocale();
-        $parameters = array_merge(['locale' => $locale], $parameters);
+        $parameters = array_merge($parameters, ['locale' => $locale]);
         
         return route($name, $parameters);
     }

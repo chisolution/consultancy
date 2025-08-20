@@ -35,6 +35,7 @@
     <link rel="canonical" href="{{ url()->current() }}">
     
     <!-- Alternate Language Links -->
+    <link rel="alternate" hreflang="x-default" href="{{ \App\Helpers\LocaleHelper::route(Route::currentRouteName(), request()->route()->parameters()) }}">
     @foreach(\App\Helpers\LocaleHelper::getSupportedLocales() as $locale => $name)
         <link rel="alternate" hreflang="{{ $locale }}" href="{{ \App\Helpers\LocaleHelper::route(Route::currentRouteName(), request()->route()->parameters(), $locale) }}">
     @endforeach
