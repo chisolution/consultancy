@@ -74,14 +74,17 @@
                         <select id="service" name="service"
                                 class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors duration-200">
                             <option value="">{{ __('common.contact.form.select_service') }}</option>
-                            <option value="business-consultancy">{{ __('common.services.business_consultancy.title') }}</option>
+                            <option value="business_consultancy">{{ __('common.services.business_consultancy.title') }}</option>
                             <option value="accounting">{{ __('common.services.accounting.title') }}</option>
-                            <option value="tax-advisory">{{ __('common.services.tax_advisory.title') }}</option>
-                            <option value="financial-planning">{{ __('common.services.financial_planning.title') }}</option>
-                            <option value="business-registration">{{ __('common.services.business_registration.title') }}</option>
-                            <option value="audit-compliance">{{ __('common.services.audit_compliance.title') }}</option>
+                            <option value="tax_advisory">{{ __('common.services.tax_advisory.title') }}</option>
+                            <option value="financial_planning">{{ __('common.services.financial_planning.title') }}</option>
+                            <option value="business_registration">{{ __('common.services.business_registration.title') }}</option>
+                            <option value="audit_compliance">{{ __('common.services.audit_compliance.title') }}</option>
                             <option value="training">{{ __('common.services.training.title') }}</option>
-                            <option value="career-development">{{ __('common.services.career_development.title') }}</option>
+                            <option value="career_development">{{ __('common.services.career_development.title') }}</option>
+                            <option value="feasibility_studies">{{ __('common.services.feasibility_studies.title') }}</option>
+                            <option value="data_analytics">{{ __('common.services.data_analytics.title') }}</option>
+                            <option value="market_research">{{ __('common.services.market_research.title') }}</option>
                         </select>
                     </div>
                     

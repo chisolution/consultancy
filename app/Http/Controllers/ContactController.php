@@ -4,13 +4,20 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\ContactInquiryRequest;
 use App\Models\ContactInquiry;
+use App\Services\EmailService;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Log;
 
 class ContactController extends Controller
 {
+    protected EmailService $emailService;
+
+    public function __construct(EmailService $emailService)
+    {
+        $this->emailService = $emailService;
+    }
+
     /**
      * Submit contact form inquiry
      */
@@ -31,7 +38,7 @@ class ContactController extends Controller
             ]);
 
             // Send email notifications
-            $this->sendEmailNotifications($inquiry);
+            $this->emailService->sendContactInquiryNotifications($inquiry);
 
             return response()->json([
                 'success' => true,
@@ -56,34 +63,5 @@ class ContactController extends Controller
         }
     }
 
-    /**
-     * Send email notifications for contact inquiry
-     */
-    protected function sendEmailNotifications(ContactInquiry $inquiry): void
-    {
-        try {
-            // Email to admin/team
-            $adminEmails = config('mail.admin_emails', ['admin@consultancy.com']);
 
-            foreach ($adminEmails as $adminEmail) {
-                Mail::send('emails.contact-inquiry-admin', compact('inquiry'), function ($message) use ($adminEmail, $inquiry) {
-                    $message->to($adminEmail)
-                        ->subject("New Contact Inquiry - {$inquiry->reference}")
-                        ->replyTo($inquiry->email, $inquiry->name);
-                });
-            }
-
-            // Confirmation email to client
-            Mail::send('emails.contact-inquiry-confirmation', compact('inquiry'), function ($message) use ($inquiry) {
-                $message->to($inquiry->email, $inquiry->name)
-                    ->subject(__('common.contact.form.confirmation_subject'));
-            });
-
-        } catch (\Exception $e) {
-            Log::error('Failed to send contact inquiry emails', [
-                'inquiry_id' => $inquiry->id,
-                'error' => $e->getMessage(),
-            ]);
-        }
-    }
 }

@@ -289,8 +289,9 @@
         </div>
         
         <div class="bg-gray-50 rounded-2xl p-8">
-            <form class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <form id="audit-compliance-form" class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 @csrf
+                <input type="hidden" name="service_type" value="audit_compliance">
                 <div>
                     <label for="name" class="block text-sm font-medium text-gray-700 mb-2">{{ __('common.form.name') }}</label>
                     <input type="text" id="name" name="name" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent-500 focus:border-accent-500">
@@ -329,9 +330,30 @@
                 </div>
                 
                 <div class="md:col-span-2">
-                    <button type="submit" class="w-full bg-accent-600 hover:bg-accent-700 text-white py-4 px-8 rounded-lg font-semibold text-lg transition-colors duration-200">
-                        {{ __('services.audit_compliance.form.submit') }}
+                    <button type="submit" id="submit-btn" class="w-full bg-accent-600 hover:bg-accent-700 text-white py-4 px-8 rounded-lg font-semibold text-lg transition-colors duration-200">
+                        <span id="submit-text">{{ __('services.audit_compliance.form.submit') }}</span>
+                        <span id="loading-text" class="hidden">{{ __('common.ui.loading') }}</span>
                     </button>
+                </div>
+
+                <!-- Success/Error Messages -->
+                <div id="form-messages" class="hidden md:col-span-2">
+                    <div id="success-message" class="hidden bg-green-50 border border-green-200 text-green-700 px-4 py-3 rounded-lg">
+                        <div class="flex">
+                            <svg class="w-5 h-5 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span id="success-text"></span>
+                        </div>
+                    </div>
+                    <div id="error-message" class="hidden bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-lg">
+                        <div class="flex">
+                            <svg class="w-5 h-5 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span id="error-text"></span>
+                        </div>
+                    </div>
                 </div>
             </form>
         </div>

@@ -4,13 +4,20 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\ServiceInquiryRequest;
 use App\Models\ServiceInquiry;
+use App\Services\EmailService;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Log;
 
 class ServiceInquiryController extends Controller
 {
+    protected EmailService $emailService;
+
+    public function __construct(EmailService $emailService)
+    {
+        $this->emailService = $emailService;
+    }
+
     /**
      * Submit service inquiry form
      */
@@ -35,7 +42,7 @@ class ServiceInquiryController extends Controller
             ]);
 
             // Send email notifications
-            $this->sendEmailNotifications($inquiry);
+            $this->emailService->sendServiceInquiryNotifications($inquiry);
 
             return response()->json([
                 'success' => true,
@@ -148,34 +155,5 @@ class ServiceInquiryController extends Controller
         return array_filter($formData, fn($value) => $value !== null);
     }
 
-    /**
-     * Send email notifications for service inquiry
-     */
-    protected function sendEmailNotifications(ServiceInquiry $inquiry): void
-    {
-        try {
-            // Email to admin/team
-            $adminEmails = config('mail.admin_emails', ['admin@consultancy.com']);
 
-            foreach ($adminEmails as $adminEmail) {
-                Mail::send('emails.service-inquiry-admin', compact('inquiry'), function ($message) use ($adminEmail, $inquiry) {
-                    $message->to($adminEmail)
-                        ->subject("New Service Inquiry - {$inquiry->reference} ({$inquiry->service_display_name})")
-                        ->replyTo($inquiry->email, $inquiry->name);
-                });
-            }
-
-            // Confirmation email to client
-            Mail::send('emails.service-inquiry-confirmation', compact('inquiry'), function ($message) use ($inquiry) {
-                $message->to($inquiry->email, $inquiry->name)
-                    ->subject(__('common.services.form.confirmation_subject', ['service' => $inquiry->service_display_name]));
-            });
-
-        } catch (\Exception $e) {
-            Log::error('Failed to send service inquiry emails', [
-                'inquiry_id' => $inquiry->id,
-                'error' => $e->getMessage(),
-            ]);
-        }
-    }
 }
