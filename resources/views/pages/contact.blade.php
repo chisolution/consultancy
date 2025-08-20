@@ -82,7 +82,9 @@
                             <option value="audit_compliance">{{ __('common.services.audit_compliance.title') }}</option>
                             <option value="training">{{ __('common.services.training.title') }}</option>
                             <option value="career_development">{{ __('common.services.career_development.title') }}</option>
-                            <option value="feasibility-studies">Feasibility Studies</option>
+                            <option value="feasibility_studies">{{ __('common.services.feasibility_studies.title') }}</option>
+                            <option value="data_analytics">{{ __('common.services.data_analytics.title') }}</option>
+                            <option value="market_research">{{ __('common.services.market_research.title') }}</option>
                         </select>
                     </div>
                     

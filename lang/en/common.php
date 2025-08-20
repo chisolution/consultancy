@@ -84,6 +84,18 @@ return [
             'title' => 'Career Development',
             'description' => 'Career coaching and professional development',
         ],
+        'feasibility_studies' => [
+            'title' => 'Feasibility Studies',
+            'description' => 'Comprehensive business feasibility analysis and market research',
+        ],
+        'data_analytics' => [
+            'title' => 'Business Intelligence & Data Analytics',
+            'description' => 'Data-driven insights and business intelligence solutions',
+        ],
+        'market_research' => [
+            'title' => 'Market Research',
+            'description' => 'Market analysis and competitive intelligence services',
+        ],
         'learn_more' => 'Learn More',
         'view_all' => 'View All Services',
         'form' => [
