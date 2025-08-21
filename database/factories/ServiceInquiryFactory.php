@@ -22,7 +22,7 @@ class ServiceInquiryFactory extends Factory
             'career_development',
             'feasibility_studies',
             'data_analytics',
-            'market_research'
+            'market_research',
         ]);
 
         return [
@@ -131,7 +131,7 @@ class ServiceInquiryFactory extends Factory
         ]);
     }
 
-    public function new(): static
+    public function asNew(): static
     {
         return $this->state(fn (array $attributes) => [
             'status' => 'new',
