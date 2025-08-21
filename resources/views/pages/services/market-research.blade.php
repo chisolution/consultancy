@@ -224,42 +224,60 @@
         </div>
 
         <div class="bg-white rounded-2xl p-8">
-            <form class="space-y-6">
+            <form id="market-research-form" class="space-y-6">
+                @csrf
+                <input type="hidden" name="service_type" value="market_research">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
-                        <label for="name" class="block text-sm font-medium text-gray-700 mb-2">{{ __('common.contact.form.name') }} *</label>
+                        <label for="name" class="block text-sm font-medium text-gray-700 mb-2">{{ __('common.form.name') }}</label>
                         <input type="text" id="name" name="name" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors duration-200 text-gray-900 bg-white">
                     </div>
                     <div>
-                        <label for="email" class="block text-sm font-medium text-gray-700 mb-2">{{ __('common.contact.form.email') }} *</label>
+                        <label for="email" class="block text-sm font-medium text-gray-700 mb-2">{{ __('common.form.email') }}</label>
                         <input type="email" id="email" name="email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors duration-200 text-gray-900 bg-white">
                     </div>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
-                        <label for="research_type" class="block text-sm font-medium text-gray-700 mb-2">{{ __('services.market_research.form.research_type') }}</label>
-                        <select id="research_type" name="research_type" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors duration-200 text-gray-900 bg-white">
-                            <option value="">{{ __('services.market_research.form.select_type') }}</option>
-                            @foreach(__('services.market_research.form.types') as $key => $type)
-                            <option value="{{ $key }}">{{ $type }}</option>
-                            @endforeach
-                        </select>
+                        <label for="phone" class="block text-sm font-medium text-gray-700 mb-2">{{ __('common.form.phone') }}</label>
+                        <input type="tel" id="phone" name="phone" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors duration-200 text-gray-900 bg-white">
                     </div>
                     <div>
-                        <label for="target_market" class="block text-sm font-medium text-gray-700 mb-2">{{ __('services.market_research.form.target_market') }}</label>
-                        <select id="target_market" name="target_market" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors duration-200 text-gray-900 bg-white">
-                            <option value="">{{ __('services.market_research.form.select_market') }}</option>
-                            @foreach(__('services.market_research.form.markets') as $key => $market)
-                            <option value="{{ $key }}">{{ $market }}</option>
-                            @endforeach
-                        </select>
+                        <label for="company" class="block text-sm font-medium text-gray-700 mb-2">{{ __('common.form.company') }}</label>
+                        <input type="text" id="company" name="company" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors duration-200 text-gray-900 bg-white">
+                    </div>
+                </div>
+
+                <!-- Research Types - Checkboxes for multiple selection -->
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-3">{{ __('services.market_research.form.research_type') }}</label>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                        @foreach(__('services.market_research.form.types') as $key => $type)
+                        <label class="flex items-center p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
+                            <input type="checkbox" name="research_type[]" value="{{ $key }}" class="h-4 w-4 text-primary-600 focus:ring-primary-500 border-gray-300 rounded">
+                            <span class="ml-3 text-sm text-gray-700">{{ $type }}</span>
+                        </label>
+                        @endforeach
+                    </div>
+                </div>
+
+                <!-- Target Markets - Checkboxes for multiple selection -->
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-3">{{ __('services.market_research.form.target_market') }}</label>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                        @foreach(__('services.market_research.form.markets') as $key => $market)
+                        <label class="flex items-center p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
+                            <input type="checkbox" name="target_market[]" value="{{ $key }}" class="h-4 w-4 text-primary-600 focus:ring-primary-500 border-gray-300 rounded">
+                            <span class="ml-3 text-sm text-gray-700">{{ $market }}</span>
+                        </label>
+                        @endforeach
                     </div>
                 </div>
 
                 <div>
-                    <label for="message" class="block text-sm font-medium text-gray-700 mb-2">{{ __('common.contact.form.message') }} *</label>
-                    <textarea id="message" name="message" rows="6" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors duration-200 text-gray-900 bg-white" placeholder="{{ __('services.market_research.form.message_placeholder') }}"></textarea>
+                    <label for="message" class="block text-sm font-medium text-gray-700 mb-2">{{ __('common.form.message') }}</label>
+                    <textarea id="message" name="message" rows="6" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors duration-200 text-gray-900 bg-white" placeholder="{{ __('services.market_research.form.message_placeholder') }}"></textarea>
                 </div>
 
                 <button type="submit" class="w-full bg-primary-600 hover:bg-primary-700 text-white py-4 rounded-lg font-semibold transition-colors duration-200">

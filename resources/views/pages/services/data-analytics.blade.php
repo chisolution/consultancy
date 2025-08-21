@@ -268,51 +268,73 @@
         </div>
 
         <div class="bg-white rounded-2xl p-8">
-            <form class="space-y-6">
+            <form id="data-analytics-form" class="space-y-6">
+                @csrf
+                <input type="hidden" name="service_type" value="data_analytics">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
-                        <label for="name" class="block text-sm font-medium text-gray-700 mb-2">{{ __('common.contact.form.name') }} *</label>
+                        <label for="name" class="block text-sm font-medium text-gray-700 mb-2">{{ __('common.form.name') }}</label>
                         <input type="text" id="name" name="name" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors duration-200 text-gray-900 bg-white">
                     </div>
                     <div>
-                        <label for="email" class="block text-sm font-medium text-gray-700 mb-2">{{ __('common.contact.form.email') }} *</label>
+                        <label for="email" class="block text-sm font-medium text-gray-700 mb-2">{{ __('common.form.email') }}</label>
                         <input type="email" id="email" name="email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors duration-200 text-gray-900 bg-white">
                     </div>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
-                        <label for="data_source" class="block text-sm font-medium text-gray-700 mb-2">{{ __('services.data_analytics.form.data_source') }}</label>
-                        <select id="data_source" name="data_source" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors duration-200 text-gray-900 bg-white">
-                            <option value="">{{ __('services.data_analytics.form.select_source') }}</option>
-                            @foreach(__('services.data_analytics.form.sources') as $key => $source)
-                            <option value="{{ $key }}">{{ $source }}</option>
-                            @endforeach
-                        </select>
+                        <label for="phone" class="block text-sm font-medium text-gray-700 mb-2">{{ __('common.form.phone') }}</label>
+                        <input type="tel" id="phone" name="phone" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors duration-200 text-gray-900 bg-white">
                     </div>
                     <div>
-                        <label for="analytics_goal" class="block text-sm font-medium text-gray-700 mb-2">{{ __('services.data_analytics.form.analytics_goal') }}</label>
-                        <select id="analytics_goal" name="analytics_goal" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors duration-200 text-gray-900 bg-white">
-                            <option value="">{{ __('services.data_analytics.form.select_goal') }}</option>
-                            @foreach(__('services.data_analytics.form.goals') as $key => $goal)
-                            <option value="{{ $key }}">{{ $goal }}</option>
-                            @endforeach
-                        </select>
+                        <label for="company" class="block text-sm font-medium text-gray-700 mb-2">{{ __('common.form.company') }}</label>
+                        <input type="text" id="company" name="company" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors duration-200 text-gray-900 bg-white">
                     </div>
-                    <div>
-                        <label for="preferred_tool" class="block text-sm font-medium text-gray-700 mb-2">{{ __('services.data_analytics.form.preferred_tool') }}</label>
-                        <select id="preferred_tool" name="preferred_tool" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors duration-200 text-gray-900 bg-white">
-                            <option value="">{{ __('services.data_analytics.form.select_tool') }}</option>
-                            @foreach(__('services.data_analytics.form.tools') as $key => $tool)
-                            <option value="{{ $key }}">{{ $tool }}</option>
-                            @endforeach
-                        </select>
+                </div>
+
+                <!-- Data Sources - Checkboxes -->
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-3">{{ __('services.data_analytics.form.data_source') }}</label>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                        @foreach(__('services.data_analytics.form.sources') as $key => $source)
+                        <label class="flex items-center p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
+                            <input type="checkbox" name="data_source[]" value="{{ $key }}" class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded">
+                            <span class="ml-3 text-sm text-gray-700">{{ $source }}</span>
+                        </label>
+                        @endforeach
+                    </div>
+                </div>
+
+                <!-- Analytics Goals - Checkboxes -->
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-3">{{ __('services.data_analytics.form.analytics_goal') }}</label>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                        @foreach(__('services.data_analytics.form.goals') as $key => $goal)
+                        <label class="flex items-center p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
+                            <input type="checkbox" name="analytics_goal[]" value="{{ $key }}" class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded">
+                            <span class="ml-3 text-sm text-gray-700">{{ $goal }}</span>
+                        </label>
+                        @endforeach
+                    </div>
+                </div>
+
+                <!-- Preferred Tools - Checkboxes -->
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-3">{{ __('services.data_analytics.form.preferred_tool') }}</label>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+                        @foreach(__('services.data_analytics.form.tools') as $key => $tool)
+                        <label class="flex items-center p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
+                            <input type="checkbox" name="preferred_tool[]" value="{{ $key }}" class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded">
+                            <span class="ml-3 text-sm text-gray-700">{{ $tool }}</span>
+                        </label>
+                        @endforeach
                     </div>
                 </div>
 
                 <div>
-                    <label for="message" class="block text-sm font-medium text-gray-700 mb-2">{{ __('common.contact.form.message') }} *</label>
-                    <textarea id="message" name="message" rows="6" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors duration-200 text-gray-900 bg-white" placeholder="{{ __('services.data_analytics.form.message_placeholder') }}"></textarea>
+                    <label for="message" class="block text-sm font-medium text-gray-700 mb-2">{{ __('common.form.message') }}</label>
+                    <textarea id="message" name="message" rows="6" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors duration-200 text-gray-900 bg-white" placeholder="{{ __('services.data_analytics.form.message_placeholder') }}"></textarea>
                 </div>
 
                 <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white py-4 rounded-lg font-semibold transition-colors duration-200">
