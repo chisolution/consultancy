@@ -1241,6 +1241,8 @@ return [
                 'powerbi' => 'Power BI',
                 'tableau' => 'Tableau',
                 'python' => 'Python',
+                'sql' => 'SQL',
+                'other' => 'Autre',
                 'no_preference' => 'Aucune Préférence',
             ],
             'message_placeholder' => 'Décrivez vos besoins d\'analyse de données et objectifs spécifiques...',

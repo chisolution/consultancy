@@ -23,11 +23,16 @@ class ServiceInquiryController extends Controller
      */
     public function submit(ServiceInquiryRequest $request): JsonResponse
     {
-        try {
-            // Prepare form data (service-specific fields)
-            $formData = $this->prepareFormData($request);
+        $inquiry = null;
+        $dbSuccess = false;
+        $emailSuccess = false;
+        $errors = [];
 
-            // Create the service inquiry
+        // Prepare form data (service-specific fields)
+        $formData = $this->prepareFormData($request);
+
+        // Attempt to save to database
+        try {
             $inquiry = ServiceInquiry::create([
                 'service_type' => $request->service_type,
                 'name' => $request->name,
@@ -41,29 +46,99 @@ class ServiceInquiryController extends Controller
                 'user_agent' => $request->userAgent(),
             ]);
 
-            // Send email notifications
-            $this->emailService->sendServiceInquiryNotifications($inquiry);
+            $dbSuccess = true;
 
-            return response()->json([
+            Log::info('Service inquiry saved to database successfully', [
+                'inquiry_id' => $inquiry->id,
+                'reference' => $inquiry->reference,
+                'service_type' => $inquiry->service_type,
+            ]);
+
+        } catch (\Exception $e) {
+            $errors['database'] = $e->getMessage();
+
+            Log::error('Failed to save service inquiry to database', [
+                'error' => $e->getMessage(),
+                'service_type' => $request->service_type,
+                'request_data' => $request->except(['_token']),
+            ]);
+        }
+
+        // Attempt to send email notifications (independent of database success)
+        try {
+            // If database failed, create a temporary inquiry object for email
+            if (!$inquiry) {
+                $inquiry = new ServiceInquiry([
+                    'service_type' => $request->service_type,
+                    'name' => $request->name,
+                    'email' => $request->email,
+                    'phone' => $request->phone,
+                    'company' => $request->company,
+                    'message' => $request->message,
+                    'form_data' => $formData,
+                    'locale' => $request->locale,
+                ]);
+                $inquiry->reference = 'TEMP-SRV-' . time() . '-' . substr(md5($request->email), 0, 8);
+            }
+
+            $this->emailService->sendServiceInquiryNotifications($inquiry);
+            $emailSuccess = true;
+
+        } catch (\Exception $e) {
+            $errors['email'] = $e->getMessage();
+
+            Log::error('Failed to send service inquiry email notifications', [
+                'inquiry_id' => $inquiry?->id ?? 'temp',
+                'reference' => $inquiry?->reference ?? 'unknown',
+                'service_type' => $request->service_type,
+                'error' => $e->getMessage(),
+            ]);
+        }
+
+        // Determine response based on what succeeded
+        if ($dbSuccess || $emailSuccess) {
+            $responseData = [
                 'success' => true,
-                'data' => [
+                'message' => __('common.services.form.success_message'),
+                'status' => [
+                    'database' => $dbSuccess,
+                    'email' => $emailSuccess,
+                ]
+            ];
+
+            if ($dbSuccess && $inquiry) {
+                $responseData['data'] = [
                     'id' => $inquiry->id,
                     'reference' => $inquiry->reference,
                     'status' => $inquiry->status,
                     'service_type' => $inquiry->service_type,
-                ],
-                'message' => __('common.services.form.success_message'),
-            ], 201);
+                ];
+            }
 
-        } catch (\Exception $e) {
-            Log::error('Service inquiry submission failed', [
-                'error' => $e->getMessage(),
+            if (!empty($errors)) {
+                $responseData['partial_errors'] = $errors;
+                Log::warning('Service inquiry submission completed with partial errors', [
+                    'errors' => $errors,
+                    'service_type' => $request->service_type,
+                    'db_success' => $dbSuccess,
+                    'email_success' => $emailSuccess,
+                ]);
+            }
+
+            return response()->json($responseData, 201);
+
+        } else {
+            // Both database and email failed
+            Log::error('Service inquiry submission completely failed', [
+                'errors' => $errors,
+                'service_type' => $request->service_type,
                 'request_data' => $request->except(['_token']),
             ]);
 
             return response()->json([
                 'success' => false,
                 'message' => __('common.services.form.error_message'),
+                'errors' => $errors,
             ], 500);
         }
     }
