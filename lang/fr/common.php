@@ -175,12 +175,16 @@ return [
             'email' => 'Adresse Email',
             'phone' => 'Numéro de Téléphone',
             'company' => 'Nom de l\'Entreprise',
-            'service' => 'Service d\'Intérêt',
+            'service' => 'Service d\'Intérêt (sauter si question générale)',
             'message' => 'Message',
             'send_message' => 'Envoyer le Message',
             'required' => 'Champ requis',
-            'select_service' => 'Sélectionner un service',
+            'select_service' => 'Sélectionner un service (sauter si question générale)',
+            'service_invalid' => 'Veuillez sélectionner un service valide.',
+            'general_inquiry' => 'Question Générale',
             'message_placeholder' => 'Parlez-nous de vos besoins commerciaux...',
+            'success_message' => 'Merci pour votre message! Nous vous contacterons dans les 24 heures.',
+            'error_message' => 'Désolé, une erreur s\'est produite lors de l\'envoi de votre message. Veuillez réessayer ou nous contacter directement.',
         ],
         'info' => [
             'title' => 'Informations de Contact',
@@ -245,4 +249,7 @@ return [
     'get_started' => 'Commencer',
     'contact_us' => 'Nous Contacter',
     'read_more' => 'Lire Plus',
+    'ui' => [
+        'loading' => 'Chargement...',
+    ],
 ];

@@ -1,0 +1,46 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+return new class extends Migration
+{
+    /**
+     * Run the migrations.
+     */
+    public function up(): void
+    {
+        Schema::create('contact_inquiries', function (Blueprint $table) {
+            $table->uuid('id')->primary();
+            $table->string('reference')->unique(); // INQ-2025-001 format
+            $table->string('name');
+            $table->string('email');
+            $table->string('phone')->nullable();
+            $table->string('company')->nullable();
+            $table->string('service')->nullable(); // business_consultancy, accounting, etc.
+            $table->text('message');
+            $table->string('locale', 2)->default('en'); // en, fr
+            $table->enum('status', ['new', 'in_progress', 'responded', 'closed'])->default('new');
+            $table->enum('priority', ['low', 'medium', 'high', 'urgent'])->default('medium');
+            $table->timestamp('responded_at')->nullable();
+            $table->uuid('assigned_to')->nullable(); // admin user id
+            $table->json('metadata')->nullable(); // additional form data
+            $table->string('ip_address')->nullable();
+            $table->string('user_agent')->nullable();
+            $table->timestamps();
+
+            $table->index(['status', 'created_at']);
+            $table->index(['service', 'created_at']);
+            $table->index(['assigned_to', 'status']);
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     */
+    public function down(): void
+    {
+        Schema::dropIfExists('contact_inquiries');
+    }
+};

@@ -84,8 +84,25 @@ return [
             'title' => 'Career Development',
             'description' => 'Career coaching and professional development',
         ],
+        'feasibility_studies' => [
+            'title' => 'Feasibility Studies',
+            'description' => 'Comprehensive business feasibility analysis and market research',
+        ],
+        'data_analytics' => [
+            'title' => 'Business Intelligence & Data Analytics',
+            'description' => 'Data-driven insights and business intelligence solutions',
+        ],
+        'market_research' => [
+            'title' => 'Market Research',
+            'description' => 'Market analysis and competitive intelligence services',
+        ],
         'learn_more' => 'Learn More',
         'view_all' => 'View All Services',
+        'form' => [
+            'success_message' => 'Thank you for your service inquiry! We will review your requirements and get back to you within 24 hours.',
+            'error_message' => 'Sorry, there was an error submitting your inquiry. Please try again or contact us directly.',
+            'confirmation_subject' => 'Thank you for your :service inquiry',
+        ],
     ],
 
     // Why Choose Us
@@ -165,6 +182,16 @@ return [
         'loading' => 'Loading...',
     ],
 
+    // Common Form Fields
+    'form' => [
+        'name' => 'Full Name',
+        'email' => 'Email Address',
+        'phone' => 'Phone Number',
+        'company' => 'Company Name',
+        'message' => 'Message',
+        'required' => 'Required field',
+    ],
+
     // Contact Page
     'contact' => [
         'title' => 'Get In Touch',
@@ -175,12 +202,17 @@ return [
             'email' => 'Email Address',
             'phone' => 'Phone Number',
             'company' => 'Company Name',
-            'service' => 'Service Interested In',
+            'service' => 'Service Interested In (skip if general inquiry)',
             'message' => 'Message',
             'send_message' => 'Send Message',
             'required' => 'Required field',
-            'select_service' => 'Select a service',
+            'select_service' => 'Select a service (skip if general inquiry)',
+            'service_invalid' => 'Please select a valid service.',
+            'general_inquiry' => 'General Inquiry',
             'message_placeholder' => 'Tell us about your business needs...',
+            'success_message' => 'Thank you for your inquiry! We will get back to you within 24 hours.',
+            'error_message' => 'Sorry, there was an error submitting your inquiry. Please try again or contact us directly.',
+            'confirmation_subject' => 'Thank you for contacting us',
         ],
         'info' => [
             'title' => 'Contact Information',
@@ -245,4 +277,7 @@ return [
     'get_started' => 'Get Started',
     'contact_us' => 'Contact Us',
     'read_more' => 'Read More',
+    'ui' => [
+        'loading' => 'Loading...',
+    ],
 ];
