@@ -1355,6 +1355,8 @@ return [
                 'powerbi' => 'Power BI',
                 'tableau' => 'Tableau',
                 'python' => 'Python',
+                'sql' => 'SQL',
+                'other' => 'Other',
                 'no_preference' => 'No Preference',
             ],
             'message_placeholder' => 'Describe your data analytics needs and specific objectives...',

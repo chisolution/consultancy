@@ -1,98 +1,69 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
-use Illuminate\Support\Facades\App;
-use App\Http\Controllers\SitemapController;
+use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ServiceInquiryController;
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\Admin\ContactInquiryController as AdminContactInquiryController;
+use App\Http\Controllers\Admin\ServiceInquiryController as AdminServiceInquiryController;
+use App\Http\Controllers\Admin\ServiceController as AdminServiceController;
+use App\Http\Controllers\Admin\PageController as AdminPageController;
+use Illuminate\Support\Facades\Route;
 
-// Default route (redirect to default language)
+// Public routes (existing)
 Route::get('/', function () {
     return redirect('/en');
 });
 
-// Language switch route
-Route::get('/language/{locale}', function ($locale) {
-    if (in_array($locale, ['en', 'fr'])) {
-        session(['locale' => $locale]);
-    }
-    return redirect()->back();
-})->name('language.switch');
-
-// SEO Routes
-Route::get('/sitemap.xml', [SitemapController::class, 'index'])->name('sitemap');
-
-// Localized routes
-Route::prefix('{locale}')->where(['locale' => 'en|fr'])->group(function () {
-    // Homepage
+// Localized routes (existing)
+Route::prefix('{locale}')->where(['locale' => '[a-zA-Z]{2}'])->group(function () {
     Route::get('/', function () {
         return view('pages.home');
     })->name('home');
 
-    // Services
-    Route::get('/services', function () {
-        return view('pages.services');
-    })->name('services');
-
-    // About
-    Route::get('/about', function () {
-        return view('pages.about');
-    })->name('about');
-
-    // Contact
     Route::get('/contact', function () {
         return view('pages.contact');
     })->name('contact');
 
-    // Individual service pages
-    Route::get('/services/business-consultancy', function () {
-        return view('pages.services.business-consultancy');
-    })->name('services.business-consultancy');
+    Route::get('/services/{service}', function ($locale, $service) {
+        $validServices = [
+            'business-consultancy', 'accounting', 'tax-advisory', 'financial-planning',
+            'business-registration', 'audit-compliance', 'corporate-training',
+            'career-development', 'feasibility-studies', 'data-analytics', 'market-research'
+        ];
 
-    Route::get('/services/accounting', function () {
-        return view('pages.services.accounting');
-    })->name('services.accounting');
+        if (!in_array($service, $validServices)) {
+            abort(404);
+        }
 
-    Route::get('/services/tax-advisory', function () {
-        return view('pages.services.tax-advisory');
-    })->name('services.tax-advisory');
-
-    Route::get('/services/financial-planning', function () {
-        return view('pages.services.financial-planning');
-    })->name('services.financial-planning');
-
-    Route::get('/services/business-registration', function () {
-        return view('pages.services.business-registration');
-    })->name('services.business-registration');
-
-    Route::get('/services/audit-compliance', function () {
-        return view('pages.services.audit-compliance');
-    })->name('services.audit-compliance');
-
-    Route::get('/services/corporate-training', function () {
-        return view('pages.services.corporate-training');
-    })->name('services.corporate-training');
-
-    Route::get('/services/career-development', function () {
-        return view('pages.services.career-development');
-    })->name('services.career-development');
-
-    // New Research & Analytics Services
-    Route::get('/services/market-research', function () {
-        return view('pages.services.market-research');
-    })->name('services.market-research');
-
-    Route::get('/services/feasibility-studies', function () {
-        return view('pages.services.feasibility-studies');
-    })->name('services.feasibility-studies');
-
-    Route::get('/services/data-analytics', function () {
-        return view('pages.services.data-analytics');
-    })->name('services.data-analytics');
+        $viewName = 'pages.services.' . str_replace('-', '-', $service);
+        return view($viewName);
+    })->name('services.show');
 });
 
-// Form submission routes (public, with rate limiting)
-Route::middleware(['throttle:10,1'])->group(function () {
-    Route::post('/contact/submit', [ContactController::class, 'submit'])->name('contact.submit');
-    Route::post('/services/inquiry', [ServiceInquiryController::class, 'submit'])->name('services.inquiry.submit');
+// API routes for form submissions (existing)
+Route::post('/contact/submit', [ContactController::class, 'submit'])->name('contact.submit');
+Route::post('/services/inquiry', [ServiceInquiryController::class, 'submit'])->name('services.inquiry');
+
+// Admin Dashboard routes
+Route::get('/admin/dashboard', [DashboardController::class, 'index'])
+    ->middleware(['auth', 'verified'])
+    ->name('dashboard');
+
+Route::middleware('auth')->group(function () {
+    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+
+    // Admin inquiry management routes
+    Route::prefix('admin')->name('admin.')->group(function () {
+        Route::resource('contact-inquiries', AdminContactInquiryController::class)
+            ->except(['create', 'store']);
+        Route::resource('service-inquiries', AdminServiceInquiryController::class)
+            ->except(['create', 'store']);
+        Route::resource('services', AdminServiceController::class);
+        Route::resource('pages', AdminPageController::class);
+    });
 });
+
+require __DIR__.'/auth.php';
