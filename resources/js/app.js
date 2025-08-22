@@ -1,5 +1,7 @@
 import './bootstrap';
-import { initPerformanceOptimizations } from './performance';
 
-// Initialize performance optimizations
-initPerformanceOptimizations();
+import Alpine from 'alpinejs';
+
+window.Alpine = Alpine;
+
+Alpine.start();

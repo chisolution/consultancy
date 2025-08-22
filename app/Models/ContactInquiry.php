@@ -26,6 +26,7 @@ class ContactInquiry extends Model
         'metadata',
         'ip_address',
         'user_agent',
+        'notes',
     ];
 
     protected $casts = [

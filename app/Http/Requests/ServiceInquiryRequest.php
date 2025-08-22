@@ -47,45 +47,50 @@ class ServiceInquiryRequest extends FormRequest
         return match($serviceType) {
             'business_consultancy' => [
                 'business_stage' => 'nullable|string|in:idea,startup,growth,established',
-                'industry' => 'nullable|string|max:255',
+                'industry' => 'nullable|string|in:agriculture,mining,manufacturing,utilities,construction,wholesale,transportation,information,finance,real_estate,professional_services,administration,education,healthcare,other',
             ],
             'accounting' => [
-                'accounting_service' => 'nullable|string|in:bookkeeping,financial_statements,tax_compliance,payroll,full_service',
+                'accounting_service' => 'nullable|string|in:bookkeeping,financial_statements,tax_compliance,payroll,full_service,other',
                 'company_size' => 'nullable|string|in:small,medium,large',
             ],
             'tax_advisory' => [
-                'tax_issue' => 'nullable|string|in:tax_planning,compliance_issue',
+                'tax_issue' => 'nullable|string|in:tax_planning,compliance_issue,other',
                 'entity_type' => 'nullable|string|in:individual,small_business,corporation,partnership,ngo',
             ],
             'audit_compliance' => [
-                'audit_type' => 'nullable|string|in:financial_audit,compliance_audit,internal_audit,risk_assessment,due_diligence',
+                'audit_type' => 'nullable|string|in:financial_audit,compliance_audit,internal_audit,risk_assessment,due_diligence,other',
                 'company_size' => 'nullable|string|in:small,medium,large',
             ],
             'training' => [
                 'team_size' => 'nullable|string|in:1-10,11-25,26-50,51-100,100+',
-                'training_focus' => 'nullable|string|in:leadership,communication,technical,teamwork,customer_service',
+                'training_area' => 'nullable|string|in:leadership,communication,technical,teamwork,customer_service,other',
             ],
             'career_development' => [
                 'career_stage' => 'nullable|string|in:entry,mid,senior,executive',
-                'focus_area' => 'nullable|string|in:career_coaching,resume_optimization,interview_prep,skill_development',
+                'focus_area' => 'nullable|string|in:career_coaching,resume_optimization,interview_prep,skill_development,other',
             ],
             'financial_planning' => [
                 'age' => 'nullable|string|in:18-25,26-35,36-45,46-55,56-65,65+',
-                'financial_goals' => 'nullable|string|in:retirement,wealth_building,education,home_purchase,business_investment',
+                'financial_goals' => 'nullable|string|in:retirement,wealth_building,education,home_purchase,business_investment,other',
             ],
             'feasibility_studies' => [
                 'business_concept' => 'nullable|string|max:1000',
-                'target_location' => 'nullable|string|in:kigali,rwanda_other,douala,yaounde,cameroon_other',
+                'target_location' => 'nullable|string|in:gisenyi,kigali,rwanda_other,bamenda,douala,yaounde,cameroon_other',
                 'investment_range' => 'nullable|string|in:under_50k,50k_200k,200k_500k,500k_1m,over_1m',
             ],
             'data_analytics' => [
-                'data_source' => 'nullable|string|in:excel_files,databases,web_data,surveys,multiple_sources',
-                'analytics_goal' => 'nullable|string|in:performance_tracking,predictive_analytics,customer_insights,operational_efficiency,strategic_planning',
-                'preferred_tool' => 'nullable|string|max:255',
+                'data_source' => 'nullable|array',
+                'data_source.*' => 'string|in:excel_files,databases,web_data,surveys,multiple_sources,other',
+                'analytics_goal' => 'nullable|array',
+                'analytics_goal.*' => 'string|in:performance_tracking,predictive_analytics,customer_insights,operational_efficiency,strategic_planning,other',
+                'preferred_tool' => 'nullable|array',
+                'preferred_tool.*' => 'string|in:excel,powerbi,tableau,python,sql,other,no_preference',
             ],
             'market_research' => [
-                'research_type' => 'nullable|string|in:market_entry,competitor_analysis,customer_research,industry_analysis,opportunity_assessment',
-                'target_market' => 'nullable|string|in:rwanda,cameroon,east_africa,central_africa,multiple_markets',
+                'research_type' => 'nullable|array',
+                'research_type.*' => 'string|in:market_entry,competitor_analysis,customer_research,industry_analysis,opportunity_assessment,other',
+                'target_market' => 'nullable|array',
+                'target_market.*' => 'string|in:rwanda,cameroon,east_africa,central_africa,multiple_markets,other',
             ],
             default => [],
         };

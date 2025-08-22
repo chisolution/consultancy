@@ -304,8 +304,9 @@
         </div>
         
         <div class="bg-gray-50 rounded-2xl p-8">
-            <form class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <form id="career-development-form" class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 @csrf
+                <input type="hidden" name="service_type" value="career_development">
                 <div>
                     <label for="name" class="block text-sm font-medium text-gray-700 mb-2">{{ __('common.form.name') }}</label>
                     <input type="text" id="name" name="name" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-secondary-500 focus:border-secondary-500">
@@ -327,8 +328,8 @@
                 </div>
                 
                 <div>
-                    <label for="experience_level" class="block text-sm font-medium text-gray-700 mb-2">{{ __('services.career_development.form.experience_level') }}</label>
-                    <select id="experience_level" name="experience_level" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-secondary-500 focus:border-secondary-500">
+                    <label for="career_stage" class="block text-sm font-medium text-gray-700 mb-2">{{ __('services.career_development.form.experience_level') }}</label>
+                    <select id="career_stage" name="career_stage" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-secondary-500 focus:border-secondary-500">
                         <option value="">{{ __('services.career_development.form.select_level') }}</option>
                         <option value="entry">{{ __('services.career_development.form.levels.entry') }}</option>
                         <option value="mid">{{ __('services.career_development.form.levels.mid') }}</option>
@@ -336,16 +337,15 @@
                         <option value="executive">{{ __('services.career_development.form.levels.executive') }}</option>
                     </select>
                 </div>
-                
+
                 <div>
-                    <label for="coaching_focus" class="block text-sm font-medium text-gray-700 mb-2">{{ __('services.career_development.form.coaching_focus') }}</label>
-                    <select id="coaching_focus" name="coaching_focus" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-secondary-500 focus:border-secondary-500">
+                    <label for="focus_area" class="block text-sm font-medium text-gray-700 mb-2">{{ __('services.career_development.form.coaching_focus') }}</label>
+                    <select id="focus_area" name="focus_area" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-secondary-500 focus:border-secondary-500">
                         <option value="">{{ __('services.career_development.form.select_focus') }}</option>
-                        <option value="career_change">{{ __('services.career_development.form.focus.career_change') }}</option>
-                        <option value="promotion">{{ __('services.career_development.form.focus.promotion') }}</option>
-                        <option value="leadership">{{ __('services.career_development.form.focus.leadership') }}</option>
-                        <option value="skills">{{ __('services.career_development.form.focus.skills') }}</option>
-                        <option value="interview">{{ __('services.career_development.form.focus.interview') }}</option>
+                        <option value="career_coaching">{{ __('services.career_development.form.focus.career_change') }}</option>
+                        <option value="resume_optimization">{{ __('services.career_development.form.focus.promotion') }}</option>
+                        <option value="interview_prep">{{ __('services.career_development.form.focus.leadership') }}</option>
+                        <option value="skill_development">{{ __('services.career_development.form.focus.skills') }}</option>
                     </select>
                 </div>
                 

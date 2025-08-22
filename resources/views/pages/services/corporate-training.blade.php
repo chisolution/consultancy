@@ -303,8 +303,9 @@
         </div>
         
         <div class="bg-gray-50 rounded-2xl p-8">
-            <form class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <form id="training-form" class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 @csrf
+                <input type="hidden" name="service_type" value="training">
                 <div>
                     <label for="name" class="block text-sm font-medium text-gray-700 mb-2">{{ __('common.form.name') }}</label>
                     <input type="text" id="name" name="name" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500">
@@ -337,14 +338,14 @@
                 </div>
                 
                 <div>
-                    <label for="training_area" class="block text-sm font-medium text-gray-700 mb-2">{{ __('services.corporate_training.form.training_area') }}</label>
-                    <select id="training_area" name="training_area" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500">
+                    <label for="training_focus" class="block text-sm font-medium text-gray-700 mb-2">{{ __('services.corporate_training.form.training_area') }}</label>
+                    <select id="training_focus" name="training_focus" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500">
                         <option value="">{{ __('services.corporate_training.form.select_area') }}</option>
                         <option value="leadership">{{ __('services.corporate_training.form.areas.leadership') }}</option>
-                        <option value="financial">{{ __('services.corporate_training.form.areas.financial') }}</option>
-                        <option value="digital">{{ __('services.corporate_training.form.areas.digital') }}</option>
-                        <option value="team_building">{{ __('services.corporate_training.form.areas.team_building') }}</option>
-                        <option value="custom">{{ __('services.corporate_training.form.areas.custom') }}</option>
+                        <option value="communication">{{ __('services.corporate_training.form.areas.communication') }}</option>
+                        <option value="technical">{{ __('services.corporate_training.form.areas.technical') }}</option>
+                        <option value="teamwork">{{ __('services.corporate_training.form.areas.teamwork') }}</option>
+                        <option value="customer_service">{{ __('services.corporate_training.form.areas.customer_service') }}</option>
                     </select>
                 </div>
                 

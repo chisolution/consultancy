@@ -294,15 +294,28 @@
         </div>
 
         <div class="bg-white rounded-2xl p-8">
-            <form class="space-y-6">
+            <form id="feasibility-studies-form" class="space-y-6">
+                @csrf
+                <input type="hidden" name="service_type" value="feasibility_studies">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
-                        <label for="name" class="block text-sm font-medium text-gray-700 mb-2">{{ __('common.contact.form.name') }} *</label>
+                        <label for="name" class="block text-sm font-medium text-gray-700 mb-2">{{ __('common.form.name') }}</label>
                         <input type="text" id="name" name="name" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-secondary-500 focus:border-secondary-500 transition-colors duration-200 text-gray-900 bg-white">
                     </div>
                     <div>
-                        <label for="email" class="block text-sm font-medium text-gray-700 mb-2">{{ __('common.contact.form.email') }} *</label>
+                        <label for="email" class="block text-sm font-medium text-gray-700 mb-2">{{ __('common.form.email') }}</label>
                         <input type="email" id="email" name="email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-secondary-500 focus:border-secondary-500 transition-colors duration-200 text-gray-900 bg-white">
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label for="phone" class="block text-sm font-medium text-gray-700 mb-2">{{ __('common.form.phone') }}</label>
+                        <input type="tel" id="phone" name="phone" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-secondary-500 focus:border-secondary-500 transition-colors duration-200 text-gray-900 bg-white">
+                    </div>
+                    <div>
+                        <label for="company" class="block text-sm font-medium text-gray-700 mb-2">{{ __('common.form.company') }}</label>
+                        <input type="text" id="company" name="company" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-secondary-500 focus:border-secondary-500 transition-colors duration-200 text-gray-900 bg-white">
                     </div>
                 </div>
 
@@ -328,8 +341,13 @@
                 </div>
 
                 <div>
-                    <label for="business_concept" class="block text-sm font-medium text-gray-700 mb-2">{{ __('services.feasibility_studies.form.business_concept') }} *</label>
+                    <label for="business_concept" class="block text-sm font-medium text-gray-700 mb-2">{{ __('services.feasibility_studies.form.business_concept') }}</label>
                     <textarea id="business_concept" name="business_concept" rows="6" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-secondary-500 focus:border-secondary-500 transition-colors duration-200 text-gray-900 bg-white" placeholder="{{ __('services.feasibility_studies.form.message_placeholder') }}"></textarea>
+                </div>
+
+                <div>
+                    <label for="message" class="block text-sm font-medium text-gray-700 mb-2">{{ __('common.form.message') }}</label>
+                    <textarea id="message" name="message" rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-secondary-500 focus:border-secondary-500 transition-colors duration-200 text-gray-900 bg-white" placeholder="{{ __('services.feasibility_studies.form.message_placeholder') }}"></textarea>
                 </div>
 
                 <button type="submit" class="w-full bg-secondary-600 hover:bg-secondary-700 text-white py-4 rounded-lg font-semibold transition-colors duration-200">
