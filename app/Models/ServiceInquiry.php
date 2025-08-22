@@ -28,6 +28,7 @@ class ServiceInquiry extends Model
         'assigned_to',
         'ip_address',
         'user_agent',
+        'notes',
     ];
 
     protected $casts = [
