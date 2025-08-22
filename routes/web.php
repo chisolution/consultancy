@@ -8,6 +8,7 @@ use App\Http\Controllers\Admin\ContactInquiryController as AdminContactInquiryCo
 use App\Http\Controllers\Admin\ServiceInquiryController as AdminServiceInquiryController;
 use App\Http\Controllers\Admin\ServiceController as AdminServiceController;
 use App\Http\Controllers\Admin\PageController as AdminPageController;
+use App\Http\Controllers\Admin\MediaController as AdminMediaController;
 use Illuminate\Support\Facades\Route;
 
 // Public routes (existing)
@@ -63,6 +64,7 @@ Route::middleware('auth')->group(function () {
             ->except(['create', 'store']);
         Route::resource('services', AdminServiceController::class);
         Route::resource('pages', AdminPageController::class);
+        Route::resource('media', AdminMediaController::class);
     });
 });
 
