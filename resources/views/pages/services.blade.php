@@ -57,7 +57,7 @@
                         Business Process Optimization
                     </li>
                 </ul>
-                <a href="{{ \App\Helpers\LocaleHelper::route('services.business-consultancy') }}" class="btn-primary w-full text-center">
+                <a href="{{ \App\Helpers\LocaleHelper::serviceRoute('') }}" class="btn-primary w-full text-center">
                     {{ __('common.services.learn_more') }}
                 </a>
             </div>
@@ -91,7 +91,7 @@
                         Management Reporting
                     </li>
                 </ul>
-                <a href="{{ \App\Helpers\LocaleHelper::route('services.accounting') }}" class="btn-primary w-full text-center">
+                <a href="{{ \App\Helpers\LocaleHelper::serviceRoute('') }}" class="btn-primary w-full text-center">
                     {{ __('common.services.learn_more') }}
                 </a>
             </div>
@@ -125,7 +125,7 @@
                         Cross-border Tax Compliance
                     </li>
                 </ul>
-                <a href="{{ \App\Helpers\LocaleHelper::route('services.tax-advisory') }}" class="btn-primary w-full text-center">
+                <a href="{{ \App\Helpers\LocaleHelper::serviceRoute('') }}" class="btn-primary w-full text-center">
                     {{ __('common.services.learn_more') }}
                 </a>
             </div>
@@ -159,7 +159,7 @@
                         Investment Advisory
                     </li>
                 </ul>
-                <a href="{{ \App\Helpers\LocaleHelper::route('services.financial-planning') }}" class="btn-primary w-full text-center">
+                <a href="{{ \App\Helpers\LocaleHelper::serviceRoute('') }}" class="btn-primary w-full text-center">
                     {{ __('common.services.learn_more') }}
                 </a>
             </div>
@@ -193,7 +193,7 @@
                         Regulatory Compliance
                     </li>
                 </ul>
-                <a href="{{ \App\Helpers\LocaleHelper::route('services.business-registration') }}" class="btn-primary w-full text-center">
+                <a href="{{ \App\Helpers\LocaleHelper::serviceRoute('') }}" class="btn-primary w-full text-center">
                     {{ __('common.services.learn_more') }}
                 </a>
             </div>
@@ -227,7 +227,7 @@
                         Risk Assessment
                     </li>
                 </ul>
-                <a href="{{ \App\Helpers\LocaleHelper::route('services.audit-compliance') }}" class="btn-primary w-full text-center">
+                <a href="{{ \App\Helpers\LocaleHelper::serviceRoute('') }}" class="btn-primary w-full text-center">
                     {{ __('common.services.learn_more') }}
                 </a>
             </div>
@@ -261,7 +261,7 @@
                         Customer Insights
                     </li>
                 </ul>
-                <a href="{{ \App\Helpers\LocaleHelper::route('services.market-research') }}" class="btn-primary w-full text-center">
+                <a href="{{ \App\Helpers\LocaleHelper::serviceRoute('') }}" class="btn-primary w-full text-center">
                     {{ __('common.services.learn_more') }}
                 </a>
             </div>
@@ -295,7 +295,7 @@
                         Financial Modeling
                     </li>
                 </ul>
-                <a href="{{ \App\Helpers\LocaleHelper::route('services.feasibility-studies') }}" class="btn-primary w-full text-center">
+                <a href="{{ \App\Helpers\LocaleHelper::serviceRoute('') }}" class="btn-primary w-full text-center">
                     {{ __('common.services.learn_more') }}
                 </a>
             </div>
@@ -329,7 +329,7 @@
                         Power BI & Tableau
                     </li>
                 </ul>
-                <a href="{{ \App\Helpers\LocaleHelper::route('services.data-analytics') }}" class="btn-primary w-full text-center">
+                <a href="{{ \App\Helpers\LocaleHelper::serviceRoute('') }}" class="btn-primary w-full text-center">
                     {{ __('common.services.learn_more') }}
                 </a>
             </div>

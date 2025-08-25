@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.public')
 
 @section('title', __('services.financial_planning.meta.title'))
 @section('description', __('services.financial_planning.meta.description'))

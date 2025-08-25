@@ -113,7 +113,7 @@
                 </div>
                 <h3 class="text-xl font-semibold text-gray-900 mb-2">{{ __('common.services.business_consultancy.title') }}</h3>
                 <p class="text-gray-600 mb-4">{{ __('common.services.business_consultancy.description') }}</p>
-                <a href="{{ \App\Helpers\LocaleHelper::route('services.business-consultancy') }}" class="text-primary-600 hover:text-primary-700 font-medium">
+                <a href="{{ \App\Helpers\LocaleHelper::serviceRoute('business-consultancy') }}" class="text-primary-600 hover:text-primary-700 font-medium">
                     {{ __('common.services.learn_more') }} →
                 </a>
             </div>
@@ -127,7 +127,7 @@
                 </div>
                 <h3 class="text-xl font-semibold text-gray-900 mb-2">{{ __('common.services.accounting.title') }}</h3>
                 <p class="text-gray-600 mb-4">{{ __('common.services.accounting.description') }}</p>
-                <a href="{{ \App\Helpers\LocaleHelper::route('services.accounting') }}" class="text-primary-600 hover:text-primary-700 font-medium">
+                <a href="{{ \App\Helpers\LocaleHelper::serviceRoute('accounting') }}" class="text-primary-600 hover:text-primary-700 font-medium">
                     {{ __('common.services.learn_more') }} →
                 </a>
             </div>
@@ -141,7 +141,7 @@
                 </div>
                 <h3 class="text-xl font-semibold text-gray-900 mb-2">{{ __('common.services.tax_advisory.title') }}</h3>
                 <p class="text-gray-600 mb-4">{{ __('common.services.tax_advisory.description') }}</p>
-                <a href="{{ \App\Helpers\LocaleHelper::route('services.tax-advisory') }}" class="text-primary-600 hover:text-primary-700 font-medium">
+                <a href="{{ \App\Helpers\LocaleHelper::serviceRoute('tax-advisory') }}" class="text-primary-600 hover:text-primary-700 font-medium">
                     {{ __('common.services.learn_more') }} →
                 </a>
             </div>
@@ -155,7 +155,7 @@
                 </div>
                 <h3 class="text-xl font-semibold text-gray-900 mb-2">{{ __('common.services.financial_planning.title') }}</h3>
                 <p class="text-gray-600 mb-4">{{ __('common.services.financial_planning.description') }}</p>
-                <a href="{{ \App\Helpers\LocaleHelper::route('services.financial-planning') }}" class="text-primary-600 hover:text-primary-700 font-medium">
+                <a href="{{ \App\Helpers\LocaleHelper::serviceRoute('financial-planning') }}" class="text-primary-600 hover:text-primary-700 font-medium">
                     {{ __('common.services.learn_more') }} →
                 </a>
             </div>
@@ -169,7 +169,7 @@
                 </div>
                 <h3 class="text-xl font-semibold text-gray-900 mb-2">{{ __('common.services.business_registration.title') }}</h3>
                 <p class="text-gray-600 mb-4">{{ __('common.services.business_registration.description') }}</p>
-                <a href="{{ \App\Helpers\LocaleHelper::route('services.business-registration') }}" class="text-primary-600 hover:text-primary-700 font-medium">
+                <a href="{{ \App\Helpers\LocaleHelper::serviceRoute('business-registration') }}" class="text-primary-600 hover:text-primary-700 font-medium">
                     {{ __('common.services.learn_more') }} →
                 </a>
             </div>
@@ -183,7 +183,7 @@
                 </div>
                 <h3 class="text-xl font-semibold text-gray-900 mb-2">{{ __('common.services.audit_compliance.title') }}</h3>
                 <p class="text-gray-600 mb-4">{{ __('common.services.audit_compliance.description') }}</p>
-                <a href="{{ \App\Helpers\LocaleHelper::route('services.audit-compliance') }}" class="text-primary-600 hover:text-primary-700 font-medium">
+                <a href="{{ \App\Helpers\LocaleHelper::serviceRoute('audit-compliance') }}" class="text-primary-600 hover:text-primary-700 font-medium">
                     {{ __('common.services.learn_more') }} →
                 </a>
             </div>
@@ -197,7 +197,7 @@
                 </div>
                 <h3 class="text-xl font-semibold text-gray-900 mb-2">{{ __('common.services.training.title') }}</h3>
                 <p class="text-gray-600 mb-4">{{ __('common.services.training.description') }}</p>
-                <a href="{{ \App\Helpers\LocaleHelper::route('services.corporate-training') }}" class="text-primary-600 hover:text-primary-700 font-medium">
+                <a href="{{ \App\Helpers\LocaleHelper::serviceRoute('corporate-training') }}" class="text-primary-600 hover:text-primary-700 font-medium">
                     {{ __('common.services.learn_more') }} →
                 </a>
             </div>
@@ -211,7 +211,7 @@
                 </div>
                 <h3 class="text-xl font-semibold text-gray-900 mb-2">{{ __('common.services.career_development.title') }}</h3>
                 <p class="text-gray-600 mb-4">{{ __('common.services.career_development.description') }}</p>
-                <a href="{{ \App\Helpers\LocaleHelper::route('services.career-development') }}" class="text-primary-600 hover:text-primary-700 font-medium">
+                <a href="{{ \App\Helpers\LocaleHelper::serviceRoute('career-development') }}" class="text-primary-600 hover:text-primary-700 font-medium">
                     {{ __('common.services.learn_more') }} →
                 </a>
             </div>
@@ -225,7 +225,7 @@
                 </div>
                 <h3 class="text-xl font-semibold text-gray-900 mb-2">{{ __('services.market_research.title') }}</h3>
                 <p class="text-gray-600 mb-4">Market intelligence and competitive analysis for strategic decisions</p>
-                <a href="{{ \App\Helpers\LocaleHelper::route('services.market-research') }}" class="text-primary-600 hover:text-primary-700 font-medium">
+                <a href="{{ \App\Helpers\LocaleHelper::serviceRoute('market-research') }}" class="text-primary-600 hover:text-primary-700 font-medium">
                     {{ __('common.services.learn_more') }} →
                 </a>
             </div>
@@ -239,7 +239,7 @@
                 </div>
                 <h3 class="text-xl font-semibold text-gray-900 mb-2">{{ __('services.feasibility_studies.title') }}</h3>
                 <p class="text-gray-600 mb-4">Business viability assessment for Rwanda and Cameroon markets</p>
-                <a href="{{ \App\Helpers\LocaleHelper::route('services.feasibility-studies') }}" class="text-primary-600 hover:text-primary-700 font-medium">
+                <a href="{{ \App\Helpers\LocaleHelper::serviceRoute('feasibility-studies') }}" class="text-primary-600 hover:text-primary-700 font-medium">
                     {{ __('common.services.learn_more') }} →
                 </a>
             </div>
@@ -253,7 +253,7 @@
                 </div>
                 <h3 class="text-xl font-semibold text-gray-900 mb-2">{{ __('services.data_analytics.title') }}</h3>
                 <p class="text-gray-600 mb-4">Advanced data analysis and visualization with modern tools</p>
-                <a href="{{ \App\Helpers\LocaleHelper::route('services.data-analytics') }}" class="text-primary-600 hover:text-primary-700 font-medium">
+                <a href="{{ \App\Helpers\LocaleHelper::serviceRoute('data-analytics') }}" class="text-primary-600 hover:text-primary-700 font-medium">
                     {{ __('common.services.learn_more') }} →
                 </a>
             </div>

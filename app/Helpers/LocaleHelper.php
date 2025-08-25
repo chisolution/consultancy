@@ -33,8 +33,17 @@ class LocaleHelper
     {
         $locale = $locale ?: self::getCurrentLocale();
         $parameters = array_merge($parameters, ['locale' => $locale]);
-        
+
         return route($name, $parameters);
+    }
+
+    /**
+     * Generate a service route URL
+     */
+    public static function serviceRoute(string $service, string $locale = null): string
+    {
+        $locale = $locale ?: self::getCurrentLocale();
+        return route('services.show', ['locale' => $locale, 'service' => $service]);
     }
 
     /**
